@@ -1,0 +1,9 @@
+html {
+    font-family: var(--font-family-base);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+}

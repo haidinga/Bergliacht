@@ -1,0 +1,17 @@
+/* ==========================================================================
+   ICONS
+   ========================================================================== */
+
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+}
+
+.icon svg,
+.icon img {
+    width: var(--icon-size-md);
+    height: var(--icon-size-md);
+    display: block;
+}
