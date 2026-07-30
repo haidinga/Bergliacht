@@ -1,0 +1,180 @@
+/* ==========================================================================
+   BERGLIACHT DESIGN SYSTEM
+   File: variables.css
+   Version: 1.0
+   Description: Global Design Tokens
+========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       COLORS
+    ====================================================================== */
+
+    /* Brand */
+    --color-primary: #2C5F7C;
+    --color-primary-hover: #24506A;
+    --color-primary-active: #1C4055;
+
+    --color-secondary: #B8863B;
+    --color-secondary-hover: #9C7130;
+    --color-secondary-active: #805C27;
+
+    /* Backgrounds */
+    --color-background: #F5F7F9;
+    --color-surface: #FFFFFF;
+    --color-surface-elevated: #FFFFFF;
+    --color-surface-interactive: #EDF1F5;
+
+    /* Text */
+    --color-text-primary: #1B2733;
+    --color-text-secondary: #4A5A68;
+    --color-text-muted: #7C8A97;
+    --color-text-inverse: #FFFFFF;
+
+    /* Borders */
+    --color-border: #DDE3E8;
+    --color-border-strong: #B7C1CA;
+    --color-border-interactive: #2C5F7C;
+
+    /* Status */
+    --color-success: #3F8F5F;
+    --color-warning: #D9A23B;
+    --color-error: #C1473F;
+    --color-info: #3D7FA3;
+
+
+
+    /* ======================================================================
+       TYPOGRAPHY
+    ====================================================================== */
+
+    /* Font Family */
+    --font-family-base: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-family-heading: 'Fraunces', Georgia, 'Times New Roman', serif;
+
+    /* Font Sizes */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.5rem;
+
+    /* Font Weights */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Line Heights */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+
+
+
+    /* ======================================================================
+       SPACING
+    ====================================================================== */
+
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
+    --spacing-4xl: 6rem;
+
+
+
+    /* ======================================================================
+       BORDER RADIUS
+    ====================================================================== */
+
+    --radius-xs: 2px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 20px;
+    --radius-full: 9999px;
+
+
+
+    /* ======================================================================
+       SHADOWS
+    ====================================================================== */
+
+    --shadow-xs: 0 1px 2px rgba(27, 39, 51, 0.06);
+    --shadow-sm: 0 2px 4px rgba(27, 39, 51, 0.08);
+    --shadow-md: 0 4px 12px rgba(27, 39, 51, 0.10);
+    --shadow-lg: 0 12px 32px rgba(27, 39, 51, 0.14);
+
+
+
+    /* ======================================================================
+       BORDERS
+    ====================================================================== */
+
+    --border-width-thin: 1px;
+    --border-width-medium: 2px;
+    --border-width-thick: 4px;
+
+
+
+    /* ======================================================================
+       LAYOUT
+    ====================================================================== */
+
+    /* Containers */
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1280px;
+
+    /* Global Layout */
+    --header-height: 72px;
+    --footer-height: 96px;
+    --sidebar-width: 280px;
+    --content-max-width: 1200px;
+
+
+
+    /* ======================================================================
+       BREAKPOINTS
+       (Documentation only)
+    ====================================================================== */
+
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1280px;
+
+
+
+    /* ======================================================================
+       MOTION
+    ====================================================================== */
+
+    --transition-fast: 120ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 360ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+
+    /* ======================================================================
+       Z-INDEX
+    ====================================================================== */
+
+    --z-base: 0;
+    --z-dropdown: 1000;
+    --z-sticky: 1100;
+    --z-overlay: 1200;
+    --z-modal: 1300;
+    --z-toast: 1400;
+    --z-tooltip: 1500;
+
+}
