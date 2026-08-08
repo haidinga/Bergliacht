@@ -1,0 +1,134 @@
+/* ==========================================================
+   Variant Selector
+========================================================== */
+
+.variant-selector {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: .75rem;
+
+}
+
+.variant-selector__label {
+
+    margin: 0;
+
+    color: var(--color-text-primary);
+
+    font-size: 12px;
+
+    font-weight: var(--font-weight-semibold);
+
+    letter-spacing: .03em;
+
+}
+
+.variant-selector__options {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: .6rem;
+
+}
+
+.variant-selector__button {
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-width: 4.75rem;
+
+    height: 2.75rem;
+
+    padding: 0 1rem;
+
+    background: var(--color-surface);
+
+    color: var(--color-text-primary);
+
+    font-size: .9rem;
+
+    font-weight: var(--font-weight-medium);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: .75rem;
+
+    cursor: pointer;
+
+    transition:
+        border-color .2s ease,
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+
+}
+
+.variant-selector__button:hover {
+
+    border-color: var(--color-primary);
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 .2rem .6rem rgba(0,0,0,.06);
+
+}
+
+.variant-selector__button.is-active {
+
+    background: var(--color-primary);
+
+    color: var(--color-white);
+
+    border-color: var(--color-primary);
+
+    box-shadow: 0 .2rem .8rem rgba(0,0,0,.08);
+
+}
+
+.variant-selector__button:disabled {
+
+    opacity: .45;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+
+}
+
+@media (max-width: 768px) {
+
+    .variant-selector__options {
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: .5rem;
+
+    }
+
+    .variant-selector__button {
+
+        width: 100%;
+
+        min-width: 0;
+
+        height: 2.6rem;
+
+        font-size: .85rem;
+
+    }
+
+}

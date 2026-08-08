@@ -1,0 +1,57 @@
+/* ==========================================================================
+   BERGLIACHT DESIGN SYSTEM
+   Component: Textarea
+   File: 007-textarea.css
+   ========================================================================== */
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+
+.textarea {
+    width: 100%;
+    min-height: 140px;
+
+    padding: var(--spacing-3) var(--spacing-4);
+
+    background: var(--color-surface);
+
+    border: var(--border-default);
+    border-radius: var(--radius-md);
+
+    color: var(--color-text-primary);
+
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-relaxed);
+
+    resize: vertical;
+
+    transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+.textarea::placeholder {
+    color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   STATES
+   ========================================================================== */
+
+.textarea:hover {
+    border-color: var(--color-border-strong);
+}
+
+.textarea:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: var(--shadow-sm);
+}
+
+.textarea:disabled {
+    background: var(--color-background);
+    opacity: .7;
+    cursor: not-allowed;
+}

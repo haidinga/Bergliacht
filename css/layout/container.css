@@ -1,0 +1,29 @@
+/* ==========================================================
+   Container
+========================================================== */
+
+.container {
+    width: min(100% - 2rem, var(--container-xl));
+
+    margin-inline: auto;
+}
+
+.container--sm {
+    max-width: var(--container-sm);
+}
+
+.container--md {
+    max-width: var(--container-md);
+}
+
+.container--lg {
+    max-width: var(--container-lg);
+}
+
+.container--xl {
+    max-width: var(--container-xl);
+}
+
+.container--full {
+    width: 100%;
+}

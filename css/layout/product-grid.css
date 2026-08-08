@@ -1,0 +1,43 @@
+/* ==========================================================
+   Product Grid
+========================================================== */
+
+#products {
+    padding-block: var(--space-20);
+}
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+
+    gap: var(--space-8);
+
+    margin-top: var(--space-12);
+}
+
+.section-header {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: var(--space-3);
+
+    text-align: center;
+}
+
+.section-header__eyebrow {
+    color: var(--color-primary);
+
+    font-weight: var(--font-weight-semibold);
+
+    text-transform: uppercase;
+
+    letter-spacing: .08em;
+}
+
+.section-header__title {
+    max-width: 20ch;
+}

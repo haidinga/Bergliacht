@@ -1,0 +1,51 @@
+/* ==========================================================================
+   BERGLIACHT DESIGN SYSTEM
+   Component: Tag
+   File: 004-tag.css
+   ========================================================================== */
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2);
+
+    padding: var(--spacing-2) var(--spacing-4);
+
+    background: var(--color-surface);
+
+    border: var(--border-default);
+    border-radius: var(--radius-full);
+
+    color: var(--color-text-secondary);
+
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   VARIANTS
+   ========================================================================== */
+
+.tag-primary {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-text-inverse);
+}
+
+.tag-outline {
+    background: transparent;
+    border: var(--border-interactive);
+    color: var(--color-primary);
+}
+
+.tag-muted {
+    background: var(--color-surface-interactive);
+    color: var(--color-text-secondary);
+}

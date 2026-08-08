@@ -1,0 +1,43 @@
+/* ==========================================================
+   Visibility
+========================================================== */
+
+.visible {
+    visibility: visible !important;
+}
+
+.invisible {
+    visibility: hidden !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.opacity-0 {
+    opacity: 0 !important;
+}
+
+.opacity-25 {
+    opacity: .25 !important;
+}
+
+.opacity-50 {
+    opacity: .5 !important;
+}
+
+.opacity-75 {
+    opacity: .75 !important;
+}
+
+.opacity-100 {
+    opacity: 1 !important;
+}
+
+.pointer-events-none {
+    pointer-events: none !important;
+}
+
+.pointer-events-auto {
+    pointer-events: auto !important;
+}

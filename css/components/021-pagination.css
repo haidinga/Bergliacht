@@ -1,0 +1,55 @@
+/* ==========================================================================
+   BERGLIACHT DESIGN SYSTEM
+   Component: Pagination
+   File: 021-pagination.css
+   ========================================================================== */
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2);
+}
+
+.pagination-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 40px;
+    height: 40px;
+
+    padding-inline: var(--spacing-3);
+
+    border: var(--border-default);
+    border-radius: var(--radius-md);
+
+    background: var(--color-surface);
+
+    color: var(--color-text-primary);
+
+    text-decoration: none;
+
+    transition:
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        color var(--transition-fast);
+}
+
+/* ==========================================================================
+   STATES
+   ========================================================================== */
+
+.pagination-item:hover {
+    background: var(--color-surface-interactive);
+}
+
+.pagination-item-active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-text-inverse);
+}

@@ -1,0 +1,13 @@
+/* ==========================================================
+   Collections Page
+========================================================== */
+
+.collections-page {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--space-20);
+
+    padding-block: var(--space-20);
+}

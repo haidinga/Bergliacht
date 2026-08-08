@@ -1,0 +1,176 @@
+{
+    "version": "1.0",
+    "lastUpdated": "",
+
+    "data": [
+
+        {
+            "id": "",
+            "slug": "",
+            "active": true,
+
+            "content": {
+                "name": "The Ripple",
+                "subtitle": "Test Product Subtitle",
+                "shortDescription": "Test Product Short Description",
+                "description": "Test Product Description"
+            },
+
+            "classification": {
+                "category": "vases",
+                "collection": "pazific",
+                "featured": true,
+                "new": false,
+                "bestseller": false
+            },
+
+"media": {
+
+    "thumbnail": "./assets/images/products/the-ripple/thumbnail.webp",
+
+    "colors": {
+
+        "anthrazit": {
+
+            "featuredImage": "./assets/images/products/the-ripple/anthrazit/featured.webp",
+
+            "gallery": [
+
+                "./assets/images/products/the-ripple/anthrazit/gallery-1.webp",
+                "./assets/images/products/the-ripple/anthrazit/gallery-2.webp",
+                "./assets/images/products/the-ripple/anthrazit/gallery-3.webp"
+
+            ]
+
+        },
+
+        "black": {
+
+            "featuredImage": "./assets/images/products/the-ripple/black/featured.webp",
+
+            "gallery": [
+
+                "./assets/images/products/the-ripple/black/gallery-1.webp",
+                "./assets/images/products/the-ripple/black/gallery-2.webp",
+                "./assets/images/products/the-ripple/black/gallery-3.webp"
+
+            ]
+
+        },
+
+        "bone-white": {
+
+            "featuredImage": "./assets/images/products/the-ripple/bone-white/featured.webp",
+
+            "gallery": [
+
+                "./assets/images/products/the-ripple/bone-white/gallery-1.webp",
+                "./assets/images/products/the-ripple/bone-white/gallery-2.webp",
+                "./assets/images/products/the-ripple/bone-white/gallery-3.webp"
+
+            ]
+
+        },
+
+        "coffee": {
+
+            "featuredImage": "./assets/images/products/the-ripple/coffee/featured.webp",
+
+            "gallery": [
+
+                "./assets/images/products/the-ripple/coffee/gallery-1.webp",
+                "./assets/images/products/the-ripple/coffee/gallery-2.webp",
+                "./assets/images/products/the-ripple/coffee/gallery-3.webp"
+
+            ]
+
+        },
+
+        "cyan": {
+
+            "featuredImage": "./assets/images/products/the-ripple/cyan/featured.webp",
+
+            "gallery": [
+
+                "./assets/images/products/the-ripple/cyan/gallery-1.webp",
+                "./assets/images/products/the-ripple/cyan/gallery-2.webp",
+                "./assets/images/products/the-ripple/cyan/gallery-3.webp"
+
+            ]
+
+        },
+
+        "white": {
+
+            "featuredImage": "./assets/images/products/the-ripple/white/featured.webp",
+
+            "gallery": [
+
+                "./assets/images/products/the-ripple/white/gallery-1.webp",
+                "./assets/images/products/the-ripple/white/gallery-2.webp",
+                "./assets/images/products/the-ripple/white/gallery-3.webp"
+
+            ]
+
+        }
+
+    }
+
+},
+            "variants": [
+                {
+                    "id": "small",
+                    "label": "120mm",
+                    "height": 120,
+                    "price": 24.90
+                },
+                {
+                    "id": "medium",
+                    "label": "180mm",
+                    "height": 180,
+                    "price": 34.90
+                },
+                {
+                    "id": "large",
+                    "label": "240mm",
+                    "height": 240,
+                    "price": 44.90
+                }
+            ],
+
+            "colors": [
+                "anthrazit",
+                "black",
+                "bone-white",
+                "oak",
+                "coffee",
+                "cyan",
+                "white"
+            ],
+
+            "specifications": {
+                "material": "PLA",
+                "manufacturer": "Bergliacht",
+                "care": "Mit einem trockenen oder leicht feuchten Tuch reinigen. Nicht spülmaschinengeeignet. Vor direkter Sonneneinstrahlung und Temperaturen über 50 °C schützen.",
+                "shipping": "Fertigungszeit 2–4 Werktage. Anschließend erfolgt der Versand mit Sendungsverfolgung."
+            },
+
+            "notes": {
+                "manufacturing": "Jedes Produkt wird individuell für dich im hochwertigen 3D-Druckverfahren gefertigt.",
+                "surface": "Jedes Produkt wird im FDM-3D-Druckverfahren Schicht für Schicht gefertigt. Feine Drucklinien sind charakteristisch für dieses Herstellungsverfahren und Teil des Designs – sie verleihen jedem Produkt seinen individuellen Charakter."
+            },
+
+            "attributes": {
+                "waterproof": false,
+                "indoor": true,
+                "outdoor": false
+            },
+
+            "meta": {
+                "created": "",
+                "updated": ""
+            }
+        }
+
+    ]
+}

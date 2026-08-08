@@ -1,0 +1,101 @@
+/* ==========================================================
+   Product Page
+========================================================== */
+
+.product-page {
+
+    padding-block: .25rem 1.5rem;
+
+}
+
+.product-page__layout {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1.45fr) minmax(24rem, .7fr);
+
+    align-items: start;
+
+    gap: 2.25rem;
+
+}
+
+/* ==========================================================
+   Linke Spalte
+========================================================== */
+
+.product-page__gallery {
+
+    position: sticky;
+
+    top: 5rem;
+
+    align-self: start;
+
+}
+
+/* ==========================================================
+   Rechte Spalte
+========================================================== */
+
+.product-page__info {
+
+    width: 100%;
+
+    max-width: 30rem;
+
+    padding-top: .35rem;
+
+}
+
+/* ==========================================================
+   Desktop Optimierung
+========================================================== */
+
+@media (min-width: 1200px) {
+
+    .product-page__layout {
+
+        grid-template-columns: 58% 42%;
+
+        gap: 2rem;
+
+    }
+
+}
+
+/* ==========================================================
+   Mobile
+========================================================== */
+
+@media (max-width: 992px) {
+
+    .product-page {
+
+        padding-block: 1rem;
+
+    }
+
+    .product-page__layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+
+    }
+
+    .product-page__gallery {
+
+        position: static;
+
+    }
+
+    .product-page__info {
+
+        max-width: none;
+
+        padding-top: 0;
+
+    }
+
+}

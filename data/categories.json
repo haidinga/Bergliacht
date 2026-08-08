@@ -1,0 +1,103 @@
+{
+    "version": "1.0",
+    "lastUpdated": "",
+
+    "data": [
+
+        {
+            "id": "vases",
+            "active": true,
+
+            "content": {
+                "name": "Vasen",
+                "description": "Moderne 3D-gedruckte Designvasen."
+            },
+
+            "media": {
+                "thumbnail": "./assets/images/categories/vases.webp",
+                "banner": "./assets/images/categories/vases-banner.webp"
+            },
+
+            "sorting": {
+                "order": 1
+            }
+        },
+
+        {
+            "id": "planters",
+            "active": true,
+
+            "content": {
+                "name": "Blumentöpfe",
+                "description": "Stilvolle Pflanzgefäße für den Innenbereich."
+            },
+
+            "media": {
+                "thumbnail": "./assets/images/categories/planters.webp",
+                "banner": "./assets/images/categories/planters-banner.webp"
+            },
+
+            "sorting": {
+                "order": 2
+            }
+        },
+
+        {
+            "id": "bowls",
+            "active": true,
+
+            "content": {
+                "name": "Schalen",
+                "description": "Dekorative Schalen für moderne Wohnräume."
+            },
+
+            "media": {
+                "thumbnail": "./assets/images/categories/bowls.webp",
+                "banner": "./assets/images/categories/bowls-banner.webp"
+            },
+
+            "sorting": {
+                "order": 3
+            }
+        },
+
+        {
+            "id": "decor",
+            "active": true,
+
+            "content": {
+                "name": "Dekoration",
+                "description": "Moderne Wohnaccessoires und Dekoration."
+            },
+
+            "media": {
+                "thumbnail": "./assets/images/categories/decor.webp",
+                "banner": "./assets/images/categories/decor-banner.webp"
+            },
+
+            "sorting": {
+                "order": 4
+            }
+        },
+
+        {
+            "id": "lighting",
+            "active": true,
+
+            "content": {
+                "name": "Beleuchtung",
+                "description": "Dekorative Leuchten und Lampenschirme."
+            },
+
+            "media": {
+                "thumbnail": "./assets/images/categories/lighting.webp",
+                "banner": "./assets/images/categories/lighting-banner.webp"
+            },
+
+            "sorting": {
+                "order": 5
+            }
+        }
+
+    ]
+}

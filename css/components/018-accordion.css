@@ -1,0 +1,48 @@
+/* ==========================================================================
+   BERGLIACHT DESIGN SYSTEM
+   Component: Accordion
+   File: 018-accordion.css
+   ========================================================================== */
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+
+.accordion {
+    border: var(--border-default);
+    border-radius: var(--radius-lg);
+
+    overflow: hidden;
+}
+
+.accordion-item + .accordion-item {
+    border-top: var(--border-default);
+}
+
+.accordion-header {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: var(--spacing-5);
+
+    background: var(--color-surface);
+
+    cursor: pointer;
+
+    transition: background-color var(--transition-fast);
+}
+
+.accordion-header:hover {
+    background: var(--color-surface-interactive);
+}
+
+.accordion-body {
+    padding: var(--spacing-5);
+
+    background: var(--color-background);
+
+    color: var(--color-text-secondary);
+}

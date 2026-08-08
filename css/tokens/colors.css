@@ -1,0 +1,45 @@
+/* ==========================================================
+   Colors
+========================================================== */
+
+:root {
+
+    /* Brand */
+
+    --color-primary: #8B6B4A;
+    --color-primary-light: #A98663;
+    --color-primary-dark: #6D533A;
+
+    /* Background */
+
+    --color-background: #F7F5F2;
+
+    /* Surface */
+
+    --color-surface: #FFFFFF;
+    --color-surface-secondary: #F1EEE9;
+    --color-surface-tertiary: #E8E2D8;
+
+    /* Text */
+
+    --color-text-primary: #2E2B28;
+    --color-text-secondary: #6E6962;
+    --color-text-muted: #9A948C;
+
+    /* Border */
+
+    --color-border: #DDD7CF;
+
+    /* Status */
+
+    --color-success: #4F7A5A;
+    --color-warning: #C39232;
+    --color-danger: #B64D4D;
+    --color-info: #50739A;
+
+    /* Neutral */
+
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+
+}

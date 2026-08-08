@@ -1,0 +1,46 @@
+/* ==========================================================================
+   BERGLIACHT DESIGN SYSTEM
+   Component: Radio
+   File: 010-radio.css
+   ========================================================================== */
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+
+.radio {
+    width: 20px;
+    height: 20px;
+
+    border: var(--border-default);
+    border-radius: var(--radius-full);
+
+    background: var(--color-surface);
+
+    cursor: pointer;
+
+    accent-color: var(--color-primary);
+
+    transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background-color var(--transition-fast);
+}
+
+/* ==========================================================================
+   STATES
+   ========================================================================== */
+
+.radio:hover {
+    border-color: var(--color-border-strong);
+}
+
+.radio:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+.radio:disabled {
+    cursor: not-allowed;
+    opacity: .5;
+}

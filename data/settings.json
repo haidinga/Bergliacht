@@ -1,0 +1,66 @@
+{
+    "version": "1.0",
+    "lastUpdated": "",
+
+    "shop": {
+        "name": "Bergliacht",
+        "tagline": "Moderne 3D-gedruckte Wohnaccessoires",
+        "language": "de",
+        "currency": "EUR"
+    },
+
+    "branding": {
+        "logo": "./assets/images/logo/logo.svg",
+        "favicon": "./assets/images/logo/favicon.ico"
+    },
+
+    "company": {
+        "name": "",
+        "owner": "",
+        "email": "",
+        "phone": "",
+        "website": "https://bergliacht.at"
+    },
+
+    "social": {
+        "instagram": "",
+        "facebook": "",
+        "pinterest": "",
+        "etsy": ""
+    },
+
+    "shipping": {
+        "country": "AT",
+        "freeShippingFrom": 0
+    },
+
+    "tax": {
+        "included": true,
+        "rate": 20
+    },
+
+    "media": {
+        "placeholder": "./assets/images/placeholders/placeholder.svg"
+    },
+
+    "catalog": {
+        "productsPerPage": 12,
+        "featuredProducts": 4,
+        "newProducts": 4
+    },
+
+    "features": {
+        "search": true,
+        "filter": true,
+        "sorting": true,
+        "wishlist": false,
+        "darkMode": false
+    },
+
+    "seo": {
+        "title": "Bergliacht",
+        "description": "",
+        "keywords": [],
+        "author": ""
+    }
+}

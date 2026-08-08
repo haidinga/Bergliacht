@@ -1,0 +1,15 @@
+/* ==========================================================
+   Radius
+========================================================== */
+
+:root {
+
+    --radius-xs: .25rem;
+    --radius-sm: .5rem;
+    --radius-md: .75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --radius-2xl: 2rem;
+    --radius-full: 9999px;
+
+}

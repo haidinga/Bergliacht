@@ -1,0 +1,129 @@
+/* ==========================================================
+   Color Selector
+========================================================== */
+
+.color-selector {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: .5rem;
+
+}
+
+.color-selector__label {
+
+    margin: 0;
+
+    color: var(--color-text-primary);
+
+    font-size: 12px;
+
+    font-weight: var(--font-weight-semibold);
+
+
+}
+
+.color-selector__swatches {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: .55rem;
+
+}
+
+.color-selector__swatch {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 2.5rem;
+
+    height: 2.5rem;
+
+    padding: .15rem;
+
+    background: transparent;
+
+    border: 1px solid transparent;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+
+}
+
+.color-selector__swatch:hover {
+
+    transform: scale(1.06);
+
+    border-color: var(--color-border);
+
+}
+
+.color-selector__swatch.is-active {
+
+    border-color: var(--color-primary);
+
+    box-shadow: 0 0 0 2px rgba(0,0,0,.06);
+
+}
+
+.color-selector__swatch-image {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+}
+
+.color-selector__current {
+
+    margin: 0;
+
+    color: var(--color-text-secondary);
+
+    font-size: .9rem;
+
+    font-weight: var(--font-weight-medium);
+
+    line-height: 1.4;
+
+    min-height: 1.25rem;
+
+}
+
+@media (max-width: 768px) {
+
+    .color-selector__swatches {
+
+        gap: .5rem;
+
+    }
+
+    .color-selector__swatch {
+
+        width: 2.25rem;
+
+        height: 2.25rem;
+
+    }
+
+}

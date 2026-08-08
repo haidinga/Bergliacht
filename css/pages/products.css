@@ -1,0 +1,29 @@
+/* ==========================================================
+   Products Page
+========================================================== */
+
+.products-page {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--space-20);
+
+    padding-block: var(--space-20);
+}
+
+.products-page__toolbar {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: var(--space-6);
+
+    flex-wrap: wrap;
+}
+
+.products-page__grid {
+    margin-top: var(--space-12);
+}

@@ -1,0 +1,50 @@
+/* ==========================================================
+   base/forms.css
+========================================================== */
+
+input,
+textarea,
+select,
+button {
+    font: inherit;
+
+    color: inherit;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+}
+
+textarea {
+    resize: vertical;
+
+    min-height: 8rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--color-text-muted);
+
+    opacity: 1;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled,
+button:disabled {
+    cursor: not-allowed;
+
+    opacity: .6;
+}

@@ -1,0 +1,47 @@
+/* ==========================================================================
+   BERGLIACHT DESIGN SYSTEM
+   Component: Tabs
+   File: 019-tabs.css
+   ========================================================================== */
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+
+.tabs {
+    display: flex;
+    gap: var(--spacing-2);
+
+    border-bottom: var(--border-default);
+}
+
+.tab {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: var(--spacing-4) var(--spacing-5);
+
+    border-bottom: 2px solid transparent;
+
+    color: var(--color-text-secondary);
+
+    cursor: pointer;
+
+    transition:
+        color var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+/* ==========================================================================
+   STATES
+   ========================================================================== */
+
+.tab:hover {
+    color: var(--color-text-primary);
+}
+
+.tab-active {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}

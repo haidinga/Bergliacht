@@ -1,0 +1,59 @@
+/* ==========================================================================
+   BERGLIACHT DESIGN SYSTEM
+   Component: Avatar
+   File: 022-avatar.css
+   ========================================================================== */
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+
+.avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: var(--radius-full);
+
+    background: var(--color-surface-interactive);
+
+    color: var(--color-primary);
+
+    font-weight: var(--font-weight-bold);
+
+    user-select: none;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   SIZES
+   ========================================================================== */
+
+.avatar-sm {
+    width: 32px;
+    height: 32px;
+
+    font-size: var(--font-size-xs);
+}
+
+.avatar-md {
+    width: 48px;
+    height: 48px;
+
+    font-size: var(--font-size-sm);
+}
+
+.avatar-lg {
+    width: 64px;
+    height: 64px;
+
+    font-size: var(--font-size-md);
+}

@@ -1,0 +1,61 @@
+/* ==========================================================================
+   BERGLIACHT DESIGN SYSTEM
+   Component: Dropdown
+   File: 017-dropdown.css
+   ========================================================================== */
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + var(--spacing-2));
+    left: 0;
+
+    min-width: 220px;
+
+    padding: var(--spacing-2);
+
+    background: var(--color-surface);
+
+    border: var(--border-default);
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-lg);
+
+    z-index: var(--z-dropdown);
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+
+    width: 100%;
+
+    padding: var(--spacing-3);
+
+    border-radius: var(--radius-md);
+
+    color: var(--color-text-primary);
+    text-decoration: none;
+
+    transition:
+        background-color var(--transition-fast),
+        color var(--transition-fast);
+}
+
+/* ==========================================================================
+   STATES
+   ========================================================================== */
+
+.dropdown-item:hover,
+.dropdown-item:focus-visible {
+    background: var(--color-surface-interactive);
+}

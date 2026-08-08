@@ -1,0 +1,99 @@
+/* ==========================================================
+   Text Alignment
+========================================================== */
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+/* ==========================================================
+   Text Transform
+========================================================== */
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.text-lowercase {
+    text-transform: lowercase !important;
+}
+
+.text-capitalize {
+    text-transform: capitalize !important;
+}
+
+/* ==========================================================
+   Font Weight
+========================================================== */
+
+.font-regular {
+    font-weight: var(--font-weight-regular) !important;
+}
+
+.font-medium {
+    font-weight: var(--font-weight-medium) !important;
+}
+
+.font-semibold {
+    font-weight: var(--font-weight-semibold) !important;
+}
+
+.font-bold {
+    font-weight: var(--font-weight-bold) !important;
+}
+
+/* ==========================================================
+   Colors
+========================================================== */
+
+.text-primary {
+    color: var(--color-text-primary) !important;
+}
+
+.text-secondary {
+    color: var(--color-text-secondary) !important;
+}
+
+.text-muted {
+    color: var(--color-text-muted) !important;
+}
+
+.text-brand {
+    color: var(--color-primary) !important;
+}
+
+.text-success {
+    color: var(--color-success) !important;
+}
+
+.text-warning {
+    color: var(--color-warning) !important;
+}
+
+.text-danger {
+    color: var(--color-danger) !important;
+}
+
+/* ==========================================================
+   Utilities
+========================================================== */
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.text-balance {
+    text-wrap: balance;
+}
+
+.text-pretty {
+    text-wrap: pretty;
+}

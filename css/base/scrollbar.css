@@ -1,0 +1,23 @@
+/* ==========================================================
+   base/scrollbar.css
+========================================================== */
+
+::-webkit-scrollbar {
+    width: .7rem;
+
+    height: .7rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-surface-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+}

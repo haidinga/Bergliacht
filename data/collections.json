@@ -1,0 +1,141 @@
+{
+    "version": "1.0",
+    "lastUpdated": "",
+
+    "data": [
+
+        {
+            "id": "nordic",
+            "active": true,
+
+            "content": {
+                "name": "Nordic",
+                "description": "Klare Linien, ruhige Formen und zeitloses skandinavisches Design."
+            },
+
+            "media": {
+                "thumbnail": "./assets/images/collections/nordic.webp",
+                "banner": "./assets/images/collections/nordic-banner.webp"
+            },
+
+            "sorting": {
+                "order": 1
+            }
+        },
+
+        {
+            "id": "alpine",
+            "active": true,
+
+            "content": {
+                "name": "Alpine",
+                "description": "Inspiriert von den Bergen, natürlichen Materialien und alpiner Ruhe."
+            },
+
+            "media": {
+                "thumbnail": "./assets/images/collections/alpine.webp",
+                "banner": "./assets/images/collections/alpine-banner.webp"
+            },
+
+            "sorting": {
+                "order": 2
+            }
+        },
+
+        {
+            "id": "organic",
+            "active": true,
+
+            "content": {
+                "name": "Organic",
+                "description": "Weiche Konturen und fließende Formen aus der Natur."
+            },
+
+            "media": {
+                "thumbnail": "./assets/images/collections/organic.webp",
+                "banner": "./assets/images/collections/organic-banner.webp"
+            },
+
+            "sorting": {
+                "order": 3
+            }
+        },
+
+        {
+            "id": "pazific",
+            "active": true,
+
+            "content": {
+                "name": "Pazific",
+                "description": "Klare Linien, ruhige Formen und zeitloses skandinavisches Design."
+            },
+
+            "media": {
+                "thumbnail": "./assets/images/collections/pazific.webp",
+                "banner": "./assets/images/collections/pazific-banner.webp"
+            },
+
+            "sorting": {
+                "order": 1
+            }
+        },
+
+        {
+            "id": "",
+            "active": false,
+
+            "content": {
+                "name": "",
+                "description": "Klare Linien, ruhige Formen und zeitloses skandinavisches Design."
+            },
+
+            "media": {
+                "thumbnail": "./assets/images/collections/emmsn.webp",
+                "banner": "./assets/images/collections/emmsn-banner.webp"
+            },
+
+            "sorting": {
+                "order": 1
+            }
+        },
+
+        {
+            "id": "minimal",
+            "active": true,
+
+            "content": {
+                "name": "Minimal",
+                "description": "Reduziertes Design mit Fokus auf Form und Funktion."
+            },
+
+            "media": {
+                "thumbnail": "./assets/images/collections/minimal.webp",
+                "banner": "./assets/images/collections/minimal-banner.webp"
+            },
+
+            "sorting": {
+                "order": 4
+            }
+        },
+
+        {
+            "id": "terra",
+            "active": true,
+
+            "content": {
+                "name": "Terra",
+                "description": "Warme Erdtöne und natürliche Oberflächen für moderne Wohnräume."
+            },
+
+            "media": {
+                "thumbnail": "./assets/images/collections/terra.webp",
+                "banner": "./assets/images/collections/terra-banner.webp"
+            },
+
+            "sorting": {
+                "order": 5
+            }
+        }
+
+    ]
+}

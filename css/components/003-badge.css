@@ -1,0 +1,45 @@
+/* ==========================================================================
+   BERGLIACHT DESIGN SYSTEM
+   Component: Badge
+   File: 003-badge.css
+   ========================================================================== */
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: var(--spacing-1) var(--spacing-3);
+
+    border-radius: var(--radius-full);
+
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   VARIANTS
+   ========================================================================== */
+
+.badge-primary {
+    background: var(--color-primary);
+    color: var(--color-text-inverse);
+}
+
+.badge-secondary {
+    background: var(--color-surface-interactive);
+    color: var(--color-text-primary);
+}
+
+.badge-outline {
+    background: transparent;
+    color: var(--color-primary);
+    border: var(--border-interactive);
+}

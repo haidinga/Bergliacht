@@ -1,0 +1,260 @@
+{
+    "version": "1.0",
+    "lastUpdated": "",
+
+    "data": [
+
+        {
+            "id": "anthrazit",
+            "active": true,
+
+            "content": {
+                "name": "Graphit",
+                "description": ""
+            },
+
+            "color": {
+                "hex": "#383537"
+            },
+
+            "media": {
+                "swatch": "./assets/images/colors/anthrazit.webp"
+            }
+        },
+
+        {
+            "id": "black",
+            "active": true,
+
+            "content": {
+                "name": "Onyx",
+                "description": ""
+            },
+
+            "color": {
+                "hex": "#000000"
+            },
+
+            "media": {
+                "swatch": "./assets/images/colors/black.webp"
+            }
+        },
+
+        {
+            "id": "bone-white",
+            "active": true,
+
+            "content": {
+                "name": "Elfenbein",
+                "description": ""
+            },
+
+            "color": {
+                "hex": "#FFF0C3"
+            },
+
+            "media": {
+                "swatch": "./assets/images/colors/bone-white.webp"
+            }
+        },
+
+        {
+            "id": "coffee",
+            "active": true,
+
+            "content": {
+                "name": "Mokka",
+                "description": ""
+            },
+
+            "color": {
+                "hex": "#3B342D"
+            },
+
+            "media": {
+                "swatch": "./assets/images/colors/coffee.webp"
+            }
+        },
+
+        {
+            "id": "cyan",
+            "active": false,
+
+            "content": {
+                "name": "Lagune",
+                "description": ""
+            },
+
+            "color": {
+                "hex": "#6E655C"
+            },
+
+            "media": {
+                "swatch": "./assets/images/colors/cyan.webp"
+            }
+        },
+
+        {
+            "id": "dark-blue",
+            "active": false,
+
+            "content": {
+                "name": "Lagune",
+                "description": ""
+            },
+
+            "color": {
+                "hex": "#6A4B3B"
+            },
+
+            "media": {
+                "swatch": "./assets/images/colors/dark-blue.webp"
+            }
+        },
+
+        {
+            "id": "light-green",
+            "active": false,
+
+            "content": {
+                "name": "Salbei",
+                "description": ""
+            },
+
+            "color": {
+                "hex": "#563B2F"
+            },
+
+            "media": {
+                "swatch": "./assets/images/colors/light-green.webp"
+            }
+        },
+
+        {
+            "id": "light-grey",
+            "active": true,
+
+            "content": {
+                "name": "Nebel",
+                "description": ""
+            },
+
+            "color": {
+                "hex": "#5C7257"
+            },
+
+            "media": {
+                "swatch": "./assets/images/colors/light-grey.webp"
+            }
+        },
+
+        {
+            "id": "oak",
+            "active": true,
+
+            "content": {
+                "name": "Eiche",
+                "description": ""
+            },
+
+            "color": {
+                "hex": "#5C7257"
+            },
+
+            "media": {
+                "swatch": "./assets/images/colors/oak.webp"
+            }
+        },
+
+        {
+            "id": "olive",
+            "active": true,
+
+            "content": {
+                "name": "Olive",
+                "description": ""
+            },
+
+            "color": {
+                "hex": "#5C7257"
+            },
+
+            "media": {
+                "swatch": "./assets/images/colors/olive.webp"
+            }
+        },
+
+        {
+            "id": "pink",
+            "active": true,
+
+            "content": {
+                "name": "Altrosa",
+                "description": ""
+            },
+
+            "color": {
+                "hex": "#5C7257"
+            },
+
+            "media": {
+                "swatch": "./assets/images/colors/pink.webp"
+            }
+        },
+
+        {
+            "id": "red",
+            "active": true,
+
+            "content": {
+                "name": "Rubin",
+                "description": ""
+            },
+
+            "color": {
+                "hex": "#5C7257"
+            },
+
+            "media": {
+                "swatch": "./assets/images/colors/red.webp"
+            }
+        },
+
+        {
+            "id": "white",
+            "active": true,
+
+            "content": {
+                "name": "Polarweiß",
+                "description": ""
+            },
+
+            "color": {
+                "hex": "#5C7257"
+            },
+
+            "media": {
+                "swatch": "./assets/images/colors/white.webp"
+            }
+        },
+
+        {
+            "id": "yellow",
+            "active": false,
+
+            "content": {
+                "name": "Sonnengelb",
+                "description": ""
+            },
+
+            "color": {
+                "hex": "#5C7257"
+            },
+
+            "media": {
+                "swatch": "./assets/images/colors/yellow.webp"
+            }
+        }
+
+    ]
+}

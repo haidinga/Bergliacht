@@ -1,0 +1,71 @@
+/* ==========================================================================
+   BERGLIACHT DESIGN SYSTEM
+   Component: Switch
+   File: 011-switch.css
+   ========================================================================== */
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+
+.switch {
+    position: relative;
+
+    width: 48px;
+    height: 28px;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    background: var(--color-border);
+
+    border-radius: var(--radius-full);
+
+    cursor: pointer;
+
+    transition:
+        background-color var(--transition-fast);
+}
+
+.switch::before {
+    content: "";
+
+    position: absolute;
+
+    top: 3px;
+    left: 3px;
+
+    width: 22px;
+    height: 22px;
+
+    background: var(--color-surface);
+
+    border-radius: var(--radius-full);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform var(--transition-fast);
+}
+
+/* ==========================================================================
+   STATES
+   ========================================================================== */
+
+.switch:checked {
+    background: var(--color-primary);
+}
+
+.switch:checked::before {
+    transform: translateX(20px);
+}
+
+.switch:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+.switch:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}

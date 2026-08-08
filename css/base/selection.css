@@ -1,0 +1,15 @@
+/* ==========================================================
+   base/selection.css
+========================================================== */
+
+::selection {
+    background: var(--color-primary);
+
+    color: var(--color-white);
+}
+
+::-moz-selection {
+    background: var(--color-primary);
+
+    color: var(--color-white);
+}

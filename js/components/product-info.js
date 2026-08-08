@@ -1,0 +1,115 @@
+/* ==========================================================
+   Imports
+========================================================== */
+
+import { getElement, setHTML } from "../utils/dom.js";
+
+/* ==========================================================
+   Product Info
+========================================================== */
+
+/**
+ * Rendert den Informationsbereich des Produkts.
+ *
+ * @param {Object} product
+ */
+export function renderProductInfo(product) {
+
+    const section = getElement("#product-info");
+
+    if (!section) return;
+
+    const startingPrice = Math.min(
+        ...product.variants.map((variant) => variant.price)
+    );
+
+    setHTML(section, `
+
+        <div class="product-info">
+
+            <div class="product-info__header">
+
+                <p class="product-info__brand">
+
+                    BERGLIACHT
+
+                </p>
+
+                <h1 class="product-info__title">
+
+                    ${product.content.name}
+
+                </h1>
+
+                <p class="product-info__description">
+
+                    ${product.content.shortDescription}
+
+                </p>
+
+            </div>
+
+            <div class="product-info__section">
+
+                <div id="variant-selector"></div>
+
+            </div>
+
+            <div class="product-info__section">
+
+                <div id="color-selector"></div>
+
+            </div>
+
+            <div class="product-info__section">
+
+                <div
+                    id="product-price"
+                    class="product-info__price"
+                >
+
+                    ab ${startingPrice.toFixed(2).replace(".", ",")} €
+
+                </div>
+
+            </div>
+
+            <div class="product-info__section">
+
+                <div id="quantity-selector"></div>
+
+                <div id="add-to-cart"></div>
+
+            </div>
+
+            <div class="product-info__section">
+
+                <div class="product-info__benefits">
+
+                    <div class="product-info__benefit">
+
+                        Individuell gefertigt
+
+                    </div>
+
+                    <div class="product-info__benefit">
+
+                        Nachhaltig produziert
+
+                    </div>
+
+                    <div class="product-info__benefit">
+
+                        Hochwertiges PLA
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    `);
+
+}
