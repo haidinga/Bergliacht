@@ -2,22 +2,26 @@
    Imports
 ========================================================== */
 
-import { getElement, setHTML } from "../utils/dom.js";
+import {
+    getElement,
+    setHTML
+} from "../utils/dom.js";
+
+import {
+    highlightVariantSelection
+} from "./variant-selector.js";
+
 
 /* ==========================================================
    Add To Cart
 ========================================================== */
 
-/**
- * Rendert den Warenkorb-Bereich.
- *
- * Der eigentliche Warenkorb wird in Sprint 3 entwickelt.
- */
-export function renderAddToCart() {
+export function renderAddToCart(product) {
 
     const section = getElement("#add-to-cart");
 
     if (!section) return;
+
 
     setHTML(section, `
 
@@ -28,69 +32,295 @@ export function renderAddToCart() {
                 class="add-to-cart__button"
                 type="button"
             >
-
                 In den Warenkorb
-
             </button>
 
             <p class="add-to-cart__hint">
-
                 Individuell für dich gefertigt.
-
             </p>
 
         </div>
 
     `);
 
-    const button = getElement("#add-to-cart-button");
+
+    /* ======================================================
+       Elements
+    ====================================================== */
+
+    const button = getElement(
+        "#add-to-cart-button"
+    );
+
+    if (!button) return;
+
+
+    /* ======================================================
+       Selection State
+    ====================================================== */
 
     let selectedVariant = null;
+
     let selectedColor = null;
+
     let quantity = 1;
 
-    document.addEventListener("variantChanged", (event) => {
 
-        selectedVariant = event.detail;
+    /* ======================================================
+       Variant Changed
+    ====================================================== */
 
-    });
+    document.addEventListener(
+        "variantChanged",
+        (event) => {
 
-    document.addEventListener("colorChanged", (event) => {
+            selectedVariant =
+                event.detail;
 
-        selectedColor = event.detail;
+        }
+    );
 
-    });
 
-    document.addEventListener("quantityChanged", (event) => {
+    /* ======================================================
+       Color Changed
+    ====================================================== */
 
-        quantity = event.detail.quantity;
+    document.addEventListener(
+        "colorChanged",
+        (event) => {
 
-    });
+            selectedColor =
+                event.detail;
 
-    button.addEventListener("click", () => {
+        }
+    );
 
-        console.log("Produkt zum Warenkorb hinzufügen:");
 
-        console.log({
+    /* ======================================================
+       Quantity Changed
+    ====================================================== */
 
-            variant: selectedVariant,
-            color: selectedColor,
-            quantity
+    document.addEventListener(
+        "quantityChanged",
+        (event) => {
 
-        });
+            quantity =
+                Number(
+                    event.detail.quantity
+                );
 
-        document.dispatchEvent(new CustomEvent("addToCart", {
+        }
+    );
 
-            detail: {
 
-                variant: selectedVariant,
-                color: selectedColor,
-                quantity
+    /* ======================================================
+       Add To Cart
+    ====================================================== */
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            /* ------------------------------------------
+               Validate Variant
+            ------------------------------------------ */
+
+            if (!selectedVariant) {
+
+                highlightVariantSelection();
+
+                return;
 
             }
 
-        }));
 
-    });
+            /* ------------------------------------------
+               Validate Color
+            ------------------------------------------ */
+
+            if (!selectedColor) {
+
+                console.warn(
+                    "⚠️ Bitte zuerst eine Farbe auswählen."
+                );
+
+                return;
+
+            }
+
+
+            /* ------------------------------------------
+               Validate Quantity
+            ------------------------------------------ */
+
+            if (
+                !Number.isInteger(quantity) ||
+                quantity < 1
+            ) {
+
+                quantity = 1;
+
+            }
+
+
+            /* ------------------------------------------
+               Load Cart
+            ------------------------------------------ */
+
+            let cart = [];
+
+            try {
+
+                cart =
+                    JSON.parse(
+                        localStorage.getItem(
+                            "bergliachtCart"
+                        )
+                    ) || [];
+
+            } catch (error) {
+
+                console.warn(
+                    "⚠️ Warenkorb konnte nicht gelesen werden. Neuer Warenkorb wird erstellt."
+                );
+
+                cart = [];
+
+            }
+
+
+            /* ------------------------------------------
+               Product ID
+            ------------------------------------------ */
+
+            const productId =
+                product.id;
+
+
+            /* ------------------------------------------
+               Existing Item
+            ------------------------------------------ */
+
+            const existingItem =
+                cart.find(
+                    (item) =>
+                        item.productId === productId &&
+                        item.variantId === selectedVariant.id &&
+                        item.colorId === selectedColor.id
+                );
+
+
+            /* ------------------------------------------
+               Existing Item
+            ------------------------------------------ */
+
+            if (existingItem) {
+
+                existingItem.quantity += quantity;
+
+            }
+
+
+            /* ------------------------------------------
+               New Item
+            ------------------------------------------ */
+
+            else {
+
+                cart.push({
+
+                    productId,
+
+                    variantId:
+                        selectedVariant.id,
+
+                    variantLabel:
+                        selectedVariant.label ??
+                        selectedVariant.id,
+
+                    price:
+                        Number(
+                            selectedVariant.price
+                        ),
+
+                    colorId:
+                        selectedColor.id,
+
+                    colorName:
+                        selectedColor.name,
+
+                    quantity
+
+                });
+
+            }
+
+
+            /* ------------------------------------------
+               Save Cart
+            ------------------------------------------ */
+
+            localStorage.setItem(
+                "bergliachtCart",
+                JSON.stringify(cart)
+            );
+
+
+            /* ------------------------------------------
+               Cart Event
+            ------------------------------------------ */
+
+            document.dispatchEvent(
+                new CustomEvent(
+                    "addToCart",
+                    {
+                        detail: {
+
+                            productId,
+
+                            variantId:
+                                selectedVariant.id,
+
+                            colorId:
+                                selectedColor.id,
+
+                            quantity
+
+                        }
+                    }
+                )
+            );
+
+
+            /* ------------------------------------------
+               Visual Feedback
+            ------------------------------------------ */
+
+            const originalText =
+                button.textContent;
+
+            button.textContent =
+                "Zum Warenkorb hinzugefügt ✓";
+
+            button.disabled = true;
+
+
+            setTimeout(() => {
+
+                button.textContent =
+                    originalText;
+
+                button.disabled = false;
+
+            }, 1500);
+
+
+            console.log(
+                "✅ Produkt zum Warenkorb hinzugefügt:",
+                cart
+            );
+
+        }
+    );
 
 }

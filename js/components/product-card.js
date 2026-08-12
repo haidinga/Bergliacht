@@ -14,6 +14,9 @@ export function createProductCard(product) {
         ...product.variants.map((variant) => variant.price)
     );
 
+    const thumbnailImage =
+        `${product.media.folder}${product.media.thumbnail}`;
+
     return `
 
         <article class="product-card">
@@ -28,7 +31,7 @@ export function createProductCard(product) {
 
                     <img
                         class="product-card__image"
-                        src="${product.media.thumbnail}"
+                        src="${thumbnailImage}"
                         alt="${product.content.name}"
                         loading="lazy"
                     >

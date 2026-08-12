@@ -9,6 +9,7 @@ import {
     removeClass
 } from "../utils/dom.js";
 
+
 /* ==========================================================
    Variant Selector
 ========================================================== */
@@ -23,6 +24,7 @@ export function renderVariantSelector(product) {
     const section = getElement("#variant-selector");
 
     if (!section) return;
+
 
     setHTML(section, `
 
@@ -40,6 +42,7 @@ export function renderVariantSelector(product) {
                         class="variant-selector__button"
                         type="button"
                         data-id="${variant.id}"
+                        data-label="${variant.label}"
                         data-price="${variant.price}"
                     >
 
@@ -55,38 +58,129 @@ export function renderVariantSelector(product) {
 
     `);
 
+
+    /* ======================================================
+       Buttons
+    ====================================================== */
+
     const buttons = section.querySelectorAll(
         ".variant-selector__button"
     );
 
+
     buttons.forEach((button) => {
 
-        button.addEventListener("click", () => {
+        button.addEventListener(
+            "click",
+            () => {
 
-            buttons.forEach((item) => {
+                buttons.forEach((item) => {
 
-                removeClass(item, "is-active");
+                    removeClass(
+                        item,
+                        "is-active"
+                    );
 
-            });
+                });
 
-            addClass(button, "is-active");
 
-            document.dispatchEvent(
-                new CustomEvent("variantChanged", {
+                addClass(
+                    button,
+                    "is-active"
+                );
 
-                    detail: {
 
-                        id: button.dataset.id,
+                /* ------------------------------------------
+                   Variant Event
+                ------------------------------------------ */
 
-                        price: Number(button.dataset.price)
+                document.dispatchEvent(
+                    new CustomEvent(
+                        "variantChanged",
+                        {
+                            detail: {
 
-                    }
+                                id:
+                                    button.dataset.id,
 
-                })
+                                label:
+                                    button.dataset.label,
+
+                                price:
+                                    Number(
+                                        button.dataset.price
+                                    )
+
+                            }
+                        }
+                    )
+                );
+
+            }
+        );
+
+    });
+
+}
+
+
+/* ==========================================================
+   Highlight Missing Selection
+========================================================== */
+
+export function highlightVariantSelection() {
+
+    const section =
+        getElement("#variant-selector");
+
+    if (!section) return;
+
+
+    const buttons =
+        section.querySelectorAll(
+            ".variant-selector__button"
+        );
+
+
+    if (!buttons.length) return;
+
+
+    buttons.forEach((button) => {
+
+        removeClass(
+            button,
+            "is-shaking"
+        );
+
+    });
+
+
+    /* Force animation restart */
+
+    void section.offsetWidth;
+
+
+    buttons.forEach((button) => {
+
+        addClass(
+            button,
+            "is-shaking"
+        );
+
+    });
+
+
+    setTimeout(() => {
+
+        buttons.forEach((button) => {
+
+            removeClass(
+                button,
+                "is-shaking"
             );
 
         });
 
-    });
+    }, 500);
 
 }

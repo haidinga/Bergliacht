@@ -5,12 +5,12 @@
     "data": [
 
         {
-            "id": "",
-            "slug": "",
+            "id": "the-amore",
+            "slug": "the-amore",
             "active": true,
 
             "content": {
-                "name": "The Ripple",
+                "name": "The Amore",
                 "subtitle": "Test Product Subtitle",
                 "shortDescription": "Test Product Short Description",
                 "description": "Test Product Description"
@@ -24,99 +24,12 @@
                 "bestseller": false
             },
 
-"media": {
+            "media": {
+                "folder": "./assets/images/products/the-amore/",
+                "thumbnail": "thumbnail.webp",
+                "scene": "scene.webp"
+            },
 
-    "thumbnail": "./assets/images/products/the-ripple/thumbnail.webp",
-
-    "colors": {
-
-        "anthrazit": {
-
-            "featuredImage": "./assets/images/products/the-ripple/anthrazit/featured.webp",
-
-            "gallery": [
-
-                "./assets/images/products/the-ripple/anthrazit/gallery-1.webp",
-                "./assets/images/products/the-ripple/anthrazit/gallery-2.webp",
-                "./assets/images/products/the-ripple/anthrazit/gallery-3.webp"
-
-            ]
-
-        },
-
-        "black": {
-
-            "featuredImage": "./assets/images/products/the-ripple/black/featured.webp",
-
-            "gallery": [
-
-                "./assets/images/products/the-ripple/black/gallery-1.webp",
-                "./assets/images/products/the-ripple/black/gallery-2.webp",
-                "./assets/images/products/the-ripple/black/gallery-3.webp"
-
-            ]
-
-        },
-
-        "bone-white": {
-
-            "featuredImage": "./assets/images/products/the-ripple/bone-white/featured.webp",
-
-            "gallery": [
-
-                "./assets/images/products/the-ripple/bone-white/gallery-1.webp",
-                "./assets/images/products/the-ripple/bone-white/gallery-2.webp",
-                "./assets/images/products/the-ripple/bone-white/gallery-3.webp"
-
-            ]
-
-        },
-
-        "coffee": {
-
-            "featuredImage": "./assets/images/products/the-ripple/coffee/featured.webp",
-
-            "gallery": [
-
-                "./assets/images/products/the-ripple/coffee/gallery-1.webp",
-                "./assets/images/products/the-ripple/coffee/gallery-2.webp",
-                "./assets/images/products/the-ripple/coffee/gallery-3.webp"
-
-            ]
-
-        },
-
-        "cyan": {
-
-            "featuredImage": "./assets/images/products/the-ripple/cyan/featured.webp",
-
-            "gallery": [
-
-                "./assets/images/products/the-ripple/cyan/gallery-1.webp",
-                "./assets/images/products/the-ripple/cyan/gallery-2.webp",
-                "./assets/images/products/the-ripple/cyan/gallery-3.webp"
-
-            ]
-
-        },
-
-        "white": {
-
-            "featuredImage": "./assets/images/products/the-ripple/white/featured.webp",
-
-            "gallery": [
-
-                "./assets/images/products/the-ripple/white/gallery-1.webp",
-                "./assets/images/products/the-ripple/white/gallery-2.webp",
-                "./assets/images/products/the-ripple/white/gallery-3.webp"
-
-            ]
-
-        }
-
-    }
-
-},
             "variants": [
                 {
                     "id": "small",
@@ -140,12 +53,24 @@
 
             "colors": [
                 "anthrazit",
+                "beige",
                 "black",
+                "blue-grey",
                 "bone-white",
-                "oak",
+                "clay",
                 "coffee",
-                "cyan",
-                "white"
+                "gold",
+                "grass-green",
+                "midnight",
+                "oak",
+                "olive",
+                "porzellan",
+                "red",
+                "roasted-chestnut",
+                "sakura-pink",
+                "silver",
+                "taro-purple",
+                "yellow"
             ],
 
             "specifications": {

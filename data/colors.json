@@ -23,6 +23,24 @@
         },
 
         {
+            "id": "beige",
+            "active": true,
+
+            "content": {
+                "name": "Beige",
+                "description": ""
+            },
+
+            "color": {
+                "hex": "#383537"
+            },
+
+            "media": {
+                "swatch": "./assets/images/colors/beige.webp"
+            }
+        },
+
+        {
             "id": "black",
             "active": true,
 
@@ -77,26 +95,27 @@
         },
 
         {
-            "id": "cyan",
-            "active": false,
+            "id": "clay",
+            "active": true,
 
             "content": {
-                "name": "Lagune",
+                "name": "Clay",
                 "description": ""
             },
 
             "color": {
-                "hex": "#6E655C"
+                "hex": "#383537"
             },
 
             "media": {
-                "swatch": "./assets/images/colors/cyan.webp"
+                "swatch": "./assets/images/colors/clay.webp"
             }
         },
 
+
         {
-            "id": "dark-blue",
-            "active": false,
+            "id": "blue-grey",
+            "active": true,
 
             "content": {
                 "name": "Lagune",
@@ -108,16 +127,16 @@
             },
 
             "media": {
-                "swatch": "./assets/images/colors/dark-blue.webp"
+                "swatch": "./assets/images/colors/blue-grey.webp"
             }
         },
 
         {
-            "id": "light-green",
+            "id": "silver",
             "active": false,
 
             "content": {
-                "name": "Salbei",
+                "name": "Silber",
                 "description": ""
             },
 
@@ -126,16 +145,16 @@
             },
 
             "media": {
-                "swatch": "./assets/images/colors/light-green.webp"
+                "swatch": "./assets/images/colors/silver.webp"
             }
         },
 
         {
-            "id": "light-grey",
+            "id": "taro-purple",
             "active": true,
 
             "content": {
-                "name": "Nebel",
+                "name": "Taro-Purple",
                 "description": ""
             },
 
@@ -144,7 +163,7 @@
             },
 
             "media": {
-                "swatch": "./assets/images/colors/light-grey.webp"
+                "swatch": "./assets/images/colors/taro-purple.webp"
             }
         },
 
@@ -185,7 +204,7 @@
         },
 
         {
-            "id": "pink",
+            "id": "sakura-pink",
             "active": true,
 
             "content": {
@@ -198,7 +217,7 @@
             },
 
             "media": {
-                "swatch": "./assets/images/colors/pink.webp"
+                "swatch": "./assets/images/colors/sakura-pink.webp"
             }
         },
 
@@ -221,11 +240,11 @@
         },
 
         {
-            "id": "white",
+            "id": "porzellan",
             "active": true,
 
             "content": {
-                "name": "Polarweiß",
+                "name": "Porzellan",
                 "description": ""
             },
 
@@ -234,7 +253,79 @@
             },
 
             "media": {
-                "swatch": "./assets/images/colors/white.webp"
+                "swatch": "./assets/images/colors/porzellan.webp"
+            }
+        },
+
+        {
+            "id": "gold",
+            "active": true,
+
+            "content": {
+                "name": "Gold",
+                "description": ""
+            },
+
+            "color": {
+                "hex": "#383537"
+            },
+
+            "media": {
+                "swatch": "./assets/images/colors/gold.webp"
+            }
+        },
+
+        {
+            "id": "grass-green",
+            "active": true,
+
+            "content": {
+                "name": "Grasgrün",
+                "description": ""
+            },
+
+            "color": {
+                "hex": "#383537"
+            },
+
+            "media": {
+                "swatch": "./assets/images/colors/grass-green.webp"
+            }
+        },
+
+        {
+            "id": "midnight",
+            "active": true,
+
+            "content": {
+                "name": "Mitternacht",
+                "description": ""
+            },
+
+            "color": {
+                "hex": "#383537"
+            },
+
+            "media": {
+                "swatch": "./assets/images/colors/midnight.webp"
+            }
+        },
+
+        {
+            "id": "roasted-chestnut",
+            "active": true,
+
+            "content": {
+                "name": "Kastanie",
+                "description": ""
+            },
+
+            "color": {
+                "hex": "#383537"
+            },
+
+            "media": {
+                "swatch": "./assets/images/colors/roasted-chestnut.webp"
             }
         },
 

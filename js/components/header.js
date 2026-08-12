@@ -5,6 +5,7 @@
 import { createIcon } from "./icon.js";
 import { getElement, setHTML } from "../utils/dom.js";
 
+
 /* ==========================================================
    Header
 ========================================================== */
@@ -20,6 +21,7 @@ export function renderHeader(settings) {
 
     if (!header) return;
 
+
     setHTML(header, `
 
         <div class="container">
@@ -28,7 +30,7 @@ export function renderHeader(settings) {
 
                 <a
                     class="header__brand"
-                    href="#hero"
+                    href="index.html"
                     aria-label="${settings.shop.name}"
                 >
 
@@ -40,6 +42,7 @@ export function renderHeader(settings) {
 
                 </a>
 
+
                 <nav
                     class="header__navigation"
                     aria-label="Hauptnavigation"
@@ -47,40 +50,41 @@ export function renderHeader(settings) {
 
                     <a
                         class="header__link"
-                        href="#hero"
+                        href="index.html#hero"
                     >
                         Startseite
                     </a>
-        
+
                     <a
                         class="header__link"
-                        href="#products"
+                        href="index.html#products"
                     >
                         Produkte
                     </a>
 
                     <a
                         class="header__link"
-                        href="#collections"
+                        href="index.html#collections"
                     >
                         Kollektionen
                     </a>
 
                     <a
                         class="header__link"
-                        href="#about"
+                        href="index.html#about"
                     >
                         Über uns
                     </a>
 
                     <a
                         class="header__link"
-                        href="#contact"
+                        href="index.html#contact"
                     >
                         Kontakt
                     </a>
 
                 </nav>
+
 
                 <div class="header__actions">
 
@@ -94,6 +98,7 @@ export function renderHeader(settings) {
 
                     </button>
 
+
                     <button
                         class="header__icon"
                         type="button"
@@ -104,15 +109,23 @@ export function renderHeader(settings) {
 
                     </button>
 
-                    <button
-                        class="header__icon"
-                        type="button"
+
+                    <a
+                        class="header__icon header__cart"
+                        href="./cart.html"
                         aria-label="Warenkorb"
                     >
 
                         ${createIcon("shopping-bag")}
 
-                    </button>
+                        <span
+                            class="header__cart-count"
+                            aria-label="Artikel im Warenkorb"
+                        >
+                            0
+                        </span>
+
+                    </a>
 
                 </div>
 
@@ -121,5 +134,121 @@ export function renderHeader(settings) {
         </div>
 
     `);
+
+
+    /* ======================================================
+       Cart Counter
+    ====================================================== */
+
+    updateCartCounter();
+
+
+    /* ======================================================
+       Cart Events
+    ====================================================== */
+
+    document.addEventListener(
+        "addToCart",
+        updateCartCounter
+    );
+
+    document.addEventListener(
+        "cartUpdated",
+        updateCartCounter
+    );
+
+
+    /* ======================================================
+       Storage Changes
+    ====================================================== */
+
+    window.addEventListener(
+        "storage",
+        (event) => {
+
+            if (
+                event.key === "bergliachtCart"
+            ) {
+
+                updateCartCounter();
+
+            }
+
+        }
+    );
+
+
+    /* ======================================================
+       Safety Refresh
+    ====================================================== */
+
+    setInterval(
+        updateCartCounter,
+        500
+    );
+
+}
+
+
+/* ==========================================================
+   Update Cart Counter
+========================================================== */
+
+function updateCartCounter() {
+
+    const counter =
+        getElement(".header__cart-count");
+
+    if (!counter) return;
+
+
+    let cart = [];
+
+
+    try {
+
+        cart =
+            JSON.parse(
+                localStorage.getItem(
+                    "bergliachtCart"
+                )
+            ) || [];
+
+    } catch (error) {
+
+        cart = [];
+
+    }
+
+
+    const itemCount =
+        cart.reduce(
+            (total, item) => {
+
+                return total +
+                    Number(
+                        item.quantity || 0
+                    );
+
+            },
+            0
+        );
+
+
+    counter.textContent =
+        itemCount;
+
+
+    if (itemCount > 0) {
+
+        counter.style.display =
+            "flex";
+
+    } else {
+
+        counter.style.display =
+            "none";
+
+    }
 
 }

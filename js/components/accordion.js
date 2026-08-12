@@ -32,8 +32,7 @@ export function renderAccordion(product) {
 
                 ${createItem(
                     "Beschreibung",
-                    product.content.description,
-                    true
+                    product.content.description
                 )}
 
                 ${createItem(
@@ -67,25 +66,53 @@ export function renderAccordion(product) {
 
     `);
 
-    const items = section.querySelectorAll(".accordion__item");
+    const items = section.querySelectorAll(
+        ".accordion__item"
+    );
 
     items.forEach((item) => {
 
-        const button = item.querySelector(".accordion__button");
+        const button = item.querySelector(
+            ".accordion__button"
+        );
 
         button.addEventListener("click", () => {
 
-            const isOpen = item.classList.contains("is-open");
+            const isOpen = item.classList.contains(
+                "is-open"
+            );
 
             items.forEach((accordionItem) => {
 
-                removeClass(accordionItem, "is-open");
+                removeClass(
+                    accordionItem,
+                    "is-open"
+                );
+
+                const accordionButton =
+                    accordionItem.querySelector(
+                        ".accordion__button"
+                    );
+
+                if (accordionButton) {
+
+                    accordionButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
 
             });
 
             if (!isOpen) {
 
                 addClass(item, "is-open");
+
+                button.setAttribute(
+                    "aria-expanded",
+                    "true"
+                );
 
             }
 
@@ -99,28 +126,27 @@ export function renderAccordion(product) {
    Accordion Item
 ========================================================== */
 
-function createItem(title, content, open = false) {
+function createItem(title, content) {
 
     return `
 
-        <div class="accordion__item ${open ? "is-open" : ""}">
+        <div class="accordion__item">
 
             <button
                 class="accordion__button"
                 type="button"
-                aria-expanded="${open}"
+                aria-expanded="false"
             >
 
                 <span class="accordion__title">
-
                     ${title}
-
                 </span>
 
-                <span class="accordion__icon">
-
+                <span
+                    class="accordion__icon"
+                    aria-hidden="true"
+                >
                     +
-
                 </span>
 
             </button>
@@ -128,9 +154,7 @@ function createItem(title, content, open = false) {
             <div class="accordion__content">
 
                 <p>
-
                     ${content ?? ""}
-
                 </p>
 
             </div>

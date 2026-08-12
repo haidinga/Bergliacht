@@ -3,6 +3,7 @@
 ========================================================== */
 
 #header {
+
     position: sticky;
 
     top: 0;
@@ -14,9 +15,16 @@
     backdrop-filter: blur(40px);
 
     border-bottom: 1px solid var(--color-border);
+
 }
 
+
+/* ==========================================================
+   Header Layout
+========================================================== */
+
 .header {
+
     display: flex;
 
     justify-content: space-between;
@@ -26,9 +34,16 @@
     gap: var(--space-8);
 
     min-height: 3rem;
+
 }
 
+
+/* ==========================================================
+   Brand
+========================================================== */
+
 .header__brand {
+
     display: flex;
 
     align-items: center;
@@ -36,9 +51,11 @@
     gap: var(--space-4);
 
     flex-shrink: 0;
+
 }
 
 .header__logo {
+
     width: 2.5rem;
 
     height: auto;
@@ -48,29 +65,42 @@
 }
 
 .header__brand:hover .header__logo {
+
     transform: scale(1.03);
+
 }
 
+
+/* ==========================================================
+   Navigation
+========================================================== */
+
 .header__navigation {
+
     display: flex;
 
     align-items: center;
 
     gap: var(--space-8);
+
 }
 
 .header__link {
+
     position: relative;
 
     font-weight: var(--font-weight-medium);
+
 }
 
 .header__link::after {
+
     content: "";
 
     position: absolute;
 
     left: 0;
+
     bottom: -.35rem;
 
     width: 0;
@@ -80,20 +110,128 @@
     background: var(--color-primary);
 
     transition: width .25s ease;
+
 }
 
 .header__link:hover::after {
+
     width: 100%;
+
 }
 
+
+/* ==========================================================
+   Actions
+========================================================== */
+
 .header__actions {
+
     display: flex;
 
     align-items: center;
 
     gap: var(--space-2);
+
 }
 
-.header__menu {
+
+/* ==========================================================
+   Header Icons
+========================================================== */
+
+.header__icon {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 2.5rem;
+
+    height: 2.5rem;
+
+    padding: 0;
+
+    background: transparent;
+
+    border: 0;
+
+    color: var(--color-text-primary);
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+}
+
+.header__icon:hover {
+
+    color: var(--color-primary);
+
+}
+
+
+/* ==========================================================
+   Cart
+========================================================== */
+
+.header__cart {
+
+    position: relative;
+
+}
+
+
+/* ==========================================================
+   Cart Counter
+========================================================== */
+
+.header__cart-count {
+
+    position: absolute;
+
+    top: -.15rem;
+
+    right: -.15rem;
+
     display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-width: 1.1rem;
+
+    height: 1.1rem;
+
+    padding: 0 .25rem;
+
+    background: var(--color-primary);
+
+    color: #fff;
+
+    border: 2px solid #fff;
+
+    border-radius: 999px;
+
+    font-size: .65rem;
+
+    font-weight: 700;
+
+    line-height: 1;
+
+}
+
+
+/* ==========================================================
+   Mobile Menu
+========================================================== */
+
+.header__menu {
+
+    display: none;
+
 }

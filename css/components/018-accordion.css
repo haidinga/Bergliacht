@@ -4,45 +4,214 @@
    File: 018-accordion.css
    ========================================================================== */
 
+
 /* ==========================================================================
    BASE
-   ========================================================================== */
+========================================================================== */
 
 .accordion {
-    border: var(--border-default);
-    border-radius: var(--radius-lg);
 
-    overflow: hidden;
-}
-
-.accordion-item + .accordion-item {
-    border-top: var(--border-default);
-}
-
-.accordion-header {
     width: 100%;
 
+    border-top: var(--border-default);
+
+}
+
+
+/* ==========================================================================
+   ITEM
+========================================================================== */
+
+.accordion__item {
+
+    border-bottom: var(--border-default);
+
+}
+
+
+/* ==========================================================================
+   BUTTON
+========================================================================== */
+
+.accordion__button {
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
-    padding: var(--spacing-5);
+    width: 100%;
 
-    background: var(--color-surface);
+    padding: 1.15rem 0;
+
+    background: transparent;
+
+    border: 0;
+
+    color: var(--color-text-primary);
+
+    font-family: inherit;
+
+    font-size: 1rem;
+
+    font-weight: 500;
+
+    text-align: left;
 
     cursor: pointer;
 
-    transition: background-color var(--transition-fast);
+    transition:
+        color .2s ease,
+        padding .2s ease;
+
 }
 
-.accordion-header:hover {
-    background: var(--color-surface-interactive);
+
+/* ==========================================================================
+   TITLE
+========================================================================== */
+
+.accordion__title {
+
+    display: block;
+
 }
 
-.accordion-body {
-    padding: var(--spacing-5);
 
-    background: var(--color-background);
+/* ==========================================================================
+   ICON
+========================================================================== */
+
+.accordion__icon {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 1.5rem;
+
+    height: 1.5rem;
 
     color: var(--color-text-secondary);
+
+    font-size: 1.25rem;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    transition:
+        transform .25s ease,
+        color .2s ease;
+
+}
+
+
+/* ==========================================================================
+   HOVER
+========================================================================== */
+
+.accordion__button:hover {
+
+    color: var(--color-primary);
+
+}
+
+.accordion__button:hover .accordion__icon {
+
+    color: var(--color-primary);
+
+}
+
+
+/* ==========================================================================
+   CONTENT
+========================================================================== */
+
+.accordion__content {
+
+    display: grid;
+
+    grid-template-rows: 0fr;
+
+    transition:
+        grid-template-rows .3s ease;
+
+}
+
+.accordion__content p {
+
+    min-height: 0;
+
+    margin: 0;
+
+    overflow: hidden;
+
+    color: var(--color-text-secondary);
+
+    font-size: .9rem;
+
+    line-height: 1.65;
+
+    opacity: 0;
+
+    transition:
+        opacity .2s ease,
+        padding .3s ease;
+
+}
+
+
+/* ==========================================================================
+   OPEN STATE
+========================================================================== */
+
+.accordion__item.is-open .accordion__content {
+
+    grid-template-rows: 1fr;
+
+}
+
+.accordion__item.is-open .accordion__content p {
+
+    padding: 0 0 1.25rem;
+
+    opacity: 1;
+
+}
+
+.accordion__item.is-open .accordion__icon {
+
+    transform: rotate(45deg);
+
+    color: var(--color-primary);
+
+}
+
+
+/* ==========================================================================
+   MOBILE
+========================================================================== */
+
+@media (max-width: 768px) {
+
+    .accordion__button {
+
+        padding: 1rem 0;
+
+        font-size: .95rem;
+
+    }
+
+    .accordion__content p {
+
+        font-size: .875rem;
+
+        line-height: 1.6;
+
+    }
+
 }

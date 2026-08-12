@@ -69,10 +69,7 @@ async function initializeProductPage() {
 
         renderProductLayout();
 
-        renderProductGallery(
-            product,
-            defaultColor
-        );
+        renderProductGallery(product);
 
         renderProductInfo(product);
 
@@ -86,7 +83,7 @@ async function initializeProductPage() {
 
         renderQuantitySelector();
 
-        renderAddToCart();
+        renderAddToCart(product);
 
         renderAccordion(product);
 
