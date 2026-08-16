@@ -95,7 +95,91 @@
                 "created": "",
                 "updated": ""
             }
+        },
+
+        {
+    "id": "the-ripple",
+    "slug": "the-ripple",
+    "active": true,
+    "content": {
+        "name": "The Ripple",
+        "subtitle": "Test Untertitel",
+        "shortDescription": "Test Kurzbeschreibung",
+        "description": "Test Beschreibung"
+    },
+    "classification": {
+        "category": "vases",
+        "collection": "organic",
+        "featured": false,
+        "new": false,
+        "bestseller": false
+    },
+    "media": {
+        "folder": "./assets/images/products/the-ripple/",
+        "thumbnail": "thumbnail.webp",
+        "scene": "scene.webp"
+    },
+    "variants": [
+        {
+            "id": "small",
+            "label": "120mm",
+            "height": 120,
+            "price": 24.9
+        },
+        {
+            "id": "medium",
+            "label": "180mm",
+            "height": 180,
+            "price": 34.9
+        },
+        {
+            "id": "large",
+            "label": "240mm",
+            "height": 240,
+            "price": 44.9
         }
+    ],
+    "colors": [
+        "anthrazit",
+        "beige",
+        "black",
+        "bone-white",
+        "coffee",
+        "clay",
+        "blue-grey",
+        "silver",
+        "taro-purple",
+        "oak",
+        "olive",
+        "sakura-pink",
+        "red",
+        "porzellan",
+        "gold",
+        "grass-green",
+        "midnight",
+        "roasted-chestnut",
+        "yellow"
+    ],
+    "specifications": {
+        "material": "PLA",
+        "manufacturer": "Bergliacht",
+        "care": "Mit feuchtem Tuch abwischen"
+    },
+    "notes": {
+        "manufacturing": "",
+        "surface": ""
+    },
+    "attributes": {
+        "waterproof": false,
+        "indoor": true,
+        "outdoor": false
+    },
+    "meta": {
+        "created": "2026-08-12T15:54:29.105Z",
+        "updated": "2026-08-12T15:54:29.105Z"
+    }
+}
 
     ]
 }
+

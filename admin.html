@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Bergliacht – Admin</title>
+
+    <link
+        rel="stylesheet"
+        href="./css/main.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./css/pages/admin.css"
+    >
+
+</head>
+
+
+<body>
+
+    <main id="admin">
+
+        <div class="container">
+
+            <!-- ==================================================
+                 Admin Header
+            ================================================== -->
+
+            <header class="admin__header">
+
+                <div>
+
+                    <p class="admin__eyebrow">
+                        Bergliacht
+                    </p>
+
+                    <h1 class="admin__title">
+                        Produktverwaltung
+                    </h1>
+
+                    <p class="admin__intro">
+                        Verwalte deine Produkte und erstelle neue Produkte.
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="new-product-button"
+                    class="admin__primary-button"
+                    type="button"
+                >
+                    + Neues Produkt
+                </button>
+
+            </header>
+
+
+            <!-- ==================================================
+                 Product List
+            ================================================== -->
+
+            <section
+                id="product-overview"
+                class="admin__products"
+            >
+
+                <div class="admin__section-header">
+
+                    <h2 class="admin__section-title">
+                        Produkte
+                    </h2>
+
+                    <span
+                        id="product-count"
+                        class="admin__product-count"
+                    >
+                        0 Produkte
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="product-list"
+                    class="admin__product-list"
+                >
+
+                    <p class="admin__loading">
+                        Produkte werden geladen …
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 New Product
+            ================================================== -->
+
+            <section
+                id="product-editor"
+                class="admin-editor"
+                hidden
+            >
+
+                <div class="admin-editor__header">
+
+                    <div>
+
+                        <p class="admin__eyebrow">
+                            Produktverwaltung
+                        </p>
+
+                        <h2 class="admin-editor__title">
+                            Neues Produkt
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        id="cancel-product-button"
+                        class="admin__secondary-button"
+                        type="button"
+                    >
+                        Abbrechen
+                    </button>
+
+                </div>
+
+
+                <form
+                    id="product-form"
+                    class="admin-form"
+                >
+
+                    <!-- ==================================================
+                         Basic Information
+                    ================================================== -->
+
+                    <section class="admin-form__section">
+
+                        <div class="admin-form__section-header">
+
+                            <h3>
+                                Grundinformationen
+                            </h3>
+
+                            <p>
+                                Die wichtigsten Informationen zum Produkt.
+                            </p>
+
+                        </div>
+
+
+                        <div class="admin-form__grid">
+
+                            <div class="admin-form__field admin-form__field--full">
+
+                                <label for="product-name">
+                                    Produktname *
+                                </label>
+
+                                <input
+                                    id="product-name"
+                                    name="name"
+                                    type="text"
+                                    placeholder="z. B. The Amore"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="admin-form__field admin-form__field--full">
+
+                                <label for="product-subtitle">
+                                    Untertitel
+                                </label>
+
+                                <input
+                                    id="product-subtitle"
+                                    name="subtitle"
+                                    type="text"
+                                    placeholder="Kurzer Untertitel"
+                                >
+
+                            </div>
+
+
+                            <div class="admin-form__field admin-form__field--full">
+
+                                <label for="product-short-description">
+                                    Kurzbeschreibung
+                                </label>
+
+                                <textarea
+                                    id="product-short-description"
+                                    name="shortDescription"
+                                    rows="3"
+                                    placeholder="Kurze Beschreibung für Produktkarten ..."
+                                ></textarea>
+
+                            </div>
+
+
+                            <div class="admin-form__field admin-form__field--full">
+
+                                <label for="product-description">
+                                    Beschreibung
+                                </label>
+
+                                <textarea
+                                    id="product-description"
+                                    name="description"
+                                    rows="6"
+                                    placeholder="Ausführliche Produktbeschreibung ..."
+                                ></textarea>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ==================================================
+                         Classification
+                    ================================================== -->
+
+                    <section class="admin-form__section">
+
+                        <div class="admin-form__section-header">
+
+                            <h3>
+                                Zuordnung
+                            </h3>
+
+                            <p>
+                                Kategorie und Darstellung im Shop.
+                            </p>
+
+                        </div>
+
+
+                        <div class="admin-form__grid">
+
+                            <div class="admin-form__field">
+
+                                <label for="product-category">
+                                    Kategorie
+                                </label>
+
+                                <input
+                                    id="product-category"
+                                    name="category"
+                                    type="text"
+                                    value="vases"
+                                    placeholder="z. B. vases"
+                                >
+
+                            </div>
+
+
+                            <div class="admin-form__field">
+
+                                <label for="product-collection">
+                                    Kollektion
+                                </label>
+
+                                <input
+                                    id="product-collection"
+                                    name="collection"
+                                    type="text"
+                                    placeholder="z. B. pazific"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="admin-form__checkbox-row">
+
+                            <label class="admin-checkbox">
+
+                                <input
+                                    id="product-featured"
+                                    type="checkbox"
+                                >
+
+                                <span>
+                                    Featured
+                                </span>
+
+                            </label>
+
+
+                            <label class="admin-checkbox">
+
+                                <input
+                                    id="product-new"
+                                    type="checkbox"
+                                >
+
+                                <span>
+                                    Neu
+                                </span>
+
+                            </label>
+
+
+                            <label class="admin-checkbox">
+
+                                <input
+                                    id="product-bestseller"
+                                    type="checkbox"
+                                >
+
+                                <span>
+                                    Bestseller
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ==================================================
+                         Variants
+                    ================================================== -->
+
+                    <section class="admin-form__section">
+
+                        <div class="admin-form__section-header">
+
+                            <h3>
+                                Größen & Preise
+                            </h3>
+
+                            <p>
+                                Lege die verfügbaren Größen und Preise fest.
+                            </p>
+
+                        </div>
+
+
+                        <div
+                            id="variant-list"
+                            class="admin-variant-list"
+                        ></div>
+
+
+                        <button
+                            id="add-variant-button"
+                            class="admin__secondary-button"
+                            type="button"
+                        >
+                            + Größe hinzufügen
+                        </button>
+
+                    </section>
+
+
+                    <!-- ==================================================
+                         Colors
+                    ================================================== -->
+
+                    <section class="admin-form__section">
+
+                        <div class="admin-form__section-header">
+
+                            <h3>
+                                Farben
+                            </h3>
+
+                            <p>
+                                Wähle die für dieses Produkt verfügbaren Farben.
+                            </p>
+
+                        </div>
+
+
+                        <div class="admin-color-actions">
+
+    <button
+        id="select-all-colors"
+        class="admin__secondary-button"
+        type="button"
+    >
+        Alle auswählen
+    </button>
+
+</div>
+
+<div
+    id="color-list"
+    class="admin-color-list"
+>
+    <p class="admin__loading">
+        Farben werden geladen …
+    </p>
+</div>
+
+                    </section>
+
+
+                    <!-- ==================================================
+                         Media
+                    ================================================== -->
+
+                    <section class="admin-form__section">
+
+                        <div class="admin-form__section-header">
+
+                            <h3>
+                                Medien
+                            </h3>
+
+                            <p>
+                                Die Bildordner werden manuell erstellt. Hier werden nur die Dateinamen hinterlegt.
+                            </p>
+
+                        </div>
+
+
+                        <div class="admin-form__grid">
+
+                            <div class="admin-form__field">
+
+                                <label for="product-folder">
+                                    Produktordner
+                                </label>
+
+                                <input
+                                    id="product-folder"
+                                    type="text"
+                                    placeholder="the-amore"
+                                >
+
+                            </div>
+
+
+                            <div class="admin-form__field">
+
+                                <label for="product-thumbnail">
+                                    Thumbnail
+                                </label>
+
+                                <input
+                                    id="product-thumbnail"
+                                    type="text"
+                                    value="thumbnail.webp"
+                                >
+
+                            </div>
+
+
+                            <div class="admin-form__field">
+
+                                <label for="product-scene">
+                                    Szenenbild
+                                </label>
+
+                                <input
+                                    id="product-scene"
+                                    type="text"
+                                    value="scene.webp"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ==================================================
+                         Specifications
+                    ================================================== -->
+
+                    <section class="admin-form__section">
+
+                        <div class="admin-form__section-header">
+
+                            <h3>
+                                Produktinformationen
+                            </h3>
+
+                            <p>
+                                Material, Hersteller und Pflegeinformationen.
+                            </p>
+
+                        </div>
+
+
+                        <div class="admin-form__grid">
+
+                            <div class="admin-form__field">
+
+                                <label for="product-material">
+                                    Material
+                                </label>
+
+                                <input
+                                    id="product-material"
+                                    type="text"
+                                    value="PLA"
+                                >
+
+                            </div>
+
+
+                            <div class="admin-form__field">
+
+                                <label for="product-manufacturer">
+                                    Hersteller
+                                </label>
+
+                                <input
+                                    id="product-manufacturer"
+                                    type="text"
+                                    value="Bergliacht"
+                                >
+
+                            </div>
+
+
+                            <div class="admin-form__field admin-form__field--full">
+
+                                <label for="product-care">
+                                    Pflege
+                                </label>
+
+                                <textarea
+                                    id="product-care"
+                                    rows="4"
+                                ></textarea>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ==================================================
+                         Notes
+                    ================================================== -->
+
+                    <section class="admin-form__section">
+
+                        <div class="admin-form__section-header">
+
+                            <h3>
+                                Hinweise
+                            </h3>
+
+                        </div>
+
+
+                        <div class="admin-form__grid">
+
+                            <div class="admin-form__field admin-form__field--full">
+
+                                <label for="product-manufacturing">
+                                    Herstellung
+                                </label>
+
+                                <textarea
+                                    id="product-manufacturing"
+                                    rows="4"
+                                ></textarea>
+
+                            </div>
+
+
+                            <div class="admin-form__field admin-form__field--full">
+
+                                <label for="product-surface">
+                                    Oberfläche
+                                </label>
+
+                                <textarea
+                                    id="product-surface"
+                                    rows="4"
+                                ></textarea>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ==================================================
+                         Attributes
+                    ================================================== -->
+
+                    <section class="admin-form__section">
+
+                        <div class="admin-form__section-header">
+
+                            <h3>
+                                Eigenschaften
+                            </h3>
+
+                        </div>
+
+
+                        <div class="admin-form__checkbox-row">
+
+                            <label class="admin-checkbox">
+
+                                <input
+                                    id="product-waterproof"
+                                    type="checkbox"
+                                >
+
+                                <span>
+                                    Wasserfest
+                                </span>
+
+                            </label>
+
+
+                            <label class="admin-checkbox">
+
+                                <input
+                                    id="product-indoor"
+                                    type="checkbox"
+                                    checked
+                                >
+
+                                <span>
+                                    Indoor
+                                </span>
+
+                            </label>
+
+
+                            <label class="admin-checkbox">
+
+                                <input
+                                    id="product-outdoor"
+                                    type="checkbox"
+                                >
+
+                                <span>
+                                    Outdoor
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- ==================================================
+                         Form Actions
+                    ================================================== -->
+
+                    <div class="admin-form__actions">
+
+                        <button
+                            id="cancel-product-button-bottom"
+                            class="admin__secondary-button"
+                            type="button"
+                        >
+                            Abbrechen
+                        </button>
+
+
+                        <button
+                            class="admin__primary-button"
+                            type="submit"
+                        >
+                            Produkt erstellen
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <script
+        type="module"
+        src="./js/pages/admin.js"
+    ></script>
+
+</body>
+
+</html>
