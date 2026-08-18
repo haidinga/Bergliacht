@@ -144,7 +144,9 @@ export function createProductCard(product) {
                         class="product-card__cta"
                         href="product.html?id=${product.id}"
                     >
-                        <span>Produkt ansehen</span>
+                        <span>
+                            <span class="product-card__cta-prefix">Produkt </span>Ansehen
+                        </span>
                         ${createIcon("arrow-right")}
                     </a>
                 </div>

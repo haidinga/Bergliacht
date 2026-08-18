@@ -30,69 +30,89 @@ export function renderMobileMenu() {
             aria-modal="true"
             aria-labelledby="mobile-menu-title"
         >
-            <div class="mobile-menu__header">
-                <p id="mobile-menu-title">Menü</p>
-
-                <button
-                    class="mobile-menu__close"
-                    type="button"
-                    aria-label="Menü schließen"
-                >
-                    ${createIcon("x")}
-                </button>
-            </div>
+            <h2 id="mobile-menu-title" class="mobile-menu__title">
+                Menü
+            </h2>
 
             <nav
                 class="mobile-menu__navigation"
                 aria-label="Mobile Hauptnavigation"
             >
                 <a href="vasen.html">
-                    <span>Vasen</span>
+                    <span>VASEN</span>
                     ${createIcon("arrow-right")}
                 </a>
 
                 <a href="schriftzuege.html">
-                    <span>Schriftzüge</span>
+                    <span>SCHRIFTZÜGE</span>
                     ${createIcon("arrow-right")}
                 </a>
 
                 <a href="dekoschalen.html">
-                    <span>Dekoschalen</span>
+                    <span>DEKOSCHALEN</span>
                     ${createIcon("arrow-right")}
                 </a>
 
-                <a href="collections.html">
-                    <span>Kollektionen</span>
+                <a href="index.html#collections">
+                    <span>INSPIRATION</span>
                     ${createIcon("arrow-right")}
                 </a>
             </nav>
 
             <div class="mobile-menu__secondary">
                 <a href="about.html">Über uns</a>
+                <a href="index.html#footer">Service</a>
             </div>
         </div>
     `;
 
     document.body.append(overlay);
 
-    const closeButton = overlay.querySelector(".mobile-menu__close");
+    const triggerIcon = trigger.querySelector(".menu-toggle-icon");
+    const header = document.querySelector("#header");
+    let closeTimer = null;
+
+    const updateTrigger = (isOpen) => {
+        trigger.setAttribute("aria-expanded", String(isOpen));
+        trigger.setAttribute(
+            "aria-label",
+            isOpen ? "Menü schließen" : "Menü öffnen"
+        );
+
+        triggerIcon?.classList.toggle("is-active", isOpen);
+    };
 
     const open = () => {
+        window.clearTimeout(closeTimer);
+        header?.classList.remove("is-hidden");
+        header?.classList.add("menu-is-open");
+        const headerHeight = `${header?.offsetHeight ?? 80}px`;
+
+        overlay.style.setProperty("--menu-header-height", headerHeight);
+        document.body.style.setProperty("--menu-header-height", headerHeight);
         overlay.classList.add("is-open");
         overlay.setAttribute("aria-hidden", "false");
         document.body.classList.add("mobile-menu-is-open");
-        window.setTimeout(() => closeButton.focus(), 250);
+        updateTrigger(true);
     };
 
     const close = () => {
         overlay.classList.remove("is-open");
         overlay.setAttribute("aria-hidden", "true");
-        document.body.classList.remove("mobile-menu-is-open");
+        updateTrigger(false);
         trigger.focus();
+
+        closeTimer = window.setTimeout(() => {
+            document.body.classList.remove("mobile-menu-is-open");
+            document.body.style.removeProperty("--menu-header-height");
+            header?.classList.remove("menu-is-open");
+        }, 500);
     };
 
-    trigger.addEventListener("click", open);
-    closeButton.addEventListener("click", close);
+    trigger.setAttribute("aria-expanded", "false");
+    trigger.addEventListener("click", () => {
+        overlay.classList.contains("is-open") ? close() : open();
+    });
 
     overlay.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", close);

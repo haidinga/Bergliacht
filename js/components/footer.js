@@ -50,59 +50,77 @@ export function renderFooter(settings) {
 
                     <div class="footer__grid">
 
-                        <div class="footer__column">
+                        <div class="footer__column" data-footer-accordion>
 
-                            <h3 class="footer__heading">
+                            <button
+                                class="footer__heading"
+                                type="button"
+                                aria-expanded="false"
+                            >
+                                <span>Navigation</span>
+                                <span class="footer__heading-icon" aria-hidden="true">+</span>
+                            </button>
 
-                                Navigation
-
-                            </h3>
-
-                            <nav class="footer__nav">
-
-                                <a href="index.html#hero">Startseite</a>
-
-                                <a href="index.html#products">Produkte</a>
-
-                                <a href="collections.html">Kollektionen</a>
-
-                                <a href="about.html">Über uns</a>
-
-                                <a href="about.html#contact">Kontakt</a>
-
-                            </nav>
+                            <div class="footer__column-content">
+                                <nav class="footer__nav">
+                                    <a href="index.html#hero">Startseite</a>
+                                    <a href="collections.html">Kollektionen</a>
+                                    <a href="about.html">Über uns</a>
+                                </nav>
+                            </div>
 
                         </div>
 
-                        <div class="footer__column">
+                        <div class="footer__column" data-footer-accordion>
 
-                            <h3 class="footer__heading">
+                            <button
+                                class="footer__heading"
+                                type="button"
+                                aria-expanded="false"
+                            >
+                                <span>Service</span>
+                                <span class="footer__heading-icon" aria-hidden="true">+</span>
+                            </button>
 
-                                Service
-
-                            </h3>
-
-                            <nav class="footer__nav">
-
-                                <a href="#">Versand</a>
-
-                                <a href="#">FAQ</a>
-
-                                <a href="#">Datenschutz</a>
-
-                                <a href="#">Impressum</a>
-
-                            </nav>
+                            <div class="footer__column-content">
+                                <nav class="footer__nav">
+                                    <a href="#">Versand</a>
+                                    <a href="#">FAQ</a>
+                                    <a href="#">Datenschutz</a>
+                                    <a href="#">Impressum</a>
+                                </nav>
+                            </div>
 
                         </div>
 
-                        <div class="footer__column">
+                        <div class="footer__column" data-footer-accordion>
 
-                            <h3 class="footer__heading">
+                            <button
+                                class="footer__heading"
+                                type="button"
+                                aria-expanded="false"
+                            >
+                                <span>Shop</span>
+                                <span class="footer__heading-icon" aria-hidden="true">+</span>
+                            </button>
+
+                            <div class="footer__column-content">
+                                <nav class="footer__nav">
+                                    <a href="vasen.html">Vasen</a>
+                                    <a href="schriftzuege.html">Schriftzüge</a>
+                                    <a href="dekoschalen.html">Dekoschalen</a>
+                                </nav>
+                            </div>
+
+                        </div>
+
+                        <div class="footer__column footer__column--contact">
+
+                            <div class="footer__heading footer__heading--static">
 
                                 Kontakt
 
-                            </h3>
+                            </div>
 
                             <div class="footer__contact">
 
@@ -130,7 +148,7 @@ export function renderFooter(settings) {
 
                     <p>
 
-                        © ${new Date().getFullYear()} ${settings.shop.name}
+                        © ${new Date().getFullYear()} · ${settings.shop.name.toUpperCase()} · Tirol · Austria
 
                     </p>
 
@@ -149,7 +167,8 @@ export function renderFooter(settings) {
 
                     <p class="footer__signature-text">
 
-                        Made in Tirol · Mit Liebe gestaltet
+                        <span>Made in Tirol</span>
+                        <span>Mit Liebe gestaltet</span>
 
                     </p>
 
@@ -162,6 +181,8 @@ export function renderFooter(settings) {
     `);
 
     renderScrollToTop();
+
+    initializeFooterAccordions(footer);
 
     /* ======================================================
        Signature Animation
@@ -194,5 +215,45 @@ export function renderFooter(settings) {
     });
 
     observer.observe(signature);
+
+}
+
+
+/* ==========================================================
+   Mobile Footer Accordions
+========================================================== */
+
+function initializeFooterAccordions(footer) {
+
+    const mobileQuery = window.matchMedia("(max-width: 768px)");
+    const columns = [...footer.querySelectorAll("[data-footer-accordion]")];
+
+    columns.forEach((column) => {
+
+        const button = column.querySelector(".footer__heading");
+
+        button?.addEventListener("click", () => {
+
+            if (!mobileQuery.matches) return;
+
+            const isOpen = column.classList.toggle("is-open");
+
+            button.setAttribute("aria-expanded", String(isOpen));
+
+        });
+
+    });
+
+    mobileQuery.addEventListener?.("change", () => {
+
+        columns.forEach((column) => {
+
+            column.classList.remove("is-open");
+            column.querySelector(".footer__heading")
+                ?.setAttribute("aria-expanded", "false");
+
+        });
+
+    });
 
 }

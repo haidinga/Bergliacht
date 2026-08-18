@@ -40,7 +40,11 @@ export function renderHeader(settings, products = []) {
                         aria-label="Menü öffnen"
                         data-mobile-menu-trigger
                     >
-                        ${createIcon("menu")}
+                        <span class="menu-toggle-icon" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
                     </button>
 
                     <button
