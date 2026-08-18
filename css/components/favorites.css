@@ -9,7 +9,7 @@
     width: 2.5rem;
     height: 2.5rem;
     padding: 0;
-    background: rgba(255, 255, 255, .94);
+    background: rgba(232, 225, 215, .94);
     border: 1px solid var(--color-border);
     border-radius: 50%;
     box-shadow: 0 .25rem .8rem rgba(46, 43, 40, .12);
@@ -42,10 +42,8 @@
 }
 
 .product-card__favorite {
-    position: absolute;
-    top: var(--space-4);
-    right: var(--space-4);
-    z-index: 3;
+    position: static;
+    flex: 0 0 auto;
 }
 
 .product-info__heading-row {
@@ -63,26 +61,6 @@
     position: relative;
 }
 
-.header__favorite-count {
-    position: absolute;
-    top: -.15rem;
-    right: -.15rem;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    min-width: 1.1rem;
-    height: 1.1rem;
-    padding: 0 .25rem;
-    background: #c94747;
-    color: #fff;
-    border: 2px solid #fff;
-    border-radius: 999px;
-    font-size: .65rem;
-    font-weight: 700;
-    line-height: 1;
-}
-
-
 /* ==========================================================
    Favorites Drawer
 ========================================================== */
@@ -95,7 +73,7 @@ body.favorites-is-open {
     position: fixed;
     inset: 0;
     z-index: 2000;
-    background: rgba(46, 43, 40, 0);
+    background: rgba(59, 52, 45, 0);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -109,7 +87,7 @@ body.favorites-is-open {
 }
 
 .favorites-drawer-overlay.is-open {
-    background: rgba(46, 43, 40, .14);
+    background: rgba(59, 52, 45, .14);
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -128,7 +106,7 @@ body.favorites-is-open {
     height: 100dvh;
     background: var(--color-background);
     border-left: 1px solid var(--color-border);
-    box-shadow: -1rem 0 2.5rem rgba(46, 43, 40, .12);
+    box-shadow: -1rem 0 2.5rem rgba(59, 52, 45, .12);
     transform: translateX(100%);
     transition: transform .4s cubic-bezier(.22, 1, .36, 1);
 }

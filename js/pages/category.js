@@ -5,7 +5,10 @@
 import { loadData } from "../core/loader.js";
 import { renderHeader } from "../components/header.js";
 import { renderFooter } from "../components/footer.js";
-import { createProductCard } from "../components/product-card.js";
+import {
+    createProductCard,
+    initializeProductCards
+} from "../components/product-card.js";
 import { getElement, setHTML } from "../utils/dom.js";
 
 
@@ -154,6 +157,8 @@ function renderCategoryProducts(category, products) {
             </div>
         </div>
     `);
+
+    initializeProductCards(section);
 
 }
 

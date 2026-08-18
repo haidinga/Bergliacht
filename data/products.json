@@ -17,7 +17,7 @@
     "classification": {
         "category": "vases",
         "collection": "essence",
-        "featured": false,
+        "featured": true,
         "new": false,
         "bestseller": false
     },

@@ -3,9 +3,5 @@
 ========================================================== */
 
 .home-page {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: var(--space-24);
+    display: block;
 }

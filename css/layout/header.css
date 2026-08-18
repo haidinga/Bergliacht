@@ -10,12 +10,26 @@
 
     z-index: 1000;
 
-    background: rgba(255, 255, 255, .9);
+    background: rgba(245, 241, 234, .92);
 
     backdrop-filter: blur(40px);
 
     border-bottom: 1px solid var(--color-border);
 
+    transition:
+        background-color .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease,
+        backdrop-filter .3s ease,
+        transform .3s cubic-bezier(.22, 1, .36, 1);
+
+    will-change: transform;
+
+}
+
+#header.is-hidden {
+    transform: translateY(calc(-100% - 1px));
+    pointer-events: none;
 }
 
 
@@ -193,35 +207,21 @@
 
     position: absolute;
 
-    top: -.15rem;
+    top: .05rem;
 
-    right: -.15rem;
+    right: .15rem;
 
     display: none;
 
-    justify-content: center;
+    color: var(--color-text-primary);
 
-    align-items: center;
-
-    min-width: 1.1rem;
-
-    height: 1.1rem;
-
-    padding: 0 .25rem;
-
-    background: var(--color-primary);
-
-    color: #fff;
-
-    border: 2px solid #fff;
-
-    border-radius: 999px;
-
-    font-size: .65rem;
+    font-size: .68rem;
 
     font-weight: 700;
 
     line-height: 1;
+
+    text-shadow: 0 1px 4px rgba(59, 52, 45, .2);
 
 }
 
@@ -234,4 +234,50 @@
 
     display: none;
 
+}
+
+.home-page #header {
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    border-bottom-color: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+}
+
+.home-page #header.is-past-hero {
+    background: rgba(245, 241, 234, .9);
+    border-bottom-color: var(--color-border);
+    box-shadow: 0 .35rem 1.2rem rgba(59, 52, 45, .08);
+    backdrop-filter: blur(24px);
+}
+
+.home-page #header .container {
+    width: min(100% - clamp(2rem, 7vw, 7rem), var(--container-2xl));
+}
+
+.home-page #header .header {
+    min-height: clamp(5rem, 9vw, 7rem);
+}
+
+.home-page #header .header__logo,
+.home-page #header .header__icon .icon {
+    filter: brightness(0) invert(1);
+    transition: filter .3s ease;
+}
+
+.home-page #header.is-past-hero .header__logo,
+.home-page #header.is-past-hero .header__icon .icon {
+    filter: none;
+}
+
+.home-page #header .header__cart-count {
+    color: var(--color-white);
+    text-shadow: 0 1px 5px rgba(0, 0, 0, .35);
+    transition: color .3s ease, text-shadow .3s ease;
+}
+
+.home-page #header.is-past-hero .header__cart-count {
+    color: var(--color-text-primary);
+    text-shadow: 0 1px 4px rgba(59, 52, 45, .2);
 }

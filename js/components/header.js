@@ -97,7 +97,7 @@ export function renderHeader(settings, products = []) {
 
                     <a
                         class="header__link"
-                        href="index.html#collections"
+                        href="collections.html"
                     >
                         Kollektionen
                     </a>
@@ -135,13 +135,6 @@ export function renderHeader(settings, products = []) {
 
                         ${createIcon("heart")}
 
-                        <span
-                            class="header__favorite-count"
-                            aria-label="Anzahl der Favoriten"
-                        >
-                            0
-                        </span>
-
                     </button>
 
 
@@ -173,6 +166,8 @@ export function renderHeader(settings, products = []) {
     renderSearchDrawer(products);
     renderFavorites(products);
     renderMobileMenu();
+
+    initializeHeaderScrollState(header);
 
 
     /* ======================================================
@@ -277,11 +272,27 @@ function updateCartCounter() {
     counter.textContent =
         itemCount;
 
+    const cartLink = getElement(".header__cart");
+    const cartIcon = cartLink?.querySelector(".icon");
+
+    cartLink?.classList.toggle(
+        "has-items",
+        itemCount > 0
+    );
+
+    if (cartIcon) {
+        cartIcon.src = `./assets/icons/${
+            itemCount > 0
+                ? "shopping-bag-filled"
+                : "shopping-bag"
+        }.svg`;
+    }
+
 
     if (itemCount > 0) {
 
         counter.style.display =
-            "flex";
+            "block";
 
     } else {
 
@@ -289,5 +300,82 @@ function updateCartCounter() {
             "none";
 
     }
+
+}
+
+
+/* ==========================================================
+   Scroll State
+========================================================== */
+
+function initializeHeaderScrollState(header) {
+
+    let frame = null;
+    let lastScrollPosition = window.scrollY;
+
+    const updateState = () => {
+
+        const scrollPosition = Math.max(window.scrollY, 0);
+        const scrollDifference =
+            scrollPosition - lastScrollPosition;
+
+        if (document.body.classList.contains("home-page")) {
+
+            const hero = getElement("#hero .hero");
+
+            if (hero) {
+
+                const heroBottom =
+                    hero.getBoundingClientRect().bottom;
+
+                header.classList.toggle(
+                    "is-past-hero",
+                    heroBottom <= header.offsetHeight
+                );
+
+            }
+
+        }
+
+        if (scrollPosition <= header.offsetHeight) {
+
+            header.classList.remove("is-hidden");
+
+        } else if (scrollDifference > 4) {
+
+            header.classList.add("is-hidden");
+
+        } else if (scrollDifference < -4) {
+
+            header.classList.remove("is-hidden");
+
+        }
+
+        if (Math.abs(scrollDifference) > 4) {
+            lastScrollPosition = scrollPosition;
+        }
+
+    };
+
+    const requestUpdate = () => {
+
+        if (frame) cancelAnimationFrame(frame);
+
+        frame = requestAnimationFrame(updateState);
+
+    };
+
+    window.addEventListener(
+        "scroll",
+        requestUpdate,
+        { passive: true }
+    );
+
+    window.addEventListener(
+        "resize",
+        requestUpdate
+    );
+
+    requestUpdate();
 
 }

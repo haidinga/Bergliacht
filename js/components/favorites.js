@@ -176,10 +176,6 @@ export function renderFavorites(products = []) {
 
             });
 
-        const counter = trigger.querySelector(
-            ".header__favorite-count"
-        );
-
         trigger.classList.toggle(
             "is-favorite",
             favorites.length > 0
@@ -191,11 +187,6 @@ export function renderFavorites(products = []) {
             triggerIcon.src = `./assets/icons/${
                 favorites.length ? "heart-filled" : "heart"
             }.svg`;
-        }
-
-        if (counter) {
-            counter.textContent = favorites.length;
-            counter.style.display = favorites.length ? "flex" : "none";
         }
 
     };

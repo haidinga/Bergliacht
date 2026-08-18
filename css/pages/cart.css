@@ -101,7 +101,7 @@
 
     height: 7rem;
 
-    background: #faf9f7;
+    background: var(--color-surface);
 
     border: 1px solid var(--color-border);
 
@@ -238,7 +238,7 @@
 
 .cart-item__quantity-button:hover {
 
-    background: #f7f5f2;
+    background: var(--color-background);
 
 }
 
@@ -296,7 +296,7 @@
 
     padding: 1.5rem;
 
-    background: #faf9f7;
+    background: var(--color-surface);
 
     border: 1px solid var(--color-border);
 
@@ -508,7 +508,7 @@
 
 .cart__input.is-error {
 
-    border-color: #b45353;
+    border-color: var(--color-danger);
 
     box-shadow:
         0 0 0 3px
@@ -601,7 +601,7 @@
 
 .cart__status--error {
 
-    color: #a04444;
+    color: var(--color-danger);
 
 }
 

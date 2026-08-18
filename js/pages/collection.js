@@ -13,7 +13,8 @@ import {
 } from "../utils/dom.js";
 
 import {
-    createProductCard
+    createProductCard,
+    initializeProductCards
 } from "../components/product-card.js";
 
 
@@ -373,6 +374,8 @@ function renderCollectionProducts(
             </div>
         `
     );
+
+    initializeProductCards(section);
 
 }
 

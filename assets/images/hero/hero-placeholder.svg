@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="title description">
+    <title id="title">Platzhalter für das Bergliacht Hero-Bild</title>
+    <desc id="description">Warme abstrakte Fläche als Platzhalter für das zukünftige Hero-Foto.</desc>
+    <defs>
+        <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#3B342D"/>
+            <stop offset=".55" stop-color="#6A4B3B"/>
+            <stop offset="1" stop-color="#241F1A"/>
+        </linearGradient>
+        <radialGradient id="light" cx="78%" cy="34%" r="60%">
+            <stop offset="0" stop-color="#E8E1D7" stop-opacity=".5"/>
+            <stop offset="1" stop-color="#E8E1D7" stop-opacity="0"/>
+        </radialGradient>
+    </defs>
+    <rect width="1920" height="1080" fill="url(#background)"/>
+    <rect width="1920" height="1080" fill="url(#light)"/>
+    <circle cx="1480" cy="760" r="280" fill="#F5F1EA" fill-opacity=".1"/>
+    <circle cx="1180" cy="860" r="190" fill="#E8E1D7" fill-opacity=".08"/>
+</svg>

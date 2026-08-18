@@ -72,7 +72,7 @@
 
 .quantity-selector__button:hover {
 
-    background: #f7f5f2;
+    background: var(--color-background);
 
 }
 

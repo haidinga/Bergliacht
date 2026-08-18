@@ -167,7 +167,7 @@
 
     height: 8rem;
 
-    background: #faf9f7;
+    background: var(--color-surface);
 
     border: 1px solid var(--color-border);
 
@@ -281,18 +281,18 @@
 
 .admin-product__status.is-active {
 
-    background: #eef5ed;
+    background: color-mix(in srgb, var(--color-accent) 12%, var(--color-background));
 
-    color: #496346;
+    color: var(--color-accent);
 
 }
 
 
 .admin-product__status.is-inactive {
 
-    background: #f3eeee;
+    background: color-mix(in srgb, var(--color-danger) 10%, var(--color-background));
 
-    color: #765858;
+    color: var(--color-danger);
 
 }
 
@@ -436,7 +436,7 @@
 
 .admin__error {
 
-    color: #a04444;
+    color: var(--color-danger);
 
 }
 
@@ -537,7 +537,7 @@
 
     padding: 1.5rem;
 
-    background: #faf9f7;
+    background: var(--color-surface);
 
     border: 1px solid var(--color-border);
 
@@ -786,7 +786,7 @@
 
 .admin-color:hover {
 
-    background: #faf9f7;
+    background: var(--color-surface);
 
 }
 
@@ -894,9 +894,9 @@
 
 .admin-variant__remove:hover {
 
-    color: #a04444;
+    color: var(--color-danger);
 
-    border-color: #d5aaaa;
+    border-color: var(--color-danger);
 
 }
 
@@ -928,7 +928,7 @@
 
     padding: 1.5rem;
 
-    background: #f5f2ed;
+    background: var(--color-background);
 
     border: 1px solid var(--color-border);
 
@@ -1293,7 +1293,7 @@
 .admin-checkbox:has(input:checked),
 .admin-color:has(input:checked) {
 
-    background: #f1eee9;
+    background: var(--color-surface-secondary);
 
     border-color: var(--color-primary);
 

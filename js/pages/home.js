@@ -29,7 +29,8 @@ export async function initHomePage() {
         renderHero(data.settings);
 
         renderCollectionGrid(
-            data.collections
+            data.collections,
+            data.products
         );
 
         renderFeaturedProducts(

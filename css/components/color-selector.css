@@ -51,7 +51,7 @@
 
     background: transparent;
 
-    border: 1px solid rgba(0, 0, 0, .16);
+    border: 1px solid var(--color-border);
 
     border-radius: 50%;
 
@@ -65,7 +65,7 @@
         box-shadow .2s ease;
 
     box-shadow:
-        0 1px 4px rgba(0, 0, 0, .18);
+        0 1px 4px rgba(59, 52, 45, .18);
 
 }
 
@@ -73,10 +73,10 @@
 
     transform: scale(1.06);
 
-    border-color: rgba(0, 0, 0, .32);
+    border-color: var(--color-primary);
 
     box-shadow:
-        0 3px 8px rgba(0, 0, 0, .24);
+        0 3px 8px rgba(59, 52, 45, .24);
 
 }
 
@@ -87,7 +87,7 @@
     box-shadow:
         0 0 0 2px var(--color-background),
         0 0 0 4px var(--color-primary),
-        0 2px 6px rgba(0, 0, 0, .18);
+        0 2px 6px rgba(59, 52, 45, .18);
 
 }
 

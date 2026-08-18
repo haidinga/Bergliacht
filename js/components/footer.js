@@ -64,7 +64,7 @@ export function renderFooter(settings) {
 
                                 <a href="index.html#products">Produkte</a>
 
-                                <a href="index.html#collections">Kollektionen</a>
+                                <a href="collections.html">Kollektionen</a>
 
                                 <a href="about.html">Über uns</a>
 

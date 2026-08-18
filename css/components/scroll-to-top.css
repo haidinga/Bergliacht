@@ -24,7 +24,7 @@
 
     padding: 0;
 
-    background: rgba(255, 255, 255, .94);
+    background: rgba(232, 225, 215, .94);
 
     color: var(--color-text-primary);
 
@@ -33,8 +33,8 @@
     border-radius: 50%;
 
     box-shadow:
-        0 .5rem 1.5rem rgba(46, 43, 40, .18),
-        0 .125rem .375rem rgba(46, 43, 40, .1);
+        0 .5rem 1.5rem rgba(59, 52, 45, .18),
+        0 .125rem .375rem rgba(59, 52, 45, .1);
 
     cursor: pointer;
 

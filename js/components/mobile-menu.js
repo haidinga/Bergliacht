@@ -61,7 +61,7 @@ export function renderMobileMenu() {
                     ${createIcon("arrow-right")}
                 </a>
 
-                <a href="index.html#collections">
+                <a href="collections.html">
                     <span>Kollektionen</span>
                     ${createIcon("arrow-right")}
                 </a>

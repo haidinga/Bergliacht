@@ -3,7 +3,10 @@
 ========================================================== */
 
 import { getElement, setHTML } from "../utils/dom.js";
-import { createProductCard } from "./product-card.js";
+import {
+    createProductCard,
+    initializeProductCards
+} from "./product-card.js";
 
 /* ==========================================================
    Related Products
@@ -78,5 +81,7 @@ export function renderRelatedProducts(currentProduct, products) {
         </div>
 
     `);
+
+    initializeProductCards(section);
 
 }

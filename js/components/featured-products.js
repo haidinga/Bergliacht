@@ -2,7 +2,10 @@
    Imports
 ========================================================== */
 
-import { createProductCard } from "./product-card.js";
+import {
+    createProductCard,
+    initializeProductCards
+} from "./product-card.js";
 import { getElement, setHTML } from "../utils/dom.js";
 
 /* ==========================================================
@@ -65,5 +68,7 @@ export function renderFeaturedProducts(products) {
         </div>
 
     `);
+
+    initializeProductCards(section);
 
 }
