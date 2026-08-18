@@ -36,7 +36,7 @@ async function initCollectionPage() {
            Header
         ======================================================= */
 
-        renderHeader(data.settings, data.products, data.colors);
+        renderHeader(data.settings, data.products);
 
 
         /* ======================================================

@@ -67,7 +67,7 @@ async function initializeProductPage() {
            Layout
         ------------------------------------------ */
 
-        renderHeader(data.settings, data.products, data.colors);
+        renderHeader(data.settings, data.products);
 
         // Breadcrumb entfernt
 

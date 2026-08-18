@@ -3,7 +3,6 @@
 ========================================================== */
 
 import { createIcon } from "./icon.js";
-import { formatPrice } from "../utils/currency.js";
 
 
 /* ==========================================================
@@ -11,7 +10,6 @@ import { formatPrice } from "../utils/currency.js";
 ========================================================== */
 
 const FAVORITES_KEY = "bergliachtFavorites";
-const CART_KEY = "bergliachtCart";
 
 
 /* ==========================================================
@@ -56,7 +54,7 @@ export function isProductFavorite(productId) {
    Favorites
 ========================================================== */
 
-export function renderFavorites(products = [], colors = []) {
+export function renderFavorites(products = []) {
 
     const trigger = document.querySelector(
         "[data-favorites-trigger]"
@@ -67,10 +65,6 @@ export function renderFavorites(products = [], colors = []) {
     document.querySelector(".favorites-drawer-overlay")?.remove();
 
     const activeProducts = products.filter(product => product.active);
-    const activeColors = colors.filter(color => color.active);
-    const colorMap = new Map(
-        activeColors.map(color => [color.id, color])
-    );
 
     const overlay = document.createElement("div");
 
@@ -112,21 +106,6 @@ export function renderFavorites(products = [], colors = []) {
         const image =
             `${product.media.folder}${product.media.thumbnail}`;
 
-        const variantOptions = product.variants.map(variant => `
-            <option value="${variant.id}">
-                ${variant.label} · ${formatPrice(variant.price)}
-            </option>
-        `).join("");
-
-        const colorOptions = product.colors
-            .map(colorId => colorMap.get(colorId))
-            .filter(Boolean)
-            .map(color => `
-                <option value="${color.id}">
-                    ${color.content.name}
-                </option>
-            `).join("");
-
         return `
             <article
                 class="favorite-item"
@@ -141,9 +120,15 @@ export function renderFavorites(products = [], colors = []) {
 
                 <div class="favorite-item__content">
                     <div class="favorite-item__top">
-                        <a href="product.html?id=${product.id}">
-                            <h3>${product.content.name}</h3>
-                        </a>
+                        <div class="favorite-item__text">
+                            <a href="product.html?id=${product.id}">
+                                <h3>${product.content.name}</h3>
+                            </a>
+
+                            <p class="favorite-item__description">
+                                ${product.content.shortDescription}
+                            </p>
+                        </div>
 
                         <button
                             class="favorite-button favorite-item__remove is-favorite"
@@ -157,31 +142,12 @@ export function renderFavorites(products = [], colors = []) {
                         </button>
                     </div>
 
-                    <div class="favorite-item__options">
-                        <label>
-                            <span>Größe</span>
-                            <select data-favorite-variant>
-                                <option value="">Auswählen</option>
-                                ${variantOptions}
-                            </select>
-                        </label>
-
-                        <label>
-                            <span>Farbe</span>
-                            <select data-favorite-color>
-                                <option value="">Auswählen</option>
-                                ${colorOptions}
-                            </select>
-                        </label>
-                    </div>
-
-                    <button
-                        class="favorite-item__cart"
-                        type="button"
-                        data-favorite-add-to-cart="${product.id}"
+                    <a
+                        class="favorite-item__product-link"
+                        href="product.html?id=${product.id}"
                     >
-                        In den Warenkorb
-                    </button>
+                        Zum Produkt
+                    </a>
                 </div>
             </article>
         `;
@@ -282,86 +248,6 @@ export function renderFavorites(products = [], colors = []) {
 
     };
 
-    const addToCart = (productId, item, button) => {
-
-        const product = activeProducts.find(
-            currentProduct => currentProduct.id === productId
-        );
-
-        if (!product) return;
-
-        const variantSelect = item.querySelector("[data-favorite-variant]");
-        const colorSelect = item.querySelector("[data-favorite-color]");
-
-        const variant = product.variants.find(
-            currentVariant => currentVariant.id === variantSelect.value
-        );
-
-        const color = colorMap.get(colorSelect.value);
-
-        variantSelect.classList.toggle("has-error", !variant);
-        colorSelect.classList.toggle("has-error", !color);
-
-        if (!variant || !color) {
-            item.classList.remove("is-shaking");
-            void item.offsetWidth;
-            item.classList.add("is-shaking");
-            window.setTimeout(
-                () => item.classList.remove("is-shaking"),
-                500
-            );
-            return;
-        }
-
-        let cart = [];
-
-        try {
-            cart = JSON.parse(localStorage.getItem(CART_KEY)) || [];
-        } catch (error) {
-            cart = [];
-        }
-
-        const existingItem = cart.find(cartItem =>
-            cartItem.productId === product.id &&
-            cartItem.variantId === variant.id &&
-            cartItem.colorId === color.id
-        );
-
-        if (existingItem) {
-            existingItem.quantity += 1;
-        } else {
-            cart.push({
-                productId: product.id,
-                variantId: variant.id,
-                variantLabel: variant.label ?? variant.id,
-                price: Number(variant.price),
-                colorId: color.id,
-                colorName: color.content.name,
-                quantity: 1
-            });
-        }
-
-        localStorage.setItem(CART_KEY, JSON.stringify(cart));
-        document.dispatchEvent(new CustomEvent("addToCart", {
-            detail: {
-                productId: product.id,
-                variantId: variant.id,
-                colorId: color.id,
-                quantity: 1
-            }
-        }));
-
-        const originalText = button.textContent;
-        button.textContent = "Hinzugefügt ✓";
-        button.disabled = true;
-
-        window.setTimeout(() => {
-            button.textContent = originalText;
-            button.disabled = false;
-        }, 1400);
-
-    };
-
     const open = () => {
         renderDrawer();
         overlay.classList.add("is-open");
@@ -398,18 +284,6 @@ export function renderFavorites(products = [], colors = []) {
                 favoriteButton
             );
             return;
-        }
-
-        const cartButton = event.target.closest(
-            "[data-favorite-add-to-cart]"
-        );
-
-        if (cartButton) {
-            addToCart(
-                cartButton.dataset.favoriteAddToCart,
-                cartButton.closest(".favorite-item"),
-                cartButton
-            );
         }
 
     });

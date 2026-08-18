@@ -17,7 +17,7 @@ async function initializeAboutPage() {
 
         const data = await loadData();
 
-        renderHeader(data.settings, data.products, data.colors);
+        renderHeader(data.settings, data.products);
         renderFooter(data.settings);
 
     } catch (error) {

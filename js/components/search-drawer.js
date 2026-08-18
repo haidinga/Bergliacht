@@ -13,11 +13,13 @@ import { isProductFavorite } from "./favorites.js";
 
 export function renderSearchDrawer(products = []) {
 
-    const trigger = document.querySelector(
+    const triggers = document.querySelectorAll(
         "[data-search-trigger]"
     );
 
-    if (!trigger) return;
+    if (!triggers.length) return;
+
+    let activeTrigger = triggers[0];
 
     document.querySelector(".search-drawer-overlay")?.remove();
 
@@ -208,7 +210,9 @@ export function renderSearchDrawer(products = []) {
 
     };
 
-    const open = () => {
+    const open = event => {
+
+        activeTrigger = event.currentTarget;
 
         overlay.classList.add("is-open");
         overlay.setAttribute("aria-hidden", "false");
@@ -225,11 +229,13 @@ export function renderSearchDrawer(products = []) {
         overlay.classList.remove("is-open");
         overlay.setAttribute("aria-hidden", "true");
         document.body.classList.remove("search-is-open");
-        trigger.focus();
+        activeTrigger.focus();
 
     };
 
-    trigger.addEventListener("click", open);
+    triggers.forEach(trigger => {
+        trigger.addEventListener("click", open);
+    });
     closeButton.addEventListener("click", close);
     input.addEventListener("input", renderResults);
 

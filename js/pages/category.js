@@ -23,7 +23,7 @@ async function initializeCategoryPage() {
             item => item.id === categoryId
         );
 
-        renderHeader(data.settings, data.products, data.colors);
+        renderHeader(data.settings, data.products);
         renderFooter(data.settings);
 
         if (!category) {

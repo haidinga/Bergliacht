@@ -24,7 +24,7 @@ export async function initHomePage() {
 
         const data = await loadData();
 
-        renderHeader(data.settings, data.products, data.colors);
+        renderHeader(data.settings, data.products);
 
         renderHero(data.settings);
 

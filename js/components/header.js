@@ -6,6 +6,7 @@ import { createIcon } from "./icon.js";
 import { getElement, setHTML } from "../utils/dom.js";
 import { renderSearchDrawer } from "./search-drawer.js";
 import { renderFavorites } from "./favorites.js";
+import { renderMobileMenu } from "./mobile-menu.js";
 
 
 /* ==========================================================
@@ -17,9 +18,8 @@ import { renderFavorites } from "./favorites.js";
  *
  * @param {Object} settings
  * @param {Array} products
- * @param {Array} colors
  */
-export function renderHeader(settings, products = [], colors = []) {
+export function renderHeader(settings, products = []) {
 
     const header = getElement("#header");
 
@@ -31,6 +31,28 @@ export function renderHeader(settings, products = [], colors = []) {
         <div class="container">
 
             <header class="header">
+
+                <div class="header__mobile-left">
+
+                    <button
+                        class="header__icon"
+                        type="button"
+                        aria-label="Menü öffnen"
+                        data-mobile-menu-trigger
+                    >
+                        ${createIcon("menu")}
+                    </button>
+
+                    <button
+                        class="header__icon"
+                        type="button"
+                        aria-label="Suche"
+                        data-search-trigger
+                    >
+                        ${createIcon("search")}
+                    </button>
+
+                </div>
 
                 <a
                     class="header__brand"
@@ -93,7 +115,7 @@ export function renderHeader(settings, products = [], colors = []) {
                 <div class="header__actions">
 
                     <button
-                        class="header__icon"
+                        class="header__icon header__search--desktop"
                         type="button"
                         aria-label="Suche"
                         data-search-trigger
@@ -149,7 +171,8 @@ export function renderHeader(settings, products = [], colors = []) {
     `);
 
     renderSearchDrawer(products);
-    renderFavorites(products, colors);
+    renderFavorites(products);
+    renderMobileMenu();
 
 
     /* ======================================================

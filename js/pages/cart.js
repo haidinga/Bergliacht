@@ -40,7 +40,7 @@ export async function initCartPage() {
            Header
         ================================================== */
 
-        renderHeader(data.settings, data.products, data.colors);
+        renderHeader(data.settings, data.products);
 
 
         /* ==================================================
@@ -920,25 +920,31 @@ function initializeCartInteractions(
                     "click",
                     () => {
 
-                        updateCart(
-                            (cart) => {
+                        animateCartItemRemoval(
+                            itemElement,
+                            () => {
 
-                                return cart.filter(
-                                    (item) =>
-                                        !(
-                                            item.productId === productId &&
-                                            item.variantId === variantId &&
-                                            item.colorId === colorId
-                                        )
+                                updateCart(
+                                    (cart) => {
+
+                                        return cart.filter(
+                                            (item) =>
+                                                !(
+                                                    item.productId === productId &&
+                                                    item.variantId === variantId &&
+                                                    item.colorId === colorId
+                                                )
+                                        );
+
+                                    }
+                                );
+
+                                renderCart(
+                                    section,
+                                    data
                                 );
 
                             }
-                        );
-
-
-                        renderCart(
-                            section,
-                            data
                         );
 
                     }
@@ -967,66 +973,91 @@ function initializeCartInteractions(
                             const action =
                                 button.dataset.action;
 
+                            const quantity = Number(
+                                itemElement.querySelector(
+                                    ".cart-item__quantity-value"
+                                )?.textContent
+                            );
 
-                            updateCart(
-                                (cart) => {
+                            const applyQuantityChange = () => {
 
-                                    const cartItem =
-                                        cart.find(
-                                            (item) =>
-                                                item.productId === productId &&
-                                                item.variantId === variantId &&
-                                                item.colorId === colorId
-                                        );
+                                updateCart(
+                                    (cart) => {
+
+                                        const cartItem =
+                                            cart.find(
+                                                (item) =>
+                                                    item.productId === productId &&
+                                                    item.variantId === variantId &&
+                                                    item.colorId === colorId
+                                            );
 
 
-                                    if (!cartItem) {
+                                        if (!cartItem) {
+
+                                            return cart;
+
+                                        }
+
+
+                                        if (
+                                            action === "increase"
+                                        ) {
+
+                                            cartItem.quantity += 1;
+
+                                        }
+
+
+                                        if (
+                                            action === "decrease"
+                                        ) {
+
+                                            cartItem.quantity -= 1;
+
+
+                                            if (
+                                                cartItem.quantity <= 0
+                                            ) {
+
+                                                return cart.filter(
+                                                    (item) =>
+                                                        item !== cartItem
+                                                );
+
+                                            }
+
+                                        }
+
 
                                         return cart;
 
                                     }
+                                );
 
 
-                                    if (
-                                        action === "increase"
-                                    ) {
+                                renderCart(
+                                    section,
+                                    data
+                                );
 
-                                        cartItem.quantity += 1;
+                            };
 
-                                    }
+                            if (
+                                action === "decrease" &&
+                                quantity <= 1
+                            ) {
 
+                                animateCartItemRemoval(
+                                    itemElement,
+                                    applyQuantityChange
+                                );
 
-                                    if (
-                                        action === "decrease"
-                                    ) {
+                                return;
 
-                                        cartItem.quantity -= 1;
+                            }
 
-
-                                        if (
-                                            cartItem.quantity <= 0
-                                        ) {
-
-                                            return cart.filter(
-                                                (item) =>
-                                                    item !== cartItem
-                                            );
-
-                                        }
-
-                                    }
-
-
-                                    return cart;
-
-                                }
-                            );
-
-
-                            renderCart(
-                                section,
-                                data
-                            );
+                            applyQuantityChange();
 
                         }
                     );
@@ -1036,6 +1067,74 @@ function initializeCartInteractions(
 
         }
     );
+
+}
+
+
+/* ==========================================================
+   Remove Animation
+========================================================== */
+
+function animateCartItemRemoval(itemElement, onComplete) {
+
+    const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (reduceMotion || !itemElement.animate) {
+        onComplete();
+        return;
+    }
+
+    itemElement.querySelectorAll("button").forEach(button => {
+        button.disabled = true;
+    });
+
+    itemElement.style.overflow = "hidden";
+
+    const height = itemElement.getBoundingClientRect().height;
+    const styles = window.getComputedStyle(itemElement);
+
+    const animation = itemElement.animate(
+        [
+            {
+                height: `${height}px`,
+                opacity: 1,
+                transform: "translateX(0) scale(1)",
+                paddingTop: styles.paddingTop,
+                paddingBottom: styles.paddingBottom
+            },
+            {
+                height: `${height}px`,
+                opacity: 0,
+                transform: "translateX(2rem) scale(.98)",
+                offset: .65
+            },
+            {
+                height: "0px",
+                opacity: 0,
+                transform: "translateX(2rem) scale(.98)",
+                paddingTop: "0",
+                paddingBottom: "0",
+                borderBottomWidth: "0"
+            }
+        ],
+        {
+            duration: 480,
+            easing: "cubic-bezier(.4, 0, .2, 1)",
+            fill: "forwards"
+        }
+    );
+
+    let completed = false;
+
+    const finish = () => {
+        if (completed) return;
+        completed = true;
+        onComplete();
+    };
+
+    animation.finished.then(finish).catch(finish);
 
 }
 
