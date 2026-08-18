@@ -3,6 +3,7 @@
 ========================================================== */
 
 import { getElement } from "../utils/dom.js";
+import { formatPrice } from "../utils/currency.js";
 
 /* ==========================================================
    Price Display
@@ -48,8 +49,7 @@ export function initializePriceDisplay() {
 
         setTimeout(() => {
 
-            price.textContent =
-                `${variantPrice.toFixed(2).replace(".", ",")} EUR`;
+            price.textContent = formatPrice(variantPrice);
 
         }, 110);
 

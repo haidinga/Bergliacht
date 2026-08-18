@@ -11,6 +11,10 @@ import {
     highlightVariantSelection
 } from "./variant-selector.js";
 
+import {
+    highlightColorSelection
+} from "./color-selector.js";
+
 
 /* ==========================================================
    Add To Cart
@@ -122,31 +126,25 @@ export function renderAddToCart(product) {
         () => {
 
             /* ------------------------------------------
-               Validate Variant
+               Validate Required Selections
             ------------------------------------------ */
 
-            if (!selectedVariant) {
+            const variantMissing = !selectedVariant;
+            const colorMissing = !selectedColor;
+
+            if (variantMissing) {
 
                 highlightVariantSelection();
 
-                return;
+            }
+
+            if (colorMissing) {
+
+                highlightColorSelection();
 
             }
 
-
-            /* ------------------------------------------
-               Validate Color
-            ------------------------------------------ */
-
-            if (!selectedColor) {
-
-                console.warn(
-                    "⚠️ Bitte zuerst eine Farbe auswählen."
-                );
-
-                return;
-
-            }
+            if (variantMissing || colorMissing) return;
 
 
             /* ------------------------------------------

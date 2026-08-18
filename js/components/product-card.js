@@ -1,4 +1,13 @@
 /* ==========================================================
+   Imports
+========================================================== */
+
+import { formatPrice } from "../utils/currency.js";
+import { createIcon } from "./icon.js";
+import { isProductFavorite } from "./favorites.js";
+
+
+/* ==========================================================
    Product Card
 ========================================================== */
 
@@ -17,9 +26,28 @@ export function createProductCard(product) {
     const thumbnailImage =
         `${product.media.folder}${product.media.thumbnail}`;
 
+    const isFavorite = isProductFavorite(product.id);
+
     return `
 
         <article class="product-card">
+
+            <button
+                class="product-card__favorite favorite-button ${
+                    isFavorite ? "is-favorite" : ""
+                }"
+                type="button"
+                data-favorite-button
+                data-product-id="${product.id}"
+                aria-label="${product.content.name} ${
+                    isFavorite
+                        ? "aus Favoriten entfernen"
+                        : "zu Favoriten hinzufügen"
+                }"
+                aria-pressed="${isFavorite}"
+            >
+                ${createIcon(isFavorite ? "heart-filled" : "heart")}
+            </button>
 
             <a
                 class="product-card__link"
@@ -56,7 +84,7 @@ export function createProductCard(product) {
 
                         <span class="product-card__price">
 
-                            ab ${startingPrice.toFixed(2).replace(".", ",")} €
+                            ab ${formatPrice(startingPrice)}
 
                         </span>
 

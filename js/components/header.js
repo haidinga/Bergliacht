@@ -4,6 +4,8 @@
 
 import { createIcon } from "./icon.js";
 import { getElement, setHTML } from "../utils/dom.js";
+import { renderSearchDrawer } from "./search-drawer.js";
+import { renderFavorites } from "./favorites.js";
 
 
 /* ==========================================================
@@ -14,8 +16,10 @@ import { getElement, setHTML } from "../utils/dom.js";
  * Rendert den Header.
  *
  * @param {Object} settings
+ * @param {Array} products
+ * @param {Array} colors
  */
-export function renderHeader(settings) {
+export function renderHeader(settings, products = [], colors = []) {
 
     const header = getElement("#header");
 
@@ -50,16 +54,23 @@ export function renderHeader(settings) {
 
                     <a
                         class="header__link"
-                        href="index.html#hero"
+                        href="vasen.html"
                     >
-                        Startseite
+                        Vasen
                     </a>
 
                     <a
                         class="header__link"
-                        href="index.html#products"
+                        href="schriftzuege.html"
                     >
-                        Produkte
+                        Schriftzüge
+                    </a>
+
+                    <a
+                        class="header__link"
+                        href="dekoschalen.html"
+                    >
+                        Dekoschalen
                     </a>
 
                     <a
@@ -71,16 +82,9 @@ export function renderHeader(settings) {
 
                     <a
                         class="header__link"
-                        href="index.html#about"
+                        href="about.html"
                     >
                         Über uns
-                    </a>
-
-                    <a
-                        class="header__link"
-                        href="index.html#contact"
-                    >
-                        Kontakt
                     </a>
 
                 </nav>
@@ -92,6 +96,7 @@ export function renderHeader(settings) {
                         class="header__icon"
                         type="button"
                         aria-label="Suche"
+                        data-search-trigger
                     >
 
                         ${createIcon("search")}
@@ -100,12 +105,20 @@ export function renderHeader(settings) {
 
 
                     <button
-                        class="header__icon"
+                        class="header__icon header__favorite"
                         type="button"
                         aria-label="Favoriten"
+                        data-favorites-trigger
                     >
 
                         ${createIcon("heart")}
+
+                        <span
+                            class="header__favorite-count"
+                            aria-label="Anzahl der Favoriten"
+                        >
+                            0
+                        </span>
 
                     </button>
 
@@ -134,6 +147,9 @@ export function renderHeader(settings) {
         </div>
 
     `);
+
+    renderSearchDrawer(products);
+    renderFavorites(products, colors);
 
 
     /* ======================================================

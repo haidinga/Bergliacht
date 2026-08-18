@@ -53,7 +53,7 @@
         "search": true,
         "filter": true,
         "sorting": true,
-        "wishlist": false,
+        "wishlist": true,
         "darkMode": false
     },
 

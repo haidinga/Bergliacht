@@ -67,6 +67,9 @@
 @import "./components/026-navigation.css";
 @import "./components/027-toast.css";
 @import "./components/028-order-confirmation.css";
+@import "./components/scroll-to-top.css";
+@import "./components/search-drawer.css";
+@import "./components/favorites.css";
 
 /* ==========================================================
    PAGES
@@ -78,6 +81,7 @@
 @import "./pages/collection.css";
 @import "./pages/about.css";
 @import "./pages/contact.css";
+@import "./pages/category.css";
 
 /* ==========================================================
    UTILITIES

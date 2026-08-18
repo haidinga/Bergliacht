@@ -11,10 +11,6 @@ import { initCartPage } from "../pages/cart.js";
 ========================================================== */
 
 export async function initApp() {
-
-    console.log("🚀 Bergliacht gestartet");
-
-
     const path =
         window.location.pathname;
 
@@ -50,10 +46,3 @@ export async function initApp() {
     }
 
 }
-
-
-/* ==========================================================
-   Start
-========================================================== */
-
-initApp();

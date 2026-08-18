@@ -11,6 +11,7 @@ import {
 
 import { renderHeader } from "../components/header.js";
 import { renderFooter } from "../components/footer.js";
+import { formatPrice } from "../utils/currency.js";
 
 import {
     WEB3FORMS_ACCESS_KEY
@@ -39,7 +40,7 @@ export async function initCartPage() {
            Header
         ================================================== */
 
-        renderHeader(data.settings);
+        renderHeader(data.settings, data.products, data.colors);
 
 
         /* ==================================================
@@ -1075,18 +1076,5 @@ function updateCart(callback) {
             }
         )
     );
-
-}
-
-
-/* ==========================================================
-   Format Price
-========================================================== */
-
-function formatPrice(value) {
-
-    return `${value
-        .toFixed(2)
-        .replace(".", ",")} €`;
 
 }

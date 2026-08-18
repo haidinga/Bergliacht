@@ -3,11 +3,342 @@
 ========================================================== */
 
 .about-page {
+
+    padding-block: clamp(var(--space-16), 9vw, var(--space-32));
+
+}
+
+.about-page__intro {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, .9fr) minmax(22rem, 1.1fr);
+
+    align-items: center;
+
+    gap: clamp(var(--space-10), 7vw, var(--space-24));
+
+}
+
+.about-page__content {
+
     display: flex;
 
     flex-direction: column;
 
-    gap: var(--space-24);
+    align-items: flex-start;
 
-    padding-block: var(--space-20);
+    gap: var(--space-6);
+
+}
+
+.about-page__eyebrow {
+
+    color: var(--color-primary);
+
+    font-size: var(--font-size-sm);
+
+    font-weight: var(--font-weight-semibold);
+
+    letter-spacing: .08em;
+
+    text-transform: uppercase;
+
+}
+
+.about-page__title {
+
+    max-width: 12ch;
+
+}
+
+.about-page__lead {
+
+    max-width: 38rem;
+
+    color: var(--color-text-primary);
+
+    font-size: var(--font-size-md);
+
+}
+
+.about-page__text {
+
+    max-width: 38rem;
+
+}
+
+.about-page__media {
+
+    aspect-ratio: 4 / 5;
+
+    min-height: 30rem;
+
+    background: var(--color-surface-secondary);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-2xl);
+
+    overflow: hidden;
+
+}
+
+.about-page__image {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+/* ==========================================================
+   Values
+========================================================== */
+
+.about-values {
+
+    padding-block: var(--space-24);
+
+    background: var(--color-surface-secondary);
+
+}
+
+.about-values__header {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--space-4);
+
+    max-width: 48rem;
+
+    margin-bottom: var(--space-12);
+
+}
+
+.about-values__grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: var(--space-6);
+
+}
+
+.about-values__item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--space-4);
+
+    padding: var(--space-8);
+
+    background: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-xl);
+
+}
+
+.about-values__item h3 {
+
+    font-size: var(--font-size-xl);
+
+}
+
+.about-values__number {
+
+    color: var(--color-primary);
+
+    font-size: var(--font-size-sm);
+
+    font-weight: var(--font-weight-semibold);
+
+    letter-spacing: .08em;
+
+}
+
+
+/* ==========================================================
+   Contact
+========================================================== */
+
+.about-contact {
+
+    padding-block: var(--space-24);
+
+}
+
+.about-contact__inner {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) minmax(20rem, .75fr);
+
+    gap: clamp(var(--space-10), 8vw, var(--space-24));
+
+    align-items: end;
+
+}
+
+.about-contact__content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--space-4);
+
+    max-width: 42rem;
+
+}
+
+.about-contact__details {
+
+    display: flex;
+
+    flex-direction: column;
+
+    border-top: 1px solid var(--color-border);
+
+    font-style: normal;
+
+}
+
+.about-contact__item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: var(--space-6);
+
+    padding-block: var(--space-5);
+
+    color: var(--color-text-primary);
+
+    font-weight: var(--font-weight-medium);
+
+    border-bottom: 1px solid var(--color-border);
+
+    transition:
+        color .2s ease,
+        padding-left .2s ease;
+
+}
+
+.about-contact__item:hover {
+
+    padding-left: var(--space-2);
+
+    color: var(--color-primary);
+
+}
+
+.about-contact__label {
+
+    color: var(--color-text-muted);
+
+    font-size: var(--font-size-sm);
+
+    font-weight: var(--font-weight-regular);
+
+    text-transform: uppercase;
+
+    letter-spacing: .06em;
+
+}
+
+
+/* ==========================================================
+   Responsive
+========================================================== */
+
+@media (max-width: 992px) {
+
+    .about-page__intro {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .about-page__title {
+
+        max-width: 14ch;
+
+    }
+
+    .about-page__media {
+
+        min-height: 0;
+
+        aspect-ratio: 16 / 10;
+
+    }
+
+    .about-contact__inner {
+
+        grid-template-columns: 1fr;
+
+        align-items: start;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .about-values__grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .about-values__item {
+
+        padding: var(--space-6);
+
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .about-page,
+    .about-values,
+    .about-contact {
+
+        padding-block: var(--space-16);
+
+    }
+
+    .about-contact__item {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: var(--space-2);
+
+    }
+
+    .about-page__media {
+
+        aspect-ratio: 4 / 5;
+
+        border-radius: var(--radius-xl);
+
+    }
+
 }

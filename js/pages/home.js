@@ -23,12 +23,8 @@ export async function initHomePage() {
     try {
 
         const data = await loadData();
-        console.log("DATA:", data);
-    console.log("SETTINGS:", data.settings);
-    console.log("COLLECTIONS:", data.collections);
-    console.log("PRODUCTS:", data.products);
 
-        renderHeader(data.settings);
+        renderHeader(data.settings, data.products, data.colors);
 
         renderHero(data.settings);
 

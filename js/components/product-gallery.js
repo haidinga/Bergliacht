@@ -14,8 +14,13 @@ import { getElement, setHTML } from "../utils/dom.js";
  *
  * @param {Object} product
  * @param {String|null} selectedColor
+ * @param {String|null} previewColor
  */
-export function renderProductGallery(product, selectedColor = null) {
+export function renderProductGallery(
+    product,
+    selectedColor = null,
+    previewColor = "anthrazit"
+) {
 
     const gallery = getElement("#product-gallery");
 
@@ -29,15 +34,18 @@ export function renderProductGallery(product, selectedColor = null) {
     const sceneImage =
         `${folder}${product.media.scene}`;
 
+    const displayedColor =
+        selectedColor || previewColor;
+
+    const colorImage =
+        `${folder}${displayedColor}.webp`;
+
     /*
-     * Wenn keine Farbe ausgewählt wurde:
-     * → Thumbnail als Hauptbild
-     *
-     * Wenn eine Farbe ausgewählt wurde:
-     * → entsprechendes Farbbild als Hauptbild
+     * Ohne Auswahl bleibt das Thumbnail das Hauptbild.
+     * Das zweite Vorschaubild zeigt trotzdem bereits Anthrazit.
      */
-    const colorImage = selectedColor
-        ? `${folder}${selectedColor}.webp`
+    const mainImage = selectedColor
+        ? colorImage
         : thumbnailImage;
 
     setHTML(gallery, `
@@ -49,7 +57,7 @@ export function renderProductGallery(product, selectedColor = null) {
                 <img
                     id="product-gallery-image"
                     class="product-gallery__image"
-                    src="${colorImage}"
+                    src="${mainImage}"
                     alt="${product.content.name}"
                 >
 
@@ -96,7 +104,7 @@ export function renderProductGallery(product, selectedColor = null) {
 
                     <img
                         src="${colorImage}"
-                        alt="${product.content.name} – ${selectedColor ?? "Farbe"}"
+                        alt="${product.content.name} – ${displayedColor}"
                     >
 
                 </button>

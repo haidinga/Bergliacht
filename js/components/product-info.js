@@ -3,6 +3,9 @@
 ========================================================== */
 
 import { getElement, setHTML } from "../utils/dom.js";
+import { formatPrice } from "../utils/currency.js";
+import { createIcon } from "./icon.js";
+import { isProductFavorite } from "./favorites.js";
 
 /* ==========================================================
    Product Info
@@ -23,6 +26,8 @@ export function renderProductInfo(product) {
         ...product.variants.map((variant) => variant.price)
     );
 
+    const isFavorite = isProductFavorite(product.id);
+
     setHTML(section, `
 
         <div class="product-info">
@@ -35,11 +40,32 @@ export function renderProductInfo(product) {
 
                 </p>
 
-                <h1 class="product-info__title">
+                <div class="product-info__heading-row">
 
-                    ${product.content.name}
+                    <h1 class="product-info__title">
 
-                </h1>
+                        ${product.content.name}
+
+                    </h1>
+
+                    <button
+                        class="product-info__favorite favorite-button ${
+                            isFavorite ? "is-favorite" : ""
+                        }"
+                        type="button"
+                        data-favorite-button
+                        data-product-id="${product.id}"
+                        aria-label="${product.content.name} ${
+                            isFavorite
+                                ? "aus Favoriten entfernen"
+                                : "zu Favoriten hinzufügen"
+                        }"
+                        aria-pressed="${isFavorite}"
+                    >
+                        ${createIcon(isFavorite ? "heart-filled" : "heart")}
+                    </button>
+
+                </div>
 
                 <p class="product-info__description">
 
@@ -68,7 +94,7 @@ export function renderProductInfo(product) {
                     class="product-info__price"
                 >
 
-                    ab ${startingPrice.toFixed(2).replace(".", ",")} EUR
+                    ab ${formatPrice(startingPrice)}
 
                 </div>
 

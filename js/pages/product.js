@@ -57,19 +57,27 @@ async function initializeProductPage() {
             product.colors.includes(color.id)
         );
 
-        const defaultColor = availableColors[0]?.id ?? null;
+        const previewColor = availableColors.some(
+            color => color.id === "anthrazit"
+        )
+            ? "anthrazit"
+            : availableColors[0]?.id ?? null;
 
         /* ------------------------------------------
            Layout
         ------------------------------------------ */
 
-        renderHeader(data.settings);
+        renderHeader(data.settings, data.products, data.colors);
 
         // Breadcrumb entfernt
 
         renderProductLayout();
 
-        renderProductGallery(product);
+        renderProductGallery(
+            product,
+            null,
+            previewColor
+        );
 
         renderProductInfo(product);
 
@@ -102,7 +110,8 @@ async function initializeProductPage() {
 
             renderProductGallery(
                 product,
-                event.detail.id
+                event.detail.id,
+                previewColor
             );
 
         });

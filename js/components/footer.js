@@ -9,6 +9,8 @@ import {
     removeClass
 } from "../utils/dom.js";
 
+import { renderScrollToTop } from "./scroll-to-top.js";
+
 /* ==========================================================
    Footer
 ========================================================== */
@@ -34,7 +36,7 @@ export function renderFooter(settings) {
 
                     <a
                         class="footer__brand"
-                        href="#hero"
+                        href="index.html"
                         aria-label="${settings.shop.name}"
                     >
 
@@ -58,15 +60,15 @@ export function renderFooter(settings) {
 
                             <nav class="footer__nav">
 
-                                <a href="#hero">Startseite</a>
+                                <a href="index.html#hero">Startseite</a>
 
-                                <a href="#products">Produkte</a>
+                                <a href="index.html#products">Produkte</a>
 
-                                <a href="#collections">Kollektionen</a>
+                                <a href="index.html#collections">Kollektionen</a>
 
-                                <a href="#about">Über uns</a>
+                                <a href="about.html">Über uns</a>
 
-                                <a href="#contact">Kontakt</a>
+                                <a href="about.html#contact">Kontakt</a>
 
                             </nav>
 
@@ -158,6 +160,8 @@ export function renderFooter(settings) {
         </div>
 
     `);
+
+    renderScrollToTop();
 
     /* ======================================================
        Signature Animation

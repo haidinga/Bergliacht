@@ -14,7 +14,8 @@ export async function loadData() {
         settings,
         collections,
         products,
-        colors
+        colors,
+        categories
 
     ] = await Promise.all([
 
@@ -24,14 +25,11 @@ export async function loadData() {
 
         fetch("./data/products.json").then((response) => response.json()),
 
-        fetch("./data/colors.json").then((response) => response.json())
+        fetch("./data/colors.json").then((response) => response.json()),
+
+        fetch("./data/categories.json").then((response) => response.json())
 
     ]);
-
-    console.log("settings.json:", settings);
-    console.log("collections.json:", collections);
-    console.log("products.json =", JSON.stringify(products, null, 2));
-    console.log("colors.json:", colors);
 
     return {
 
@@ -41,7 +39,9 @@ export async function loadData() {
 
         products: products.data,
 
-        colors: colors.data
+        colors: colors.data,
+
+        categories: categories.data
 
     };
 

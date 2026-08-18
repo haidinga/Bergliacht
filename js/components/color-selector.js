@@ -28,8 +28,6 @@ export function renderColorSelector(colors) {
 
     if (activeColors.length === 0) return;
 
-    const defaultColor = activeColors[0];
-
     setHTML(section, `
 
         <div class="color-selector">
@@ -42,10 +40,10 @@ export function renderColorSelector(colors) {
 
             <div class="color-selector__swatches">
 
-                ${activeColors.map((color, index) => `
+                ${activeColors.map((color) => `
 
                     <button
-                        class="color-selector__swatch ${index === 0 ? "is-active" : ""}"
+                        class="color-selector__swatch"
                         type="button"
                         data-id="${color.id}"
                         data-name="${color.content.name}"
@@ -70,7 +68,7 @@ export function renderColorSelector(colors) {
                 class="color-selector__current"
             >
 
-                ${defaultColor.content.name}
+                Bitte Farbe auswählen
 
             </p>
 
@@ -111,5 +109,44 @@ export function renderColorSelector(colors) {
         });
 
     });
+
+}
+
+
+/* ==========================================================
+   Highlight Missing Selection
+========================================================== */
+
+export function highlightColorSelection() {
+
+    const section = getElement("#color-selector");
+
+    if (!section) return;
+
+    const buttons = section.querySelectorAll(
+        ".color-selector__swatch"
+    );
+
+    if (!buttons.length) return;
+
+    buttons.forEach((button) => {
+        removeClass(button, "is-shaking");
+    });
+
+    /* Force animation restart */
+
+    void section.offsetWidth;
+
+    buttons.forEach((button) => {
+        addClass(button, "is-shaking");
+    });
+
+    setTimeout(() => {
+
+        buttons.forEach((button) => {
+            removeClass(button, "is-shaking");
+        });
+
+    }, 500);
 
 }

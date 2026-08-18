@@ -47,7 +47,7 @@
             "active": true,
 
             "content": {
-                "name": "Schalen",
+                "name": "Dekoschalen",
                 "description": "Dekorative Schalen für moderne Wohnräume."
             },
 
@@ -58,6 +58,25 @@
 
             "sorting": {
                 "order": 3
+            }
+        },
+
+        {
+            "id": "lettering",
+            "active": true,
+
+            "content": {
+                "name": "Schriftzüge",
+                "description": "Dekorative 3D-gedruckte Schriftzüge für ein persönliches Zuhause."
+            },
+
+            "media": {
+                "thumbnail": "./assets/images/placeholders/placeholder.svg",
+                "banner": "./assets/images/placeholders/placeholder.svg"
+            },
+
+            "sorting": {
+                "order": 6
             }
         },
 
