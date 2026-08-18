@@ -189,23 +189,43 @@
 
     .product-gallery__main {
 
-        padding: .75rem;
+        aspect-ratio: 1.42 / 1;
 
-        border-radius: 1rem;
+        padding: 0;
+
+        border: 0;
+
+        border-radius: 1.1rem;
+
+        touch-action: pan-y;
+
+    }
+
+    .product-gallery__image {
+
+        object-fit: cover;
 
     }
 
     .product-gallery__thumbnails {
 
-        left: .75rem;
+        left: 50%;
 
-        right: .75rem;
+        right: auto;
 
-        bottom: .75rem;
+        bottom: -.55rem;
 
-        overflow-x: auto;
+        gap: .42rem;
 
-        scrollbar-width: none;
+        padding: .4rem .8rem;
+
+        overflow: visible;
+
+        background: var(--color-background);
+
+        border-radius: var(--radius-full);
+
+        transform: translateX(-50%);
 
     }
 
@@ -217,9 +237,89 @@
 
     .product-gallery__thumbnail {
 
-        width: 3.5rem;
+        width: .45rem;
 
-        height: 3.5rem;
+        height: .45rem;
+
+        padding: 0;
+
+        background: var(--color-border);
+
+        border: 0;
+
+        border-radius: 50%;
+
+        box-shadow: none;
+
+    }
+
+    .product-gallery__thumbnail:hover {
+
+        transform: none;
+
+    }
+
+    .product-gallery__thumbnail.is-active {
+
+        background: var(--color-text-primary);
+
+        border: 0;
+
+        box-shadow: none;
+
+    }
+
+    .product-gallery__thumbnail img {
+
+        display: none;
+
+    }
+
+}
+
+@media (min-width: 993px) {
+
+    .product-gallery__main {
+
+        aspect-ratio: 1 / 1.08;
+
+        padding: 0;
+
+        border-radius: .25rem;
+
+    }
+
+    .product-gallery__image {
+
+        object-fit: cover;
+
+    }
+
+    .product-gallery__thumbnails {
+
+        position: static;
+
+        display: grid;
+
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        gap: var(--space-4);
+
+        margin-top: var(--space-4);
+
+    }
+
+    .product-gallery__thumbnail {
+
+        width: 100%;
+
+        height: auto;
+
+        aspect-ratio: 1.15 / 1;
+
+        padding: .2rem;
+
+        border-radius: .25rem;
 
     }
 

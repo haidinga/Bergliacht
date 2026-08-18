@@ -36,21 +36,31 @@ export function renderVariantSelector(product) {
 
             <div class="variant-selector__options">
 
-                ${product.variants.map((variant) => `
+                ${product.variants.map((variant, index) => {
+
+                    const sizeName = ["S", "M", "L"][index] ?? variant.label;
+                    const heightInCentimeters = Number(variant.height) / 10;
+                    const displayLabel = Number.isFinite(heightInCentimeters)
+                        ? `${sizeName} (${heightInCentimeters} cm)`
+                        : variant.label;
+
+                    return `
 
                     <button
                         class="variant-selector__button"
                         type="button"
                         data-id="${variant.id}"
-                        data-label="${variant.label}"
+                        data-label="${displayLabel}"
                         data-price="${variant.price}"
                     >
 
-                        ${variant.label}
+                        ${displayLabel}
 
                     </button>
 
-                `).join("")}
+                `;
+
+                }).join("")}
 
             </div>
 

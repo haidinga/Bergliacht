@@ -11,11 +11,6 @@ import { isProductFavorite } from "./favorites.js";
    Product Info
 ========================================================== */
 
-/**
- * Rendert den Informationsbereich des Produkts.
- *
- * @param {Object} product
- */
 export function renderProductInfo(product) {
 
     const section = getElement("#product-info");
@@ -29,23 +24,13 @@ export function renderProductInfo(product) {
     const isFavorite = isProductFavorite(product.id);
 
     setHTML(section, `
-
         <div class="product-info">
-
             <div class="product-info__header">
-
-                <p class="product-info__brand">
-
-                    BERGLIACHT
-
-                </p>
+                <p class="product-info__brand">BERGLIACHT</p>
 
                 <div class="product-info__heading-row">
-
                     <h1 class="product-info__title">
-
                         ${product.content.name}
-
                     </h1>
 
                     <button
@@ -64,78 +49,53 @@ export function renderProductInfo(product) {
                     >
                         ${createIcon(isFavorite ? "heart-filled" : "heart")}
                     </button>
-
                 </div>
-
-                <p class="product-info__description">
-
-                    ${product.content.shortDescription}
-
-                </p>
-
-            </div>
-
-            <div class="product-info__section">
-
-                <div id="variant-selector"></div>
-
-            </div>
-
-            <div class="product-info__section">
-
-                <div id="color-selector"></div>
-
-            </div>
-
-            <div class="product-info__section">
 
                 <div
                     id="product-price"
                     class="product-info__price"
                 >
-
                     ab ${formatPrice(startingPrice)}
-
                 </div>
 
+                <p class="product-info__description">
+                    ${product.content.shortDescription}
+                </p>
             </div>
 
-            <div class="product-info__section">
+            <div class="product-info__benefits">
+                <div class="product-info__benefit">
+                    ${createIcon("shield-check")}
+                    <strong>Nachhaltig</strong>
+                    <span>Aus PLA gefertigt</span>
+                </div>
 
+                <div class="product-info__benefit">
+                    ${createIcon("package")}
+                    <strong>3D-Druck</strong>
+                    <span>Mit höchster Präzision</span>
+                </div>
+
+                <div class="product-info__benefit">
+                    ${createIcon("heart")}
+                    <strong>Mit Liebe</strong>
+                    <span>Für dein Zuhause</span>
+                </div>
+            </div>
+
+            <div class="product-info__section product-info__section--variants">
+                <div id="variant-selector"></div>
+            </div>
+
+            <div class="product-info__section product-info__section--colors">
+                <div id="color-selector"></div>
+            </div>
+
+            <div class="product-info__section product-info__purchase">
                 <div id="quantity-selector"></div>
-
                 <div id="add-to-cart"></div>
-
             </div>
-
-            <div class="product-info__section">
-
-                <div class="product-info__benefits">
-
-                    <div class="product-info__benefit">
-
-                        Individuell gefertigt
-
-                    </div>
-
-                    <div class="product-info__benefit">
-
-                        Nachhaltig produziert
-
-                    </div>
-
-                    <div class="product-info__benefit">
-
-                        Hochwertiges PLA
-
-                    </div>
-
-                </div>
-
-            </div>
-
         </div>
-
     `);
 
 }

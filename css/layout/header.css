@@ -239,6 +239,7 @@
 .home-page #header {
     position: fixed;
     width: 100%;
+    padding-top: env(safe-area-inset-top, 0px);
     background: transparent;
     border-bottom-color: transparent;
     box-shadow: none;

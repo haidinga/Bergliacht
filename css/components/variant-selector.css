@@ -18,11 +18,11 @@
 
     color: var(--color-text-primary);
 
-    font-size: 12px;
+    font-size: .9rem;
 
     font-weight: var(--font-weight-semibold);
 
-    letter-spacing: .03em;
+    letter-spacing: .04em;
 
 }
 
@@ -44,11 +44,11 @@
 
     align-items: center;
 
-    min-width: 4.75rem;
+    min-width: 7rem;
 
-    height: 2.75rem;
+    height: 3.2rem;
 
-    padding: 0 1rem;
+    padding: 0 1.25rem;
 
     background: var(--color-surface);
 
@@ -168,9 +168,11 @@
 
         min-width: 0;
 
-        height: 2.6rem;
+        height: 2.35rem;
 
-        font-size: .85rem;
+        padding-inline: .4rem;
+
+        font-size: .72rem;
 
     }
 

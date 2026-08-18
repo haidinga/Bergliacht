@@ -322,15 +322,26 @@ function initializeHeaderScrollState(header) {
         if (document.body.classList.contains("home-page")) {
 
             const hero = getElement("#hero .hero");
+            const themeColor = document.querySelector(
+                'meta[name="theme-color"]'
+            );
 
             if (hero) {
 
                 const heroBottom =
                     hero.getBoundingClientRect().bottom;
 
+                const isPastHero =
+                    heroBottom <= header.offsetHeight;
+
                 header.classList.toggle(
                     "is-past-hero",
-                    heroBottom <= header.offsetHeight
+                    isPastHero
+                );
+
+                themeColor?.setAttribute(
+                    "content",
+                    isPastHero ? "#F5F1EA" : "#303031"
                 );
 
             }

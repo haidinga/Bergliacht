@@ -981,10 +981,7 @@
 
     color: #f5f5f5;
 
-    font-family:
-        Consolas,
-        "Courier New",
-        monospace;
+    font-family: var(--font-family-base);
 
     font-size: .78rem;
 

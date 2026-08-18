@@ -26,13 +26,44 @@ export function renderAccordion(product) {
 
     setHTML(section, `
 
-        <div class="container">
+        <div class="container product-description__container">
+
+            <div class="product-description__intro">
+
+                <div class="product-description__copy">
+
+                    <p class="product-description__eyebrow">
+                        Beschreibung
+                    </p>
+
+                    <h2>${product.content.name}</h2>
+
+                    <p>
+                        ${product.content.description}
+                    </p>
+
+                </div>
+
+                <div class="product-description__media">
+
+                    <img
+                        src="${product.media.folder}${product.media.scene}"
+                        data-fallback="${product.media.folder}${product.media.thumbnail}"
+                        alt="${product.content.name} in Szene"
+                        loading="lazy"
+                        onerror="this.onerror=null;this.src=this.dataset.fallback"
+                    >
+
+                </div>
+
+            </div>
 
             <div class="accordion">
 
                 ${createItem(
                     "Beschreibung",
-                    product.content.description
+                    product.content.description,
+                    "accordion__item--mobile-only"
                 )}
 
                 ${createItem(
@@ -47,7 +78,7 @@ export function renderAccordion(product) {
 
                 ${createItem(
                     "Material",
-                    product.notes.material
+                    product.specifications.material
                 )}
 
                 ${createItem(
@@ -121,11 +152,11 @@ export function renderAccordion(product) {
    Accordion Item
 ========================================================== */
 
-function createItem(title, content) {
+function createItem(title, content, className = "") {
 
     return `
 
-        <div class="accordion__item">
+        <div class="accordion__item ${className}">
 
             <button
                 class="accordion__button"

@@ -28,6 +28,12 @@
 
 }
 
+.accordion__item--mobile-only {
+
+    display: none;
+
+}
+
 
 /* ==========================================================================
    BUTTON
@@ -197,6 +203,12 @@
 ========================================================================== */
 
 @media (max-width: 768px) {
+
+    .accordion__item--mobile-only {
+
+        display: block;
+
+    }
 
     .accordion__button {
 

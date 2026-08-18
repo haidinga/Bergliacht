@@ -182,6 +182,45 @@ export function renderProductGallery(
 
 
     /* ======================================================
+       Mobile Swipe Navigation
+    ====================================================== */
+
+    let touchStartX = null;
+
+    main.addEventListener("touchstart", (event) => {
+
+        touchStartX = event.touches[0]?.clientX ?? null;
+
+    }, { passive: true });
+
+    main.addEventListener("touchend", (event) => {
+
+        if (touchStartX === null) return;
+
+        const touchEndX =
+            event.changedTouches[0]?.clientX ?? touchStartX;
+        const swipeDistance = touchEndX - touchStartX;
+
+        touchStartX = null;
+
+        if (Math.abs(swipeDistance) < 40) return;
+
+        const thumbnailList = [...thumbnails];
+        const activeIndex = thumbnailList.findIndex(
+            thumbnail => thumbnail.classList.contains("is-active")
+        );
+        const direction = swipeDistance < 0 ? 1 : -1;
+        const nextIndex = Math.min(
+            Math.max(activeIndex + direction, 0),
+            thumbnailList.length - 1
+        );
+
+        thumbnailList[nextIndex]?.click();
+
+    }, { passive: true });
+
+
+    /* ======================================================
        Image Transition
     ====================================================== */
 
