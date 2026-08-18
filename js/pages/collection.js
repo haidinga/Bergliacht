@@ -29,25 +29,21 @@ async function initCollectionPage() {
            Daten laden
         ======================================================= */
 
-        const data =
-            await loadData();
+        const data = await loadData();
 
 
         /* ======================================================
            Header
         ======================================================= */
 
-        renderHeader(
-            data.settings
-        );
+        renderHeader(data.settings);
 
 
         /* ======================================================
            Collection ID aus URL
         ======================================================= */
 
-        const collectionId =
-            getCollectionId();
+        const collectionId = getCollectionId();
 
 
         if (!collectionId) {
@@ -56,9 +52,7 @@ async function initCollectionPage() {
                 "Keine Kollektion ausgewählt."
             );
 
-            renderFooter(
-                data.settings
-            );
+            renderFooter(data.settings);
 
             return;
 
@@ -69,11 +63,9 @@ async function initCollectionPage() {
            Kollektion suchen
         ======================================================= */
 
-        const collection =
-            data.collections.find(
-                (item) =>
-                    item.id === collectionId
-            );
+        const collection = data.collections.find(
+            (item) => item.id === collectionId
+        );
 
 
         if (!collection) {
@@ -82,9 +74,7 @@ async function initCollectionPage() {
                 "Die gewünschte Kollektion wurde nicht gefunden."
             );
 
-            renderFooter(
-                data.settings
-            );
+            renderFooter(data.settings);
 
             return;
 
@@ -92,30 +82,27 @@ async function initCollectionPage() {
 
 
         /* ======================================================
-           Hero
+           Hero anzeigen
         ======================================================= */
 
-        renderCollectionHero(
-            collection
-        );
+        renderCollectionHero(collection);
 
 
         /* ======================================================
            Produkte der Kollektion filtern
         ======================================================= */
 
-        const products =
-            data.products.filter(
-                (product) => {
+        const products = data.products.filter(
+            (product) => {
 
-                    return (
-                        product.active &&
-                        product.classification?.collection ===
-                            collection.id
-                    );
+                return (
+                    product.active &&
+                    product.classification?.collection ===
+                        collection.id
+                );
 
-                }
-            );
+            }
+        );
 
 
         /* ======================================================
@@ -132,18 +119,14 @@ async function initCollectionPage() {
            Seitentitel
         ======================================================= */
 
-        updatePageTitle(
-            collection
-        );
+        updatePageTitle(collection);
 
 
         /* ======================================================
            Footer
         ======================================================= */
 
-        renderFooter(
-            data.settings
-        );
+        renderFooter(data.settings);
 
 
     } catch (error) {
@@ -169,15 +152,11 @@ async function initCollectionPage() {
 
 function getCollectionId() {
 
-    const params =
-        new URLSearchParams(
-            window.location.search
-        );
-
-
-    return params.get(
-        "id"
+    const params = new URLSearchParams(
+        window.location.search
     );
+
+    return params.get("id");
 
 }
 
@@ -186,14 +165,11 @@ function getCollectionId() {
    Render Collection Hero
 ========================================================== */
 
-function renderCollectionHero(
-    collection
-) {
+function renderCollectionHero(collection) {
 
-    const hero =
-        getElement(
-            "#collection-hero"
-        );
+    const hero = getElement(
+        "#collection-hero"
+    );
 
 
     if (!hero) return;
@@ -218,7 +194,6 @@ function renderCollectionHero(
         hero,
 
         `
-
             ${
                 banner
                     ? `
@@ -268,9 +243,7 @@ function renderCollectionHero(
                 }
 
             </div>
-
         `
-
     );
 
 }
@@ -285,10 +258,9 @@ function renderCollectionProducts(
     products
 ) {
 
-    const section =
-        getElement(
-            "#collection-products"
-        );
+    const section = getElement(
+        "#collection-products"
+    );
 
 
     if (!section) return;
@@ -309,10 +281,7 @@ function renderCollectionProducts(
             section,
 
             `
-
-                <div
-                    class="collection-products__container"
-                >
+                <div class="container">
 
                     <div
                         class="collection-products__empty"
@@ -335,7 +304,6 @@ function renderCollectionProducts(
                     </div>
 
                 </div>
-
             `
         );
 
@@ -346,16 +314,14 @@ function renderCollectionProducts(
 
     /* ======================================================
        Produkte anzeigen
+       Verwendet dasselbe Layout wie die Startseite
     ======================================================= */
 
     setHTML(
         section,
 
         `
-
-            <div
-                class="collection-products__container"
-            >
+            <div class="container">
 
                 <div
                     class="collection-products__header"
@@ -392,16 +358,12 @@ function renderCollectionProducts(
                 </div>
 
 
-                <div
-                    class="collection-products__grid"
-                >
+                <div class="product-grid">
 
                     ${products
                         .map(
                             (product) =>
-                                createProductCard(
-                                    product
-                                )
+                                createProductCard(product)
                         )
                         .join("")
                     }
@@ -409,9 +371,7 @@ function renderCollectionProducts(
                 </div>
 
             </div>
-
         `
-
     );
 
 }
@@ -421,9 +381,7 @@ function renderCollectionProducts(
    Page Title
 ========================================================== */
 
-function updatePageTitle(
-    collection
-) {
+function updatePageTitle(collection) {
 
     const name =
         collection.content?.name ||
@@ -431,7 +389,7 @@ function updatePageTitle(
 
 
     document.title =
-        `${name} | s’Bergliacht`;
+        `${name} | Bergliacht`;
 
 }
 
@@ -440,25 +398,17 @@ function updatePageTitle(
    Error State
 ========================================================== */
 
-function renderError(
-    message
-) {
+function renderError(message) {
 
-    const hero =
-        getElement(
-            "#collection-hero"
-        );
+    const hero = getElement(
+        "#collection-hero"
+    );
 
 
-    const products =
-        getElement(
-            "#collection-products"
-        );
+    const products = getElement(
+        "#collection-products"
+    );
 
-
-    /* ======================================================
-       Hero leeren
-    ======================================================= */
 
     if (hero) {
 
@@ -470,20 +420,13 @@ function renderError(
     }
 
 
-    /* ======================================================
-       Fehlermeldung
-    ======================================================= */
-
     if (products) {
 
         setHTML(
             products,
 
             `
-
-                <div
-                    class="collection-products__container"
-                >
+                <div class="container">
 
                     <div
                         class="collection-products__empty"
@@ -505,7 +448,6 @@ function renderError(
                     </div>
 
                 </div>
-
             `
         );
 
