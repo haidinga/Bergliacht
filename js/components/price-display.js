@@ -49,7 +49,7 @@ export function initializePriceDisplay() {
         setTimeout(() => {
 
             price.textContent =
-                `${variantPrice.toFixed(2).replace(".", ",")} €`;
+                `${variantPrice.toFixed(2).replace(".", ",")} EUR`;
 
         }, 110);
 

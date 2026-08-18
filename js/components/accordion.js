@@ -36,23 +36,18 @@ export function renderAccordion(product) {
                 )}
 
                 ${createItem(
-                    "Material",
-                    product.specifications.material
-                )}
-
-                ${createItem(
                     "Pflege",
                     product.specifications.care
                 )}
 
                 ${createItem(
-                    "Versand",
-                    product.specifications.shipping
+                    "Herstellung",
+                    product.notes.manufacturing
                 )}
 
                 ${createItem(
-                    "Herstellung",
-                    product.notes.manufacturing
+                    "Material",
+                    product.notes.material
                 )}
 
                 ${createItem(

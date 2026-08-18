@@ -5,17 +5,74 @@
     "data": [
 
         {
-            "id": "nordic",
+            "id": "essence",
             "active": true,
 
             "content": {
-                "name": "Nordic",
-                "description": "Klare Linien, ruhige Formen und zeitloses skandinavisches Design."
+                "name": "Essence",
+                "description": "Zeitlose Formen, natürliche Eleganz und Designs, die Ruhe in den Raum bringen."
             },
 
             "media": {
-                "thumbnail": "./assets/images/collections/nordic.webp",
-                "banner": "./assets/images/collections/nordic-banner.webp"
+                "thumbnail": "./assets/images/collections/essence.webp",
+                "banner": "./assets/images/collections/essence-banner.webp"
+            },
+
+            "sorting": {
+                "order": 1
+            }
+        },
+
+        {
+            "id": "terra",
+            "active": true,
+
+            "content": {
+                "name": "Terra",
+                "description": "Warme Formen und mediterrane Inspiration – eine Hommage an Natur, Erde und Küste."
+            },
+
+            "media": {
+                "thumbnail": "./assets/images/collections/terra.webp",
+                "banner": "./assets/images/collections/terra-banner.webp"
+            },
+
+            "sorting": {
+                "order": 2
+            }
+        },
+
+        {
+            "id": "nocturne",
+            "active": true,
+
+            "content": {
+                "name": "Nocturne",
+                "description": "Dunkle Eleganz, skulpturale Formen und eine geheimnisvolle, moderne Atmosphäre."
+            },
+
+            "media": {
+                "thumbnail": "./assets/images/collections/nocturne.webp",
+                "banner": "./assets/images/collections/nocturne-banner.webp"
+            },
+
+            "sorting": {
+                "order": 3
+            }
+        },
+
+        {
+            "id": "forma",
+            "active": true,
+
+            "content": {
+                "name": "Forma",
+                "description": "Reduziertes Design, klare Silhouetten und moderne Ästhetik für bewusst eingerichtete Räume."
+            },
+
+            "media": {
+                "thumbnail": "./assets/images/collections/forma.webp",
+                "banner": "./assets/images/collections/forma-banner.webp"
             },
 
             "sorting": {
@@ -29,69 +86,12 @@
 
             "content": {
                 "name": "Alpine",
-                "description": "Inspiriert von den Bergen, natürlichen Materialien und alpiner Ruhe."
+                "description": "Klare Linien, ruhige Formen. Inspiriert von der alpinen Landschaft und der Ruhe der Berge."
             },
 
             "media": {
                 "thumbnail": "./assets/images/collections/alpine.webp",
                 "banner": "./assets/images/collections/alpine-banner.webp"
-            },
-
-            "sorting": {
-                "order": 2
-            }
-        },
-
-        {
-            "id": "organic",
-            "active": true,
-
-            "content": {
-                "name": "Organic",
-                "description": "Weiche Konturen und fließende Formen aus der Natur."
-            },
-
-            "media": {
-                "thumbnail": "./assets/images/collections/organic.webp",
-                "banner": "./assets/images/collections/organic-banner.webp"
-            },
-
-            "sorting": {
-                "order": 3
-            }
-        },
-
-        {
-            "id": "pazific",
-            "active": true,
-
-            "content": {
-                "name": "Pazific",
-                "description": "Klare Linien, ruhige Formen und zeitloses skandinavisches Design."
-            },
-
-            "media": {
-                "thumbnail": "./assets/images/collections/pazific.webp",
-                "banner": "./assets/images/collections/pazific-banner.webp"
-            },
-
-            "sorting": {
-                "order": 1
-            }
-        },
-
-        {
-            "id": "",
-            "active": false,
-
-            "content": {
-                "name": "",
-                "description": "Klare Linien, ruhige Formen und zeitloses skandinavisches Design."
-            },
-
-            "media": {
-                "thumbnail": "./assets/images/collections/emmsn.webp",
-                "banner": "./assets/images/collections/emmsn-banner.webp"
             },
 
             "sorting": {
@@ -101,7 +101,7 @@
 
         {
             "id": "minimal",
-            "active": true,
+            "active": false,
 
             "content": {
                 "name": "Minimal",
@@ -120,7 +120,7 @@
 
         {
             "id": "terra",
-            "active": true,
+            "active": false,
 
             "content": {
                 "name": "Terra",

@@ -68,7 +68,7 @@ export function renderProductInfo(product) {
                     class="product-info__price"
                 >
 
-                    ab ${startingPrice.toFixed(2).replace(".", ",")} €
+                    ab ${startingPrice.toFixed(2).replace(".", ",")} EUR
 
                 </div>
 

@@ -5,117 +5,24 @@
     "data": [
 
         {
-            "id": "the-amore",
-            "slug": "the-amore",
-            "active": true,
-
-            "content": {
-                "name": "The Amore",
-                "subtitle": "Test Product Subtitle",
-                "shortDescription": "Test Product Short Description",
-                "description": "Test Product Description"
-            },
-
-            "classification": {
-                "category": "vases",
-                "collection": "pazific",
-                "featured": true,
-                "new": false,
-                "bestseller": false
-            },
-
-            "media": {
-                "folder": "./assets/images/products/the-amore/",
-                "thumbnail": "thumbnail.webp",
-                "scene": "scene.webp"
-            },
-
-            "variants": [
-                {
-                    "id": "small",
-                    "label": "120mm",
-                    "height": 120,
-                    "price": 24.90
-                },
-                {
-                    "id": "medium",
-                    "label": "180mm",
-                    "height": 180,
-                    "price": 34.90
-                },
-                {
-                    "id": "large",
-                    "label": "240mm",
-                    "height": 240,
-                    "price": 44.90
-                }
-            ],
-
-            "colors": [
-                "anthrazit",
-                "beige",
-                "black",
-                "blue-grey",
-                "bone-white",
-                "clay",
-                "coffee",
-                "gold",
-                "grass-green",
-                "midnight",
-                "oak",
-                "olive",
-                "porzellan",
-                "red",
-                "roasted-chestnut",
-                "sakura-pink",
-                "silver",
-                "taro-purple",
-                "yellow"
-            ],
-
-            "specifications": {
-                "material": "PLA",
-                "manufacturer": "Bergliacht",
-                "care": "Mit einem trockenen oder leicht feuchten Tuch reinigen. Nicht spülmaschinengeeignet. Vor direkter Sonneneinstrahlung und Temperaturen über 50 °C schützen.",
-                "shipping": "Fertigungszeit 2–4 Werktage. Anschließend erfolgt der Versand mit Sendungsverfolgung."
-            },
-
-            "notes": {
-                "manufacturing": "Jedes Produkt wird individuell für dich im hochwertigen 3D-Druckverfahren gefertigt.",
-                "surface": "Jedes Produkt wird im FDM-3D-Druckverfahren Schicht für Schicht gefertigt. Feine Drucklinien sind charakteristisch für dieses Herstellungsverfahren und Teil des Designs – sie verleihen jedem Produkt seinen individuellen Charakter."
-            },
-
-            "attributes": {
-                "waterproof": false,
-                "indoor": true,
-                "outdoor": false
-            },
-
-            "meta": {
-                "created": "",
-                "updated": ""
-            }
-        },
-
-        {
-    "id": "the-ripple",
-    "slug": "the-ripple",
+    "id": "the-amore",
+    "slug": "the-amore",
     "active": true,
     "content": {
-        "name": "The Ripple",
-        "subtitle": "Test Untertitel",
-        "shortDescription": "Test Kurzbeschreibung",
-        "description": "Test Beschreibung"
+        "name": "The Amore",
+        "subtitle": "Sanfte Formen und italienische Leichtigkeit für besondere Momente.",
+        "shortDescription": "Sanfte Formen und italienische Leichtigkeit für besondere Momente.",
+        "description": "The Amore bringt einen Hauch italienischer Lebensfreude in den Wohnraum. Die weiche, elegante Formsprache wirkt warm und einladend und macht die Vase zu einem besonderen Blickfang. Ob als Mittelpunkt eines Tisches oder als dezentes Detail im Regal – The Amore verleiht jedem Raum eine persönliche Note."
     },
     "classification": {
         "category": "vases",
-        "collection": "organic",
+        "collection": "essence",
         "featured": false,
         "new": false,
         "bestseller": false
     },
     "media": {
-        "folder": "./assets/images/products/the-ripple/",
+        "folder": "./assets/images/products/the-amore/",
         "thumbnail": "thumbnail.webp",
         "scene": "scene.webp"
     },
@@ -124,19 +31,19 @@
             "id": "small",
             "label": "120mm",
             "height": 120,
-            "price": 24.9
+            "price": 3
         },
         {
             "id": "medium",
             "label": "180mm",
             "height": 180,
-            "price": 34.9
+            "price": 6
         },
         {
             "id": "large",
             "label": "240mm",
             "height": 240,
-            "price": 44.9
+            "price": 11
         }
     ],
     "colors": [
@@ -161,13 +68,13 @@
         "yellow"
     ],
     "specifications": {
-        "material": "PLA",
+        "material": "PLA (Polylactic Acid) ist ein biologisch abbaubarer Kunststoff, der aus nachwachsenden Rohstoffen wie Maisstärke oder Zuckerrohr hergestellt wird. PLA ist umweltfreundlicher als viele andere Kunststoffe, da es aus erneuerbaren Ressourcen stammt und unter bestimmten Bedingungen kompostierbar ist. Es ist jedoch nicht so hitzebeständig wie einige andere Kunststoffe und kann sich bei hohen Temperaturen verformen, dadurch ist darauf zu achten, dass die Produkte nicht zu lange im Auto in der Sonne stehen.",
         "manufacturer": "Bergliacht",
-        "care": "Mit feuchtem Tuch abwischen"
+        "care": "Mit einem weichen, leicht feuchten Tuch reinigen und anschließend abtrocknen. Nicht in der Spülmaschine reinigen. Keine aggressiven Reinigungs- oder Scheuermittel verwenden. Keiner direkter Hitze oder starker Sonneneinstrahlung aussetzen, da PLA dadurch mit der Zeit verformt oder sich verfärben kann."
     },
     "notes": {
-        "manufacturing": "",
-        "surface": ""
+        "manufacturing": "Die Vasen sind durch ihr Material nicht wasserdicht und daher nicht für frische Blumen geeignet. Es sollten Trockenblumen verwendet werden.Jede Vase wird in Tirol im 3D-Druckverfahren aus PLA gefertigt. Durch die additive Fertigung kann es zu geringfügigen Abweichungen in Oberfläche, Struktur, Farbe und Form kommen. Dadurch ist jedes Stück ein Unikat.",
+        "surface": "Kleine sichtbare Druckspuren, minimale Unebenheiten oder feine Linien können entstehen. Sie gehören zum Herstellungsprozess und machen den Charakter eines 3D-gedruckten Produkts aus."
     },
     "attributes": {
         "waterproof": false,
@@ -175,8 +82,1624 @@
         "outdoor": false
     },
     "meta": {
-        "created": "2026-08-12T15:54:29.105Z",
-        "updated": "2026-08-12T15:54:29.105Z"
+        "created": "2026-08-17T09:23:53.428Z",
+        "updated": "2026-08-17T09:23:53.428Z"
+    }
+},
+
+        {
+    "id": "the-harmony",
+    "slug": "the-harmony",
+    "active": true,
+    "content": {
+        "name": "The Harmony",
+        "subtitle": "Eine ausgewogene Silhouette, geschaffen für zeitlose Harmonie.",
+        "shortDescription": "Eine ausgewogene Silhouette, geschaffen für zeitlose Harmonie.",
+        "description": "The Harmony trägt ihren Namen nicht ohne Grund. Ihre ausgewogenen Proportionen und die ruhige Form schaffen eine harmonische Verbindung zwischen Objekt und Raum. Sie wirkt zurückhaltend, ohne unscheinbar zu sein, und lässt sich vielseitig mit Blumen, Zweigen oder anderen Dekorationselementen kombinieren."
+    },
+    "classification": {
+        "category": "vases",
+        "collection": "essence",
+        "featured": false,
+        "new": false,
+        "bestseller": false
+    },
+    "media": {
+        "folder": "./assets/images/products/the-harmony/",
+        "thumbnail": "thumbnail.webp",
+        "scene": "scene.webp"
+    },
+    "variants": [
+        {
+            "id": "small",
+            "label": "120mm",
+            "height": 120,
+            "price": 3
+        },
+        {
+            "id": "medium",
+            "label": "180mm",
+            "height": 180,
+            "price": 6
+        },
+        {
+            "id": "large",
+            "label": "240mm",
+            "height": 240,
+            "price": 11
+        }
+    ],
+    "colors": [
+        "anthrazit",
+        "beige",
+        "black",
+        "bone-white",
+        "coffee",
+        "clay",
+        "blue-grey",
+        "silver",
+        "taro-purple",
+        "oak",
+        "olive",
+        "sakura-pink",
+        "red",
+        "porzellan",
+        "gold",
+        "grass-green",
+        "midnight",
+        "roasted-chestnut",
+        "yellow"
+    ],
+    "specifications": {
+        "material": "PLA (Polylactic Acid) ist ein biologisch abbaubarer Kunststoff, der aus nachwachsenden Rohstoffen wie Maisstärke oder Zuckerrohr hergestellt wird. PLA ist umweltfreundlicher als viele andere Kunststoffe, da es aus erneuerbaren Ressourcen stammt und unter bestimmten Bedingungen kompostierbar ist. Es ist jedoch nicht so hitzebeständig wie einige andere Kunststoffe und kann sich bei hohen Temperaturen verformen, dadurch ist darauf zu achten, dass die Produkte nicht zu lange im Auto in der Sonne stehen.",
+        "manufacturer": "Bergliacht",
+        "care": "Mit einem weichen, leicht feuchten Tuch reinigen und anschließend abtrocknen. Nicht in der Spülmaschine reinigen. Keine aggressiven Reinigungs- oder Scheuermittel verwenden. Keiner direkter Hitze oder starker Sonneneinstrahlung aussetzen, da PLA dadurch mit der Zeit verformt oder sich verfärben kann."
+    },
+    "notes": {
+        "manufacturing": "Die Vasen sind durch ihr Material nicht wasserdicht und daher nicht für frische Blumen geeignet. Es sollten Trockenblumen verwendet werden.Jede Vase wird in Tirol im 3D-Druckverfahren aus PLA gefertigt. Durch die additive Fertigung kann es zu geringfügigen Abweichungen in Oberfläche, Struktur, Farbe und Form kommen. Dadurch ist jedes Stück ein Unikat.",
+        "surface": "Kleine sichtbare Druckspuren, minimale Unebenheiten oder feine Linien können entstehen. Sie gehören zum Herstellungsprozess und machen den Charakter eines 3D-gedruckten Produkts aus."
+    },
+    "attributes": {
+        "waterproof": false,
+        "indoor": true,
+        "outdoor": false
+    },
+    "meta": {
+        "created": "2026-08-17T09:22:39.411Z",
+        "updated": "2026-08-17T09:22:39.411Z"
+    }
+},
+
+{
+    "id": "the-alba",
+    "slug": "the-alba",
+    "active": true,
+    "content": {
+        "name": "The Alba",
+        "subtitle": "Inspiriert von der Ruhe und Schönheit der Morgendämmerung.",
+        "shortDescription": "Inspiriert von der Ruhe und Schönheit der Morgendämmerung.",
+        "description": "The Alba steht für einen sanften Neubeginn. Ihre zurückhaltende Formsprache wirkt leicht und ruhig und fügt sich harmonisch in helle, natürliche Wohnkonzepte ein. Eine Vase für alle, die dezentes Design mit einer warmen und zeitlosen Atmosphäre verbinden möchten."
+    },
+    "classification": {
+        "category": "vases",
+        "collection": "essence",
+        "featured": false,
+        "new": false,
+        "bestseller": false
+    },
+    "media": {
+        "folder": "./assets/images/products/the-alba/",
+        "thumbnail": "thumbnail.webp",
+        "scene": "scene.webp"
+    },
+    "variants": [
+        {
+            "id": "small",
+            "label": "120mm",
+            "height": 120,
+            "price": 3
+        },
+        {
+            "id": "medium",
+            "label": "180mm",
+            "height": 180,
+            "price": 6
+        },
+        {
+            "id": "large",
+            "label": "240mm",
+            "height": 240,
+            "price": 11
+        }
+    ],
+    "colors": [
+        "anthrazit",
+        "beige",
+        "black",
+        "bone-white",
+        "coffee",
+        "clay",
+        "blue-grey",
+        "silver",
+        "taro-purple",
+        "oak",
+        "olive",
+        "sakura-pink",
+        "red",
+        "porzellan",
+        "gold",
+        "grass-green",
+        "midnight",
+        "roasted-chestnut",
+        "yellow"
+    ],
+    "specifications": {
+        "material": "PLA (Polylactic Acid) ist ein biologisch abbaubarer Kunststoff, der aus nachwachsenden Rohstoffen wie Maisstärke oder Zuckerrohr hergestellt wird. PLA ist umweltfreundlicher als viele andere Kunststoffe, da es aus erneuerbaren Ressourcen stammt und unter bestimmten Bedingungen kompostierbar ist. Es ist jedoch nicht so hitzebeständig wie einige andere Kunststoffe und kann sich bei hohen Temperaturen verformen, dadurch ist darauf zu achten, dass die Produkte nicht zu lange im Auto in der Sonne stehen.",
+        "manufacturer": "Bergliacht",
+        "care": "Mit einem weichen, leicht feuchten Tuch reinigen und anschließend abtrocknen. Nicht in der Spülmaschine reinigen. Keine aggressiven Reinigungs- oder Scheuermittel verwenden. Keiner direkter Hitze oder starker Sonneneinstrahlung aussetzen, da PLA dadurch mit der Zeit verformt oder sich verfärben kann."
+    },
+    "notes": {
+        "manufacturing": "Die Vasen sind durch ihr Material nicht wasserdicht und daher nicht für frische Blumen geeignet. Es sollten Trockenblumen verwendet werden.Jede Vase wird in Tirol im 3D-Druckverfahren aus PLA gefertigt. Durch die additive Fertigung kann es zu geringfügigen Abweichungen in Oberfläche, Struktur, Farbe und Form kommen. Dadurch ist jedes Stück ein Unikat.",
+        "surface": "Kleine sichtbare Druckspuren, minimale Unebenheiten oder feine Linien können entstehen. Sie gehören zum Herstellungsprozess und machen den Charakter eines 3D-gedruckten Produkts aus."
+    },
+    "attributes": {
+        "waterproof": false,
+        "indoor": true,
+        "outdoor": false
+    },
+    "meta": {
+        "created": "2026-08-17T08:37:41.086Z",
+        "updated": "2026-08-17T08:37:41.086Z"
+    }
+},
+
+{
+    "id": "the-aura",
+    "slug": "the-aura",
+    "active": true,
+    "content": {
+        "name": "The Aura",
+        "subtitle": "Sanfte, organische Formen, die Ruhe und eine besondere Atmosphäre in den Raum bringen.",
+        "shortDescription": "Sanfte, organische Formen, die Ruhe und eine besondere Atmosphäre in den Raum bringen.",
+        "description": "The Aura verbindet eine harmonische Silhouette mit einer zeitlosen, modernen Ästhetik. Ihre weichen Formen verleihen ihr eine ruhige Ausstrahlung und machen sie zu einem stilvollen Blickfang – mit oder ohne florale Dekoration. Ob auf dem Sideboard, dem Esstisch oder als Teil eines Arrangements: The Aura fügt sich mühelos in unterschiedliche Wohnstile ein und schafft eine warme, ausgewogene Atmosphäre."
+    },
+    "classification": {
+        "category": "vases",
+        "collection": "essence",
+        "featured": false,
+        "new": false,
+        "bestseller": false
+    },
+    "media": {
+        "folder": "./assets/images/products/the-aura/",
+        "thumbnail": "thumbnail.webp",
+        "scene": "scene.webp"
+    },
+    "variants": [
+        {
+            "id": "small",
+            "label": "120mm",
+            "height": 120,
+            "price": 3
+        },
+        {
+            "id": "medium",
+            "label": "180mm",
+            "height": 180,
+            "price": 6
+        },
+        {
+            "id": "large",
+            "label": "240mm",
+            "height": 240,
+            "price": 11
+        }
+    ],
+    "colors": [
+        "anthrazit",
+        "beige",
+        "black",
+        "bone-white",
+        "coffee",
+        "clay",
+        "blue-grey",
+        "silver",
+        "taro-purple",
+        "oak",
+        "olive",
+        "sakura-pink",
+        "red",
+        "porzellan",
+        "gold",
+        "grass-green",
+        "midnight",
+        "roasted-chestnut",
+        "yellow"
+    ],
+    "specifications": {
+        "material": "PLA (Polylactic Acid) ist ein biologisch abbaubarer Kunststoff, der aus nachwachsenden Rohstoffen wie Maisstärke oder Zuckerrohr hergestellt wird. PLA ist umweltfreundlicher als viele andere Kunststoffe, da es aus erneuerbaren Ressourcen stammt und unter bestimmten Bedingungen kompostierbar ist. Es ist jedoch nicht so hitzebeständig wie einige andere Kunststoffe und kann sich bei hohen Temperaturen verformen, dadurch ist darauf zu achten, dass die Produkte nicht zu lange im Auto in der Sonne stehen.",
+        "manufacturer": "Bergliacht",
+        "care": "Mit einem weichen, leicht feuchten Tuch reinigen und anschließend abtrocknen. Nicht in der Spülmaschine reinigen. Keine aggressiven Reinigungs- oder Scheuermittel verwenden. Keiner direkter Hitze oder starker Sonneneinstrahlung aussetzen, da PLA dadurch mit der Zeit verformt oder sich verfärben kann."
+    },
+    "notes": {
+        "manufacturing": "Die Vasen sind durch ihr Material nicht wasserdicht und daher nicht für frische Blumen geeignet. Es sollten Trockenblumen verwendet werden.Jede Vase wird in Tirol im 3D-Druckverfahren aus PLA gefertigt. Durch die additive Fertigung kann es zu geringfügigen Abweichungen in Oberfläche, Struktur, Farbe und Form kommen. Dadurch ist jedes Stück ein Unikat.",
+        "surface": "Kleine sichtbare Druckspuren, minimale Unebenheiten oder feine Linien können entstehen. Sie gehören zum Herstellungsprozess und machen den Charakter eines 3D-gedruckten Produkts aus."
+    },
+    "attributes": {
+        "waterproof": false,
+        "indoor": true,
+        "outdoor": false
+    },
+    "meta": {
+        "created": "2026-08-17T08:46:37.195Z",
+        "updated": "2026-08-17T08:46:37.195Z"
+    }
+},
+
+{
+    "id": "the-solis",
+    "slug": "the-solis",
+    "active": true,
+    "content": {
+        "name": "The Solis",
+        "subtitle": "Die warme Eleganz der Sonne, eingefangen in einer modernen Form.",
+        "shortDescription": "Die warme Eleganz der Sonne, eingefangen in einer modernen Form.",
+        "description": "The Solis bringt Wärme und Leichtigkeit in den Raum. Ihre ausgewogene Form wirkt elegant und zugleich natürlich und macht sie zu einem vielseitigen Begleiter für unterschiedlichste Einrichtungsstile. Besonders in Kombination mit getrockneten Gräsern oder einzelnen Zweigen entsteht eine ruhige, natürliche Komposition."
+    },
+    "classification": {
+        "category": "vases",
+        "collection": "essence",
+        "featured": false,
+        "new": false,
+        "bestseller": false
+    },
+    "media": {
+        "folder": "./assets/images/products/the-solis/",
+        "thumbnail": "thumbnail.webp",
+        "scene": "scene.webp"
+    },
+    "variants": [
+        {
+            "id": "small",
+            "label": "120mm",
+            "height": 120,
+            "price": 3
+        },
+        {
+            "id": "medium",
+            "label": "180mm",
+            "height": 180,
+            "price": 6
+        },
+        {
+            "id": "large",
+            "label": "240mm",
+            "height": 240,
+            "price": 11
+        }
+    ],
+    "colors": [
+        "anthrazit",
+        "beige",
+        "black",
+        "bone-white",
+        "coffee",
+        "clay",
+        "blue-grey",
+        "silver",
+        "taro-purple",
+        "oak",
+        "olive",
+        "sakura-pink",
+        "red",
+        "porzellan",
+        "gold",
+        "grass-green",
+        "midnight",
+        "roasted-chestnut",
+        "yellow"
+    ],
+    "specifications": {
+        "material": "PLA (Polylactic Acid) ist ein biologisch abbaubarer Kunststoff, der aus nachwachsenden Rohstoffen wie Maisstärke oder Zuckerrohr hergestellt wird. PLA ist umweltfreundlicher als viele andere Kunststoffe, da es aus erneuerbaren Ressourcen stammt und unter bestimmten Bedingungen kompostierbar ist. Es ist jedoch nicht so hitzebeständig wie einige andere Kunststoffe und kann sich bei hohen Temperaturen verformen, dadurch ist darauf zu achten, dass die Produkte nicht zu lange im Auto in der Sonne stehen.",
+        "manufacturer": "Bergliacht",
+        "care": "Mit einem weichen, leicht feuchten Tuch reinigen und anschließend abtrocknen. Nicht in der Spülmaschine reinigen. Keine aggressiven Reinigungs- oder Scheuermittel verwenden. Keiner direkter Hitze oder starker Sonneneinstrahlung aussetzen, da PLA dadurch mit der Zeit verformt oder sich verfärben kann."
+    },
+    "notes": {
+        "manufacturing": "Die Vasen sind durch ihr Material nicht wasserdicht und daher nicht für frische Blumen geeignet. Es sollten Trockenblumen verwendet werden.Jede Vase wird in Tirol im 3D-Druckverfahren aus PLA gefertigt. Durch die additive Fertigung kann es zu geringfügigen Abweichungen in Oberfläche, Struktur, Farbe und Form kommen. Dadurch ist jedes Stück ein Unikat.",
+        "surface": "Kleine sichtbare Druckspuren, minimale Unebenheiten oder feine Linien können entstehen. Sie gehören zum Herstellungsprozess und machen den Charakter eines 3D-gedruckten Produkts aus."
+    },
+    "attributes": {
+        "waterproof": false,
+        "indoor": true,
+        "outdoor": false
+    },
+    "meta": {
+        "created": "2026-08-17T08:48:14.377Z",
+        "updated": "2026-08-17T08:48:14.377Z"
+    }
+},
+
+{
+    "id": "the-tayo",
+    "slug": "the-tayo",
+    "active": true,
+    "content": {
+        "name": "The Tayo",
+        "subtitle": "Klare Linien treffen auf mediterrane Eleganz.",
+        "shortDescription": "Klare Linien treffen auf mediterrane Eleganz.",
+        "description": "Inspiriert von der ruhigen Ästhetik mediterraner Landschaften steht The Tajo für zeitlose Eleganz und natürliche Formen. Ihre ausgewogene Silhouette macht sie zu einem vielseitigen Dekorationsobjekt, das sowohl einzeln als auch in Kombination mit anderen Vasen wirkt. Ein dezentes Statement für moderne und stilvolle Räume."
+    },
+    "classification": {
+        "category": "vases",
+        "collection": "terra",
+        "featured": false,
+        "new": false,
+        "bestseller": false
+    },
+    "media": {
+        "folder": "./assets/images/products/the-tayo/",
+        "thumbnail": "thumbnail.webp",
+        "scene": "scene.webp"
+    },
+    "variants": [
+        {
+            "id": "small",
+            "label": "120mm",
+            "height": 120,
+            "price": 3
+        },
+        {
+            "id": "medium",
+            "label": "180mm",
+            "height": 180,
+            "price": 6
+        },
+        {
+            "id": "large",
+            "label": "240mm",
+            "height": 240,
+            "price": 11
+        }
+    ],
+    "colors": [
+        "anthrazit",
+        "beige",
+        "black",
+        "bone-white",
+        "coffee",
+        "clay",
+        "blue-grey",
+        "silver",
+        "taro-purple",
+        "oak",
+        "olive",
+        "sakura-pink",
+        "red",
+        "porzellan",
+        "gold",
+        "grass-green",
+        "midnight",
+        "roasted-chestnut",
+        "yellow"
+    ],
+    "specifications": {
+        "material": "PLA (Polylactic Acid) ist ein biologisch abbaubarer Kunststoff, der aus nachwachsenden Rohstoffen wie Maisstärke oder Zuckerrohr hergestellt wird. PLA ist umweltfreundlicher als viele andere Kunststoffe, da es aus erneuerbaren Ressourcen stammt und unter bestimmten Bedingungen kompostierbar ist. Es ist jedoch nicht so hitzebeständig wie einige andere Kunststoffe und kann sich bei hohen Temperaturen verformen, dadurch ist darauf zu achten, dass die Produkte nicht zu lange im Auto in der Sonne stehen.",
+        "manufacturer": "Bergliacht",
+        "care": "Mit einem weichen, leicht feuchten Tuch reinigen und anschließend abtrocknen. Nicht in der Spülmaschine reinigen. Keine aggressiven Reinigungs- oder Scheuermittel verwenden. Keiner direkter Hitze oder starker Sonneneinstrahlung aussetzen, da PLA dadurch mit der Zeit verformt oder sich verfärben kann."
+    },
+    "notes": {
+        "manufacturing": "Die Vasen sind durch ihr Material nicht wasserdicht und daher nicht für frische Blumen geeignet. Es sollten Trockenblumen verwendet werden.Jede Vase wird in Tirol im 3D-Druckverfahren aus PLA gefertigt. Durch die additive Fertigung kann es zu geringfügigen Abweichungen in Oberfläche, Struktur, Farbe und Form kommen. Dadurch ist jedes Stück ein Unikat.",
+        "surface": "Kleine sichtbare Druckspuren, minimale Unebenheiten oder feine Linien können entstehen. Sie gehören zum Herstellungsprozess und machen den Charakter eines 3D-gedruckten Produkts aus."
+    },
+    "attributes": {
+        "waterproof": false,
+        "indoor": true,
+        "outdoor": false
+    },
+    "meta": {
+        "created": "2026-08-17T08:49:35.061Z",
+        "updated": "2026-08-17T08:49:35.062Z"
+    }
+},
+
+{
+    "id": "the-siena",
+    "slug": "the-siena",
+    "active": true,
+    "content": {
+        "name": "The Siena",
+        "subtitle": "Zeitlose Eleganz mit einem Hauch italienischer Ästhetik.",
+        "shortDescription": "Zeitlose Eleganz mit einem Hauch italienischer Ästhetik.",
+        "description": "The Siena ist eine Hommage an die warme und natürliche Ästhetik der Toskana. Ihre ausgewogene Silhouette wirkt klassisch und gleichzeitig modern. Sie eignet sich ideal als einzelnes Statement-Piece oder als Teil einer bewusst zusammengestellten Dekoration."
+    },
+    "classification": {
+        "category": "vases",
+        "collection": "terra",
+        "featured": false,
+        "new": false,
+        "bestseller": false
+    },
+    "media": {
+        "folder": "./assets/images/products/the-siena/",
+        "thumbnail": "thumbnail.webp",
+        "scene": "scene.webp"
+    },
+    "variants": [
+        {
+            "id": "small",
+            "label": "120mm",
+            "height": 120,
+            "price": 3
+        },
+        {
+            "id": "medium",
+            "label": "180mm",
+            "height": 180,
+            "price": 6
+        },
+        {
+            "id": "large",
+            "label": "240mm",
+            "height": 240,
+            "price": 11
+        }
+    ],
+    "colors": [
+        "anthrazit",
+        "beige",
+        "black",
+        "bone-white",
+        "coffee",
+        "clay",
+        "blue-grey",
+        "silver",
+        "taro-purple",
+        "oak",
+        "olive",
+        "sakura-pink",
+        "red",
+        "porzellan",
+        "gold",
+        "grass-green",
+        "midnight",
+        "roasted-chestnut",
+        "yellow"
+    ],
+    "specifications": {
+        "material": "PLA (Polylactic Acid) ist ein biologisch abbaubarer Kunststoff, der aus nachwachsenden Rohstoffen wie Maisstärke oder Zuckerrohr hergestellt wird. PLA ist umweltfreundlicher als viele andere Kunststoffe, da es aus erneuerbaren Ressourcen stammt und unter bestimmten Bedingungen kompostierbar ist. Es ist jedoch nicht so hitzebeständig wie einige andere Kunststoffe und kann sich bei hohen Temperaturen verformen, dadurch ist darauf zu achten, dass die Produkte nicht zu lange im Auto in der Sonne stehen.",
+        "manufacturer": "Bergliacht",
+        "care": "Mit einem weichen, leicht feuchten Tuch reinigen und anschließend abtrocknen. Nicht in der Spülmaschine reinigen. Keine aggressiven Reinigungs- oder Scheuermittel verwenden. Keiner direkter Hitze oder starker Sonneneinstrahlung aussetzen, da PLA dadurch mit der Zeit verformt oder sich verfärben kann."
+    },
+    "notes": {
+        "manufacturing": "Die Vasen sind durch ihr Material nicht wasserdicht und daher nicht für frische Blumen geeignet. Es sollten Trockenblumen verwendet werden.Jede Vase wird in Tirol im 3D-Druckverfahren aus PLA gefertigt. Durch die additive Fertigung kann es zu geringfügigen Abweichungen in Oberfläche, Struktur, Farbe und Form kommen. Dadurch ist jedes Stück ein Unikat.",
+        "surface": "Kleine sichtbare Druckspuren, minimale Unebenheiten oder feine Linien können entstehen. Sie gehören zum Herstellungsprozess und machen den Charakter eines 3D-gedruckten Produkts aus."
+    },
+    "attributes": {
+        "waterproof": false,
+        "indoor": true,
+        "outdoor": false
+    },
+    "meta": {
+        "created": "2026-08-17T08:50:46.911Z",
+        "updated": "2026-08-17T08:50:46.911Z"
+    }
+},
+
+{
+    "id": "the-riva",
+    "slug": "the-riva",
+    "active": true,
+    "content": {
+        "name": "The Riva",
+        "subtitle": "Ruhig, elegant und inspiriert vom Leben am Wasser.",
+        "shortDescription": "Ruhig, elegant und inspiriert vom Leben am Wasser.",
+        "description": "The Riva bringt die entspannte Atmosphäre mediterraner Uferlandschaften in den Wohnraum. Die harmonische Form wirkt ruhig und natürlich und lässt sich mühelos in unterschiedliche Einrichtungskonzepte integrieren. Ein dezentes Designobjekt für Momente, in denen weniger mehr ist."
+    },
+    "classification": {
+        "category": "vases",
+        "collection": "terra",
+        "featured": false,
+        "new": false,
+        "bestseller": false
+    },
+    "media": {
+        "folder": "./assets/images/products/the-riva/",
+        "thumbnail": "thumbnail.webp",
+        "scene": "scene.webp"
+    },
+    "variants": [
+        {
+            "id": "small",
+            "label": "120mm",
+            "height": 120,
+            "price": 3
+        },
+        {
+            "id": "medium",
+            "label": "180mm",
+            "height": 180,
+            "price": 6
+        },
+        {
+            "id": "large",
+            "label": "240mm",
+            "height": 240,
+            "price": 11
+        }
+    ],
+    "colors": [
+        "anthrazit",
+        "beige",
+        "black",
+        "bone-white",
+        "coffee",
+        "clay",
+        "blue-grey",
+        "silver",
+        "taro-purple",
+        "oak",
+        "olive",
+        "sakura-pink",
+        "red",
+        "porzellan",
+        "gold",
+        "grass-green",
+        "midnight",
+        "roasted-chestnut",
+        "yellow"
+    ],
+    "specifications": {
+        "material": "PLA (Polylactic Acid) ist ein biologisch abbaubarer Kunststoff, der aus nachwachsenden Rohstoffen wie Maisstärke oder Zuckerrohr hergestellt wird. PLA ist umweltfreundlicher als viele andere Kunststoffe, da es aus erneuerbaren Ressourcen stammt und unter bestimmten Bedingungen kompostierbar ist. Es ist jedoch nicht so hitzebeständig wie einige andere Kunststoffe und kann sich bei hohen Temperaturen verformen, dadurch ist darauf zu achten, dass die Produkte nicht zu lange im Auto in der Sonne stehen.",
+        "manufacturer": "Bergliacht",
+        "care": "Mit einem weichen, leicht feuchten Tuch reinigen und anschließend abtrocknen. Nicht in der Spülmaschine reinigen. Keine aggressiven Reinigungs- oder Scheuermittel verwenden. Keiner direkter Hitze oder starker Sonneneinstrahlung aussetzen, da PLA dadurch mit der Zeit verformt oder sich verfärben kann."
+    },
+    "notes": {
+        "manufacturing": "Die Vasen sind durch ihr Material nicht wasserdicht und daher nicht für frische Blumen geeignet. Es sollten Trockenblumen verwendet werden.Jede Vase wird in Tirol im 3D-Druckverfahren aus PLA gefertigt. Durch die additive Fertigung kann es zu geringfügigen Abweichungen in Oberfläche, Struktur, Farbe und Form kommen. Dadurch ist jedes Stück ein Unikat.",
+        "surface": "Kleine sichtbare Druckspuren, minimale Unebenheiten oder feine Linien können entstehen. Sie gehören zum Herstellungsprozess und machen den Charakter eines 3D-gedruckten Produkts aus."
+    },
+    "attributes": {
+        "waterproof": false,
+        "indoor": true,
+        "outdoor": false
+    },
+    "meta": {
+        "created": "2026-08-17T08:51:55.296Z",
+        "updated": "2026-08-17T08:51:55.296Z"
+    }
+},
+
+{
+    "id": "the-vela",
+    "slug": "the-vela",
+    "active": true,
+    "content": {
+        "name": "The Vela",
+        "subtitle": "Mediterrane Leichtigkeit in einer eleganten Silhouette.",
+        "shortDescription": "Mediterrane Leichtigkeit in einer eleganten Silhouette.",
+        "description": "The Vela verbindet eine klare Form mit mediterraner Leichtigkeit. Inspiriert von Küste, Licht und ruhigen Sommertagen bringt sie eine entspannte Atmosphäre in den Wohnraum. Ihr schlichtes Design lässt sich vielseitig einsetzen und macht sie zu einem zeitlosen Stück für moderne Interiors."
+    },
+    "classification": {
+        "category": "vases",
+        "collection": "terra",
+        "featured": false,
+        "new": false,
+        "bestseller": false
+    },
+    "media": {
+        "folder": "./assets/images/products/the-vela/",
+        "thumbnail": "thumbnail.webp",
+        "scene": "scene.webp"
+    },
+    "variants": [
+        {
+            "id": "small",
+            "label": "120mm",
+            "height": 120,
+            "price": 3
+        },
+        {
+            "id": "medium",
+            "label": "180mm",
+            "height": 180,
+            "price": 6
+        },
+        {
+            "id": "large",
+            "label": "240mm",
+            "height": 240,
+            "price": 11
+        }
+    ],
+    "colors": [
+        "anthrazit",
+        "beige",
+        "black",
+        "bone-white",
+        "coffee",
+        "clay",
+        "blue-grey",
+        "silver",
+        "taro-purple",
+        "oak",
+        "olive",
+        "sakura-pink",
+        "red",
+        "porzellan",
+        "gold",
+        "grass-green",
+        "midnight",
+        "roasted-chestnut",
+        "yellow"
+    ],
+    "specifications": {
+        "material": "PLA (Polylactic Acid) ist ein biologisch abbaubarer Kunststoff, der aus nachwachsenden Rohstoffen wie Maisstärke oder Zuckerrohr hergestellt wird. PLA ist umweltfreundlicher als viele andere Kunststoffe, da es aus erneuerbaren Ressourcen stammt und unter bestimmten Bedingungen kompostierbar ist. Es ist jedoch nicht so hitzebeständig wie einige andere Kunststoffe und kann sich bei hohen Temperaturen verformen, dadurch ist darauf zu achten, dass die Produkte nicht zu lange im Auto in der Sonne stehen.",
+        "manufacturer": "Bergliacht",
+        "care": "Mit einem weichen, leicht feuchten Tuch reinigen und anschließend abtrocknen. Nicht in der Spülmaschine reinigen. Keine aggressiven Reinigungs- oder Scheuermittel verwenden. Keiner direkter Hitze oder starker Sonneneinstrahlung aussetzen, da PLA dadurch mit der Zeit verformt oder sich verfärben kann."
+    },
+    "notes": {
+        "manufacturing": "Die Vasen sind durch ihr Material nicht wasserdicht und daher nicht für frische Blumen geeignet. Es sollten Trockenblumen verwendet werden.Jede Vase wird in Tirol im 3D-Druckverfahren aus PLA gefertigt. Durch die additive Fertigung kann es zu geringfügigen Abweichungen in Oberfläche, Struktur, Farbe und Form kommen. Dadurch ist jedes Stück ein Unikat.",
+        "surface": "Kleine sichtbare Druckspuren, minimale Unebenheiten oder feine Linien können entstehen. Sie gehören zum Herstellungsprozess und machen den Charakter eines 3D-gedruckten Produkts aus."
+    },
+    "attributes": {
+        "waterproof": false,
+        "indoor": true,
+        "outdoor": false
+    },
+    "meta": {
+        "created": "2026-08-17T08:53:14.528Z",
+        "updated": "2026-08-17T08:53:14.528Z"
+    }
+},
+
+{
+    "id": "the-norde",
+    "slug": "the-norde",
+    "active": true,
+    "content": {
+        "name": "The Norde",
+        "subtitle": "Nordische Klarheit trifft auf eine warme, natürliche Ästhetik.",
+        "shortDescription": "Nordische Klarheit trifft auf eine warme, natürliche Ästhetik.",
+        "description": "The Norde steht für reduzierte Formen, klare Linien und die ruhige Ästhetik des Nordens. Das minimalistische Design lässt der Form selbst den Raum, zu wirken. Dadurch entsteht ein zeitloses Wohnaccessoire, das sich besonders harmonisch in moderne, skandinavisch inspirierte Einrichtungen einfügt."
+    },
+    "classification": {
+        "category": "vases",
+        "collection": "terra",
+        "featured": false,
+        "new": false,
+        "bestseller": false
+    },
+    "media": {
+        "folder": "./assets/images/products/the-norde/",
+        "thumbnail": "thumbnail.webp",
+        "scene": "scene.webp"
+    },
+    "variants": [
+        {
+            "id": "small",
+            "label": "120mm",
+            "height": 120,
+            "price": 3
+        },
+        {
+            "id": "medium",
+            "label": "180mm",
+            "height": 180,
+            "price": 6
+        },
+        {
+            "id": "large",
+            "label": "240mm",
+            "height": 240,
+            "price": 11
+        }
+    ],
+    "colors": [
+        "anthrazit",
+        "beige",
+        "black",
+        "bone-white",
+        "coffee",
+        "clay",
+        "blue-grey",
+        "silver",
+        "taro-purple",
+        "oak",
+        "olive",
+        "sakura-pink",
+        "red",
+        "porzellan",
+        "gold",
+        "grass-green",
+        "midnight",
+        "roasted-chestnut",
+        "yellow"
+    ],
+    "specifications": {
+        "material": "PLA (Polylactic Acid) ist ein biologisch abbaubarer Kunststoff, der aus nachwachsenden Rohstoffen wie Maisstärke oder Zuckerrohr hergestellt wird. PLA ist umweltfreundlicher als viele andere Kunststoffe, da es aus erneuerbaren Ressourcen stammt und unter bestimmten Bedingungen kompostierbar ist. Es ist jedoch nicht so hitzebeständig wie einige andere Kunststoffe und kann sich bei hohen Temperaturen verformen, dadurch ist darauf zu achten, dass die Produkte nicht zu lange im Auto in der Sonne stehen.",
+        "manufacturer": "Bergliacht",
+        "care": "Mit einem weichen, leicht feuchten Tuch reinigen und anschließend abtrocknen. Nicht in der Spülmaschine reinigen. Keine aggressiven Reinigungs- oder Scheuermittel verwenden. Keiner direkter Hitze oder starker Sonneneinstrahlung aussetzen, da PLA dadurch mit der Zeit verformt oder sich verfärben kann."
+    },
+    "notes": {
+        "manufacturing": "Die Vasen sind durch ihr Material nicht wasserdicht und daher nicht für frische Blumen geeignet. Es sollten Trockenblumen verwendet werden.Jede Vase wird in Tirol im 3D-Druckverfahren aus PLA gefertigt. Durch die additive Fertigung kann es zu geringfügigen Abweichungen in Oberfläche, Struktur, Farbe und Form kommen. Dadurch ist jedes Stück ein Unikat.",
+        "surface": "Kleine sichtbare Druckspuren, minimale Unebenheiten oder feine Linien können entstehen. Sie gehören zum Herstellungsprozess und machen den Charakter eines 3D-gedruckten Produkts aus."
+    },
+    "attributes": {
+        "waterproof": false,
+        "indoor": true,
+        "outdoor": false
+    },
+    "meta": {
+        "created": "2026-08-17T08:54:29.880Z",
+        "updated": "2026-08-17T08:54:29.880Z"
+    }
+},
+
+{
+    "id": "the-vanta",
+    "slug": "the-vanta",
+    "active": true,
+    "content": {
+        "name": "The Vanta",
+        "subtitle": "Markant, dunkel und kompromisslos modern.",
+        "shortDescription": "Markant, dunkel und kompromisslos modern.",
+        "description": "The Vanta ist für Räume geschaffen, die ein starkes Statement vertragen. Ihre markante Formsprache verbindet sich mit einer modernen, fast skulpturalen Ästhetik. Das Ergebnis ist ein außergewöhnliches Dekorationsobjekt, das auch ohne Blumen seine Wirkung entfaltet und bewusst einen Kontrast zu hellen, natürlichen Materialien setzt."
+    },
+    "classification": {
+        "category": "vases",
+        "collection": "nocturne",
+        "featured": false,
+        "new": false,
+        "bestseller": false
+    },
+    "media": {
+        "folder": "./assets/images/products/the-vanta/",
+        "thumbnail": "thumbnail.webp",
+        "scene": "scene.webp"
+    },
+    "variants": [
+        {
+            "id": "small",
+            "label": "120mm",
+            "height": 120,
+            "price": 4
+        },
+        {
+            "id": "medium",
+            "label": "180mm",
+            "height": 180,
+            "price": 7
+        },
+        {
+            "id": "large",
+            "label": "240mm",
+            "height": 240,
+            "price": 12
+        }
+    ],
+    "colors": [
+        "anthrazit",
+        "black",
+        "coffee",
+        "clay",
+        "blue-grey",
+        "olive",
+        "midnight",
+        "roasted-chestnut"
+    ],
+    "specifications": {
+        "material": "PLA (Polylactic Acid) ist ein biologisch abbaubarer Kunststoff, der aus nachwachsenden Rohstoffen wie Maisstärke oder Zuckerrohr hergestellt wird. PLA ist umweltfreundlicher als viele andere Kunststoffe, da es aus erneuerbaren Ressourcen stammt und unter bestimmten Bedingungen kompostierbar ist. Es ist jedoch nicht so hitzebeständig wie einige andere Kunststoffe und kann sich bei hohen Temperaturen verformen, dadurch ist darauf zu achten, dass die Produkte nicht zu lange im Auto in der Sonne stehen.",
+        "manufacturer": "Bergliacht",
+        "care": "Mit einem weichen, leicht feuchten Tuch reinigen und anschließend abtrocknen. Nicht in der Spülmaschine reinigen. Keine aggressiven Reinigungs- oder Scheuermittel verwenden. Keiner direkter Hitze oder starker Sonneneinstrahlung aussetzen, da PLA dadurch mit der Zeit verformt oder sich verfärben kann."
+    },
+    "notes": {
+        "manufacturing": "Die Vasen sind durch ihr Material nicht wasserdicht und daher nicht für frische Blumen geeignet. Es sollten Trockenblumen verwendet werden.Jede Vase wird in Tirol im 3D-Druckverfahren aus PLA gefertigt. Durch die additive Fertigung kann es zu geringfügigen Abweichungen in Oberfläche, Struktur, Farbe und Form kommen. Dadurch ist jedes Stück ein Unikat.",
+        "surface": "Kleine sichtbare Druckspuren, minimale Unebenheiten oder feine Linien können entstehen. Sie gehören zum Herstellungsprozess und machen den Charakter eines 3D-gedruckten Produkts aus."
+    },
+    "attributes": {
+        "waterproof": false,
+        "indoor": true,
+        "outdoor": false
+    },
+    "meta": {
+        "created": "2026-08-17T09:08:08.206Z",
+        "updated": "2026-08-17T09:08:08.206Z"
+    }
+},
+
+{
+    "id": "the-elvara",
+    "slug": "the-elvara",
+    "active": true,
+    "content": {
+        "name": "The Elvara",
+        "subtitle": "Eine elegante Silhouette mit einem Hauch von Mystik.",
+        "shortDescription": "Eine elegante Silhouette mit einem Hauch von Mystik.",
+        "description": "The Elvara verbindet zeitgenössisches Design mit einer subtil mystischen Ausstrahlung. Ihre besondere Form macht sie zu einem Blickfang, ohne dabei aufdringlich zu wirken. Als Solitär oder mit ausgewählten Zweigen entsteht ein stilvolles Arrangement mit besonderem Charakter."
+    },
+    "classification": {
+        "category": "vases",
+        "collection": "nocturne",
+        "featured": false,
+        "new": false,
+        "bestseller": false
+    },
+    "media": {
+        "folder": "./assets/images/products/the-elvara/",
+        "thumbnail": "thumbnail.webp",
+        "scene": "scene.webp"
+    },
+    "variants": [
+        {
+            "id": "small",
+            "label": "120mm",
+            "height": 120,
+            "price": 4
+        },
+        {
+            "id": "medium",
+            "label": "180mm",
+            "height": 180,
+            "price": 7
+        },
+        {
+            "id": "large",
+            "label": "240mm",
+            "height": 240,
+            "price": 12
+        }
+    ],
+    "colors": [
+        "anthrazit",
+        "black",
+        "coffee",
+        "clay",
+        "blue-grey",
+        "olive",
+        "midnight",
+        "roasted-chestnut"
+    ],
+    "specifications": {
+        "material": "PLA (Polylactic Acid) ist ein biologisch abbaubarer Kunststoff, der aus nachwachsenden Rohstoffen wie Maisstärke oder Zuckerrohr hergestellt wird. PLA ist umweltfreundlicher als viele andere Kunststoffe, da es aus erneuerbaren Ressourcen stammt und unter bestimmten Bedingungen kompostierbar ist. Es ist jedoch nicht so hitzebeständig wie einige andere Kunststoffe und kann sich bei hohen Temperaturen verformen, dadurch ist darauf zu achten, dass die Produkte nicht zu lange im Auto in der Sonne stehen.",
+        "manufacturer": "Bergliacht",
+        "care": "Mit einem weichen, leicht feuchten Tuch reinigen und anschließend abtrocknen. Nicht in der Spülmaschine reinigen. Keine aggressiven Reinigungs- oder Scheuermittel verwenden. Keiner direkter Hitze oder starker Sonneneinstrahlung aussetzen, da PLA dadurch mit der Zeit verformt oder sich verfärben kann."
+    },
+    "notes": {
+        "manufacturing": "Die Vasen sind durch ihr Material nicht wasserdicht und daher nicht für frische Blumen geeignet. Es sollten Trockenblumen verwendet werden.Jede Vase wird in Tirol im 3D-Druckverfahren aus PLA gefertigt. Durch die additive Fertigung kann es zu geringfügigen Abweichungen in Oberfläche, Struktur, Farbe und Form kommen. Dadurch ist jedes Stück ein Unikat.",
+        "surface": "Kleine sichtbare Druckspuren, minimale Unebenheiten oder feine Linien können entstehen. Sie gehören zum Herstellungsprozess und machen den Charakter eines 3D-gedruckten Produkts aus."
+    },
+    "attributes": {
+        "waterproof": false,
+        "indoor": true,
+        "outdoor": false
+    },
+    "meta": {
+        "created": "2026-08-17T09:10:31.039Z",
+        "updated": "2026-08-17T09:10:31.039Z"
+    }
+},
+
+{
+    "id": "the-elys",
+    "slug": "the-elys",
+    "active": true,
+    "content": {
+        "name": "The Elys",
+        "subtitle": "Skulpturale Eleganz für eine außergewöhnliche Atmosphäre.",
+        "shortDescription": "Skulpturale Eleganz für eine außergewöhnliche Atmosphäre.",
+        "description": "The Elys steht für eine Ästhetik zwischen Ruhe und Ausdruck. Die skulpturale Formsprache macht sie zu einem dekorativen Objekt, das weit über die klassische Funktion einer Vase hinausgeht. Besonders puristisch eingesetzt entfaltet sie ihre volle Wirkung."
+    },
+    "classification": {
+        "category": "vases",
+        "collection": "nocturne",
+        "featured": false,
+        "new": false,
+        "bestseller": false
+    },
+    "media": {
+        "folder": "./assets/images/products/the-elys/",
+        "thumbnail": "thumbnail.webp",
+        "scene": "scene.webp"
+    },
+    "variants": [
+        {
+            "id": "small",
+            "label": "120mm",
+            "height": 120,
+            "price": 4
+        },
+        {
+            "id": "medium",
+            "label": "180mm",
+            "height": 180,
+            "price": 7
+        },
+        {
+            "id": "large",
+            "label": "240mm",
+            "height": 240,
+            "price": 12
+        }
+    ],
+    "colors": [
+        "anthrazit",
+        "black",
+        "coffee",
+        "clay",
+        "blue-grey",
+        "olive",
+        "midnight",
+        "roasted-chestnut"
+    ],
+    "specifications": {
+        "material": "PLA (Polylactic Acid) ist ein biologisch abbaubarer Kunststoff, der aus nachwachsenden Rohstoffen wie Maisstärke oder Zuckerrohr hergestellt wird. PLA ist umweltfreundlicher als viele andere Kunststoffe, da es aus erneuerbaren Ressourcen stammt und unter bestimmten Bedingungen kompostierbar ist. Es ist jedoch nicht so hitzebeständig wie einige andere Kunststoffe und kann sich bei hohen Temperaturen verformen, dadurch ist darauf zu achten, dass die Produkte nicht zu lange im Auto in der Sonne stehen.",
+        "manufacturer": "Bergliacht",
+        "care": "Mit einem weichen, leicht feuchten Tuch reinigen und anschließend abtrocknen. Nicht in der Spülmaschine reinigen. Keine aggressiven Reinigungs- oder Scheuermittel verwenden. Keiner direkter Hitze oder starker Sonneneinstrahlung aussetzen, da PLA dadurch mit der Zeit verformt oder sich verfärben kann."
+    },
+    "notes": {
+        "manufacturing": "Die Vasen sind durch ihr Material nicht wasserdicht und daher nicht für frische Blumen geeignet. Es sollten Trockenblumen verwendet werden.Jede Vase wird in Tirol im 3D-Druckverfahren aus PLA gefertigt. Durch die additive Fertigung kann es zu geringfügigen Abweichungen in Oberfläche, Struktur, Farbe und Form kommen. Dadurch ist jedes Stück ein Unikat.",
+        "surface": "Kleine sichtbare Druckspuren, minimale Unebenheiten oder feine Linien können entstehen. Sie gehören zum Herstellungsprozess und machen den Charakter eines 3D-gedruckten Produkts aus."
+    },
+    "attributes": {
+        "waterproof": false,
+        "indoor": true,
+        "outdoor": false
+    },
+    "meta": {
+        "created": "2026-08-17T09:11:44.473Z",
+        "updated": "2026-08-17T09:11:44.473Z"
+    }
+},
+
+{
+    "id": "the-nova",
+    "slug": "the-nova",
+    "active": true,
+    "content": {
+        "name": "The Nova",
+        "subtitle": "Modern, ausdrucksstark und gemacht, um aufzufallen.",
+        "shortDescription": "Modern, ausdrucksstark und gemacht, um aufzufallen.",
+        "description": "The Nova steht für einen neuen Blick auf klassische Wohnaccessoires. Ihre moderne Form verleiht ihr eine selbstbewusste Präsenz und macht sie zu einem besonderen Mittelpunkt im Raum. Mit Blumen oder als eigenständiges Designobjekt – The Nova setzt einen modernen Akzent."
+    },
+    "classification": {
+        "category": "vases",
+        "collection": "nocturne",
+        "featured": false,
+        "new": false,
+        "bestseller": false
+    },
+    "media": {
+        "folder": "./assets/images/products/the-nova/",
+        "thumbnail": "thumbnail.webp",
+        "scene": "scene.webp"
+    },
+    "variants": [
+        {
+            "id": "small",
+            "label": "120mm",
+            "height": 120,
+            "price": 4
+        },
+        {
+            "id": "medium",
+            "label": "180mm",
+            "height": 180,
+            "price": 7
+        },
+        {
+            "id": "large",
+            "label": "240mm",
+            "height": 240,
+            "price": 12
+        }
+    ],
+    "colors": [
+        "anthrazit",
+        "black",
+        "coffee",
+        "clay",
+        "blue-grey",
+        "olive",
+        "midnight",
+        "roasted-chestnut"
+    ],
+    "specifications": {
+        "material": "PLA (Polylactic Acid) ist ein biologisch abbaubarer Kunststoff, der aus nachwachsenden Rohstoffen wie Maisstärke oder Zuckerrohr hergestellt wird. PLA ist umweltfreundlicher als viele andere Kunststoffe, da es aus erneuerbaren Ressourcen stammt und unter bestimmten Bedingungen kompostierbar ist. Es ist jedoch nicht so hitzebeständig wie einige andere Kunststoffe und kann sich bei hohen Temperaturen verformen, dadurch ist darauf zu achten, dass die Produkte nicht zu lange im Auto in der Sonne stehen.",
+        "manufacturer": "Bergliacht",
+        "care": "Mit einem weichen, leicht feuchten Tuch reinigen und anschließend abtrocknen. Nicht in der Spülmaschine reinigen. Keine aggressiven Reinigungs- oder Scheuermittel verwenden. Keiner direkter Hitze oder starker Sonneneinstrahlung aussetzen, da PLA dadurch mit der Zeit verformt oder sich verfärben kann."
+    },
+    "notes": {
+        "manufacturing": "Die Vasen sind durch ihr Material nicht wasserdicht und daher nicht für frische Blumen geeignet. Es sollten Trockenblumen verwendet werden.Jede Vase wird in Tirol im 3D-Druckverfahren aus PLA gefertigt. Durch die additive Fertigung kann es zu geringfügigen Abweichungen in Oberfläche, Struktur, Farbe und Form kommen. Dadurch ist jedes Stück ein Unikat.",
+        "surface": "Kleine sichtbare Druckspuren, minimale Unebenheiten oder feine Linien können entstehen. Sie gehören zum Herstellungsprozess und machen den Charakter eines 3D-gedruckten Produkts aus."
+    },
+    "attributes": {
+        "waterproof": false,
+        "indoor": true,
+        "outdoor": false
+    },
+    "meta": {
+        "created": "2026-08-17T09:13:02.671Z",
+        "updated": "2026-08-17T09:13:02.671Z"
+    }
+},
+
+{
+    "id": "the-aster",
+    "slug": "the-aster",
+    "active": true,
+    "content": {
+        "name": "The Aster",
+        "subtitle": "Florale Inspiration trifft auf modernes Design.",
+        "shortDescription": "Florale Inspiration trifft auf modernes Design.",
+        "description": "The Aster verbindet die natürliche Schönheit floraler Formen mit einer modernen, reduzierten Ästhetik. Ihr Name erinnert an den Stern und zugleich an die gleichnamige Blume – eine Verbindung, die sich in ihrer besonderen Ausstrahlung widerspiegelt. Eine elegante Ergänzung für natürliche und moderne Wohnräume."
+    },
+    "classification": {
+        "category": "vases",
+        "collection": "terra",
+        "featured": false,
+        "new": false,
+        "bestseller": false
+    },
+    "media": {
+        "folder": "./assets/images/products/the-aster/",
+        "thumbnail": "thumbnail.webp",
+        "scene": "scene.webp"
+    },
+    "variants": [
+        {
+            "id": "small",
+            "label": "120mm",
+            "height": 120,
+            "price": 3
+        },
+        {
+            "id": "medium",
+            "label": "180mm",
+            "height": 180,
+            "price": 6
+        },
+        {
+            "id": "large",
+            "label": "240mm",
+            "height": 240,
+            "price": 11
+        }
+    ],
+    "colors": [
+        "anthrazit",
+        "beige",
+        "black",
+        "bone-white",
+        "coffee",
+        "clay",
+        "blue-grey",
+        "silver",
+        "taro-purple",
+        "oak",
+        "olive",
+        "sakura-pink",
+        "red",
+        "porzellan",
+        "gold",
+        "grass-green",
+        "midnight",
+        "roasted-chestnut",
+        "yellow"
+    ],
+    "specifications": {
+        "material": "PLA (Polylactic Acid) ist ein biologisch abbaubarer Kunststoff, der aus nachwachsenden Rohstoffen wie Maisstärke oder Zuckerrohr hergestellt wird. PLA ist umweltfreundlicher als viele andere Kunststoffe, da es aus erneuerbaren Ressourcen stammt und unter bestimmten Bedingungen kompostierbar ist. Es ist jedoch nicht so hitzebeständig wie einige andere Kunststoffe und kann sich bei hohen Temperaturen verformen, dadurch ist darauf zu achten, dass die Produkte nicht zu lange im Auto in der Sonne stehen.",
+        "manufacturer": "Bergliacht",
+        "care": "Mit einem weichen, leicht feuchten Tuch reinigen und anschließend abtrocknen. Nicht in der Spülmaschine reinigen. Keine aggressiven Reinigungs- oder Scheuermittel verwenden. Keiner direkter Hitze oder starker Sonneneinstrahlung aussetzen, da PLA dadurch mit der Zeit verformt oder sich verfärben kann."
+    },
+    "notes": {
+        "manufacturing": "Die Vasen sind durch ihr Material nicht wasserdicht und daher nicht für frische Blumen geeignet. Es sollten Trockenblumen verwendet werden.Jede Vase wird in Tirol im 3D-Druckverfahren aus PLA gefertigt. Durch die additive Fertigung kann es zu geringfügigen Abweichungen in Oberfläche, Struktur, Farbe und Form kommen. Dadurch ist jedes Stück ein Unikat.",
+        "surface": "Kleine sichtbare Druckspuren, minimale Unebenheiten oder feine Linien können entstehen. Sie gehören zum Herstellungsprozess und machen den Charakter eines 3D-gedruckten Produkts aus."
+    },
+    "attributes": {
+        "waterproof": false,
+        "indoor": true,
+        "outdoor": false
+    },
+    "meta": {
+        "created": "2026-08-17T09:14:21.087Z",
+        "updated": "2026-08-17T09:14:21.087Z"
+    }
+},
+
+{
+    "id": "the-luma",
+    "slug": "the-luma",
+    "active": true,
+    "content": {
+        "name": "The Luma",
+        "subtitle": "Sanfte Formen und eine leichte, zeitgemäße Ästhetik.",
+        "shortDescription": "Sanfte Formen und eine leichte, zeitgemäße Ästhetik.",
+        "description": "The Luma steht für Licht, Leichtigkeit und eine ruhige Formsprache. Ihre harmonische Silhouette fügt sich mühelos in moderne Wohnräume ein und lässt sich sowohl dezent als auch als bewusst gesetzter Blickfang einsetzen. Ein zeitloses Design für eine entspannte Atmosphäre."
+    },
+    "classification": {
+        "category": "vases",
+        "collection": "forma",
+        "featured": false,
+        "new": false,
+        "bestseller": false
+    },
+    "media": {
+        "folder": "./assets/images/products/the-luma/",
+        "thumbnail": "thumbnail.webp",
+        "scene": "scene.webp"
+    },
+    "variants": [
+        {
+            "id": "small",
+            "label": "120mm",
+            "height": 120,
+            "price": 3
+        },
+        {
+            "id": "medium",
+            "label": "180mm",
+            "height": 180,
+            "price": 6
+        },
+        {
+            "id": "large",
+            "label": "240mm",
+            "height": 240,
+            "price": 11
+        }
+    ],
+    "colors": [
+        "anthrazit",
+        "beige",
+        "black",
+        "bone-white",
+        "coffee",
+        "clay",
+        "blue-grey",
+        "silver",
+        "taro-purple",
+        "oak",
+        "olive",
+        "sakura-pink",
+        "red",
+        "porzellan",
+        "gold",
+        "grass-green",
+        "midnight",
+        "roasted-chestnut",
+        "yellow"
+    ],
+    "specifications": {
+        "material": "PLA (Polylactic Acid) ist ein biologisch abbaubarer Kunststoff, der aus nachwachsenden Rohstoffen wie Maisstärke oder Zuckerrohr hergestellt wird. PLA ist umweltfreundlicher als viele andere Kunststoffe, da es aus erneuerbaren Ressourcen stammt und unter bestimmten Bedingungen kompostierbar ist. Es ist jedoch nicht so hitzebeständig wie einige andere Kunststoffe und kann sich bei hohen Temperaturen verformen, dadurch ist darauf zu achten, dass die Produkte nicht zu lange im Auto in der Sonne stehen.",
+        "manufacturer": "Bergliacht",
+        "care": "Mit einem weichen, leicht feuchten Tuch reinigen und anschließend abtrocknen. Nicht in der Spülmaschine reinigen. Keine aggressiven Reinigungs- oder Scheuermittel verwenden. Keiner direkter Hitze oder starker Sonneneinstrahlung aussetzen, da PLA dadurch mit der Zeit verformt oder sich verfärben kann."
+    },
+    "notes": {
+        "manufacturing": "Die Vasen sind durch ihr Material nicht wasserdicht und daher nicht für frische Blumen geeignet. Es sollten Trockenblumen verwendet werden.Jede Vase wird in Tirol im 3D-Druckverfahren aus PLA gefertigt. Durch die additive Fertigung kann es zu geringfügigen Abweichungen in Oberfläche, Struktur, Farbe und Form kommen. Dadurch ist jedes Stück ein Unikat.",
+        "surface": "Kleine sichtbare Druckspuren, minimale Unebenheiten oder feine Linien können entstehen. Sie gehören zum Herstellungsprozess und machen den Charakter eines 3D-gedruckten Produkts aus."
+    },
+    "attributes": {
+        "waterproof": false,
+        "indoor": true,
+        "outdoor": false
+    },
+    "meta": {
+        "created": "2026-08-17T09:15:30.188Z",
+        "updated": "2026-08-17T09:15:30.188Z"
+    }
+},
+
+{
+    "id": "the-aria",
+    "slug": "the-aria",
+    "active": true,
+    "content": {
+        "name": "The Aria",
+        "subtitle": "Elegante Linienführung mit einer leichten, künstlerischen Note.",
+        "shortDescription": "Elegante Linienführung mit einer leichten, künstlerischen Note.",
+        "description": "The Aria verbindet die Eleganz eines musikalischen Namens mit einer modernen Formsprache. Ihre ausgewogene Silhouette wirkt leicht und selbstbewusst zugleich. Als Vase oder skulpturales Dekorationsobjekt verleiht sie dem Raum eine besondere, fast künstlerische Note."
+    },
+    "classification": {
+        "category": "vases",
+        "collection": "forma",
+        "featured": false,
+        "new": false,
+        "bestseller": false
+    },
+    "media": {
+        "folder": "./assets/images/products/the-aria/",
+        "thumbnail": "thumbnail.webp",
+        "scene": "scene.webp"
+    },
+    "variants": [
+        {
+            "id": "small",
+            "label": "120mm",
+            "height": 120,
+            "price": 3
+        },
+        {
+            "id": "medium",
+            "label": "180mm",
+            "height": 180,
+            "price": 6
+        },
+        {
+            "id": "large",
+            "label": "240mm",
+            "height": 240,
+            "price": 11
+        }
+    ],
+    "colors": [
+        "anthrazit",
+        "beige",
+        "black",
+        "bone-white",
+        "coffee",
+        "clay",
+        "blue-grey",
+        "silver",
+        "taro-purple",
+        "oak",
+        "olive",
+        "sakura-pink",
+        "red",
+        "porzellan",
+        "gold",
+        "grass-green",
+        "midnight",
+        "roasted-chestnut",
+        "yellow"
+    ],
+    "specifications": {
+        "material": "PLA (Polylactic Acid) ist ein biologisch abbaubarer Kunststoff, der aus nachwachsenden Rohstoffen wie Maisstärke oder Zuckerrohr hergestellt wird. PLA ist umweltfreundlicher als viele andere Kunststoffe, da es aus erneuerbaren Ressourcen stammt und unter bestimmten Bedingungen kompostierbar ist. Es ist jedoch nicht so hitzebeständig wie einige andere Kunststoffe und kann sich bei hohen Temperaturen verformen, dadurch ist darauf zu achten, dass die Produkte nicht zu lange im Auto in der Sonne stehen.",
+        "manufacturer": "Bergliacht",
+        "care": "Mit einem weichen, leicht feuchten Tuch reinigen und anschließend abtrocknen. Nicht in der Spülmaschine reinigen. Keine aggressiven Reinigungs- oder Scheuermittel verwenden. Keiner direkter Hitze oder starker Sonneneinstrahlung aussetzen, da PLA dadurch mit der Zeit verformt oder sich verfärben kann."
+    },
+    "notes": {
+        "manufacturing": "Die Vasen sind durch ihr Material nicht wasserdicht und daher nicht für frische Blumen geeignet. Es sollten Trockenblumen verwendet werden.Jede Vase wird in Tirol im 3D-Druckverfahren aus PLA gefertigt. Durch die additive Fertigung kann es zu geringfügigen Abweichungen in Oberfläche, Struktur, Farbe und Form kommen. Dadurch ist jedes Stück ein Unikat.",
+        "surface": "Kleine sichtbare Druckspuren, minimale Unebenheiten oder feine Linien können entstehen. Sie gehören zum Herstellungsprozess und machen den Charakter eines 3D-gedruckten Produkts aus."
+    },
+    "attributes": {
+        "waterproof": false,
+        "indoor": true,
+        "outdoor": false
+    },
+    "meta": {
+        "created": "2026-08-17T09:16:26.287Z",
+        "updated": "2026-08-17T09:16:26.287Z"
+    }
+},
+
+{
+    "id": "the-sora",
+    "slug": "the-sora",
+    "active": true,
+    "content": {
+        "name": "The Sora",
+        "subtitle": "Leichtigkeit und Ruhe, inspiriert vom weiten Himmel.",
+        "shortDescription": "Leichtigkeit und Ruhe, inspiriert vom weiten Himmel.",
+        "description": "The Sora verkörpert die Ruhe und Weite eines klaren Himmels. Die reduzierte Form schafft eine entspannte Ästhetik, die sich besonders gut in minimalistische und natürliche Einrichtungskonzepte einfügt. Ein zurückhaltendes Designobjekt mit einer angenehm leichten Ausstrahlung."
+    },
+    "classification": {
+        "category": "vases",
+        "collection": "forma",
+        "featured": false,
+        "new": false,
+        "bestseller": false
+    },
+    "media": {
+        "folder": "./assets/images/products/the-sora/",
+        "thumbnail": "thumbnail.webp",
+        "scene": "scene.webp"
+    },
+    "variants": [
+        {
+            "id": "small",
+            "label": "120mm",
+            "height": 120,
+            "price": 3
+        },
+        {
+            "id": "medium",
+            "label": "180mm",
+            "height": 180,
+            "price": 6
+        },
+        {
+            "id": "large",
+            "label": "240mm",
+            "height": 240,
+            "price": 11
+        }
+    ],
+    "colors": [
+        "anthrazit",
+        "beige",
+        "black",
+        "bone-white",
+        "coffee",
+        "clay",
+        "blue-grey",
+        "silver",
+        "taro-purple",
+        "oak",
+        "olive",
+        "sakura-pink",
+        "red",
+        "porzellan",
+        "gold",
+        "grass-green",
+        "midnight",
+        "roasted-chestnut",
+        "yellow"
+    ],
+    "specifications": {
+        "material": "PLA (Polylactic Acid) ist ein biologisch abbaubarer Kunststoff, der aus nachwachsenden Rohstoffen wie Maisstärke oder Zuckerrohr hergestellt wird. PLA ist umweltfreundlicher als viele andere Kunststoffe, da es aus erneuerbaren Ressourcen stammt und unter bestimmten Bedingungen kompostierbar ist. Es ist jedoch nicht so hitzebeständig wie einige andere Kunststoffe und kann sich bei hohen Temperaturen verformen, dadurch ist darauf zu achten, dass die Produkte nicht zu lange im Auto in der Sonne stehen.",
+        "manufacturer": "Bergliacht",
+        "care": "Mit einem weichen, leicht feuchten Tuch reinigen und anschließend abtrocknen. Nicht in der Spülmaschine reinigen. Keine aggressiven Reinigungs- oder Scheuermittel verwenden. Keiner direkter Hitze oder starker Sonneneinstrahlung aussetzen, da PLA dadurch mit der Zeit verformt oder sich verfärben kann."
+    },
+    "notes": {
+        "manufacturing": "Die Vasen sind durch ihr Material nicht wasserdicht und daher nicht für frische Blumen geeignet. Es sollten Trockenblumen verwendet werden.Jede Vase wird in Tirol im 3D-Druckverfahren aus PLA gefertigt. Durch die additive Fertigung kann es zu geringfügigen Abweichungen in Oberfläche, Struktur, Farbe und Form kommen. Dadurch ist jedes Stück ein Unikat.",
+        "surface": "Kleine sichtbare Druckspuren, minimale Unebenheiten oder feine Linien können entstehen. Sie gehören zum Herstellungsprozess und machen den Charakter eines 3D-gedruckten Produkts aus."
+    },
+    "attributes": {
+        "waterproof": false,
+        "indoor": true,
+        "outdoor": false
+    },
+    "meta": {
+        "created": "2026-08-17T09:17:20.205Z",
+        "updated": "2026-08-17T09:17:20.205Z"
+    }
+},
+
+{
+    "id": "the-aven",
+    "slug": "the-aven",
+    "active": true,
+    "content": {
+        "name": "The Aven",
+        "subtitle": "Minimalistisches Design mit einer klaren, modernen Formsprache.",
+        "shortDescription": "Minimalistisches Design mit einer klaren, modernen Formsprache.",
+        "description": "The Aven konzentriert sich auf das Wesentliche. Klare Proportionen und eine reduzierte Silhouette verleihen ihr einen modernen Charakter, der sich vielseitig kombinieren lässt. Sie ist gemacht für Räume, in denen bewusst ausgewählte Objekte statt überladener Dekoration im Mittelpunkt stehen."
+    },
+    "classification": {
+        "category": "vases",
+        "collection": "forma",
+        "featured": false,
+        "new": false,
+        "bestseller": false
+    },
+    "media": {
+        "folder": "./assets/images/products/the-aven/",
+        "thumbnail": "thumbnail.webp",
+        "scene": "scene.webp"
+    },
+    "variants": [
+        {
+            "id": "small",
+            "label": "120mm",
+            "height": 120,
+            "price": 3
+        },
+        {
+            "id": "medium",
+            "label": "180mm",
+            "height": 180,
+            "price": 6
+        },
+        {
+            "id": "large",
+            "label": "240mm",
+            "height": 240,
+            "price": 11
+        }
+    ],
+    "colors": [
+        "anthrazit",
+        "beige",
+        "black",
+        "bone-white",
+        "coffee",
+        "clay",
+        "blue-grey",
+        "silver",
+        "taro-purple",
+        "oak",
+        "olive",
+        "sakura-pink",
+        "red",
+        "porzellan",
+        "gold",
+        "grass-green",
+        "midnight",
+        "roasted-chestnut",
+        "yellow"
+    ],
+    "specifications": {
+        "material": "PLA (Polylactic Acid) ist ein biologisch abbaubarer Kunststoff, der aus nachwachsenden Rohstoffen wie Maisstärke oder Zuckerrohr hergestellt wird. PLA ist umweltfreundlicher als viele andere Kunststoffe, da es aus erneuerbaren Ressourcen stammt und unter bestimmten Bedingungen kompostierbar ist. Es ist jedoch nicht so hitzebeständig wie einige andere Kunststoffe und kann sich bei hohen Temperaturen verformen, dadurch ist darauf zu achten, dass die Produkte nicht zu lange im Auto in der Sonne stehen.",
+        "manufacturer": "Bergliacht",
+        "care": "Mit einem weichen, leicht feuchten Tuch reinigen und anschließend abtrocknen. Nicht in der Spülmaschine reinigen. Keine aggressiven Reinigungs- oder Scheuermittel verwenden. Keiner direkter Hitze oder starker Sonneneinstrahlung aussetzen, da PLA dadurch mit der Zeit verformt oder sich verfärben kann."
+    },
+    "notes": {
+        "manufacturing": "Die Vasen sind durch ihr Material nicht wasserdicht und daher nicht für frische Blumen geeignet. Es sollten Trockenblumen verwendet werden.Jede Vase wird in Tirol im 3D-Druckverfahren aus PLA gefertigt. Durch die additive Fertigung kann es zu geringfügigen Abweichungen in Oberfläche, Struktur, Farbe und Form kommen. Dadurch ist jedes Stück ein Unikat.",
+        "surface": "Kleine sichtbare Druckspuren, minimale Unebenheiten oder feine Linien können entstehen. Sie gehören zum Herstellungsprozess und machen den Charakter eines 3D-gedruckten Produkts aus."
+    },
+    "attributes": {
+        "waterproof": false,
+        "indoor": true,
+        "outdoor": false
+    },
+    "meta": {
+        "created": "2026-08-17T09:18:23.688Z",
+        "updated": "2026-08-17T09:18:23.688Z"
+    }
+},
+
+{
+    "id": "the-vero",
+    "slug": "the-vero",
+    "active": true,
+    "content": {
+        "name": "The Vero",
+        "subtitle": "Echt, klar und zeitlos – modernes Design ohne Überflüssiges.",
+        "shortDescription": "Echt, klar und zeitlos – modernes Design ohne Überflüssiges.",
+        "description": "The Vero steht für Authentizität und klare Ästhetik. Ihre reduzierte Form macht sie zu einem vielseitigen Designobjekt, das sich harmonisch in unterschiedliche Wohnstile integrieren lässt. Ein Stück, das nicht durch Lautstärke, sondern durch seine schlichte Präsenz überzeugt."
+    },
+    "classification": {
+        "category": "vases",
+        "collection": "forma",
+        "featured": false,
+        "new": false,
+        "bestseller": false
+    },
+    "media": {
+        "folder": "./assets/images/products/the-vero/",
+        "thumbnail": "thumbnail.webp",
+        "scene": "scene.webp"
+    },
+    "variants": [
+        {
+            "id": "small",
+            "label": "120mm",
+            "height": 120,
+            "price": 3
+        },
+        {
+            "id": "medium",
+            "label": "180mm",
+            "height": 180,
+            "price": 6
+        },
+        {
+            "id": "large",
+            "label": "240mm",
+            "height": 240,
+            "price": 11
+        }
+    ],
+    "colors": [
+        "anthrazit",
+        "beige",
+        "black",
+        "bone-white",
+        "coffee",
+        "clay",
+        "blue-grey",
+        "silver",
+        "taro-purple",
+        "oak",
+        "olive",
+        "sakura-pink",
+        "red",
+        "porzellan",
+        "gold",
+        "grass-green",
+        "midnight",
+        "roasted-chestnut",
+        "yellow"
+    ],
+    "specifications": {
+        "material": "PLA (Polylactic Acid) ist ein biologisch abbaubarer Kunststoff, der aus nachwachsenden Rohstoffen wie Maisstärke oder Zuckerrohr hergestellt wird. PLA ist umweltfreundlicher als viele andere Kunststoffe, da es aus erneuerbaren Ressourcen stammt und unter bestimmten Bedingungen kompostierbar ist. Es ist jedoch nicht so hitzebeständig wie einige andere Kunststoffe und kann sich bei hohen Temperaturen verformen, dadurch ist darauf zu achten, dass die Produkte nicht zu lange im Auto in der Sonne stehen.",
+        "manufacturer": "Bergliacht",
+        "care": "Mit einem weichen, leicht feuchten Tuch reinigen und anschließend abtrocknen. Nicht in der Spülmaschine reinigen. Keine aggressiven Reinigungs- oder Scheuermittel verwenden. Keiner direkter Hitze oder starker Sonneneinstrahlung aussetzen, da PLA dadurch mit der Zeit verformt oder sich verfärben kann."
+    },
+    "notes": {
+        "manufacturing": "Die Vasen sind durch ihr Material nicht wasserdicht und daher nicht für frische Blumen geeignet. Es sollten Trockenblumen verwendet werden.Jede Vase wird in Tirol im 3D-Druckverfahren aus PLA gefertigt. Durch die additive Fertigung kann es zu geringfügigen Abweichungen in Oberfläche, Struktur, Farbe und Form kommen. Dadurch ist jedes Stück ein Unikat.",
+        "surface": "Kleine sichtbare Druckspuren, minimale Unebenheiten oder feine Linien können entstehen. Sie gehören zum Herstellungsprozess und machen den Charakter eines 3D-gedruckten Produkts aus."
+    },
+    "attributes": {
+        "waterproof": false,
+        "indoor": true,
+        "outdoor": false
+    },
+    "meta": {
+        "created": "2026-08-17T09:19:14.993Z",
+        "updated": "2026-08-17T09:19:14.993Z"
+    }
+},
+
+{
+    "id": "the-ripple",
+    "slug": "the-ripple",
+    "active": true,
+    "content": {
+        "name": "The Ripple",
+        "subtitle": "Organische Formen und sanfte Wellen für ein modernes, lebendiges Zuhause.",
+        "shortDescription": "Organische Formen und sanfte Wellen für ein modernes, lebendiges Zuhause.",
+        "description": "The Ripple verbindet eine ruhige, organische Form mit einer subtilen Dynamik. Die sanften Wellen der Oberfläche erinnern an kleine Bewegungen auf der Wasseroberfläche und verleihen der Vase eine besondere Tiefe. Ob mit einzelnen Zweigen, Trockenblumen oder ganz ohne Inhalt – The Ripple setzt einen stilvollen Akzent und fügt sich harmonisch in moderne Wohnräume ein."
+    },
+    "classification": {
+        "category": "vases",
+        "collection": "essence",
+        "featured": false,
+        "new": false,
+        "bestseller": false
+    },
+    "media": {
+        "folder": "./assets/images/products/the-ripple/",
+        "thumbnail": "thumbnail.webp",
+        "scene": "scene.webp"
+    },
+    "variants": [
+        {
+            "id": "small",
+            "label": "120mm",
+            "height": 120,
+            "price": 3
+        },
+        {
+            "id": "medium",
+            "label": "180mm",
+            "height": 180,
+            "price": 6
+        },
+        {
+            "id": "large",
+            "label": "240mm",
+            "height": 240,
+            "price": 11
+        }
+    ],
+    "colors": [
+        "anthrazit",
+        "beige",
+        "black",
+        "bone-white",
+        "coffee",
+        "clay",
+        "blue-grey",
+        "silver",
+        "taro-purple",
+        "oak",
+        "olive",
+        "sakura-pink",
+        "red",
+        "porzellan",
+        "gold",
+        "grass-green",
+        "midnight",
+        "roasted-chestnut",
+        "yellow"
+    ],
+    "specifications": {
+        "material": "PLA (Polylactic Acid) ist ein biologisch abbaubarer Kunststoff, der aus nachwachsenden Rohstoffen wie Maisstärke oder Zuckerrohr hergestellt wird. PLA ist umweltfreundlicher als viele andere Kunststoffe, da es aus erneuerbaren Ressourcen stammt und unter bestimmten Bedingungen kompostierbar ist. Es ist jedoch nicht so hitzebeständig wie einige andere Kunststoffe und kann sich bei hohen Temperaturen verformen, dadurch ist darauf zu achten, dass die Produkte nicht zu lange im Auto in der Sonne stehen.",
+        "manufacturer": "Bergliacht",
+        "care": "Mit einem weichen, leicht feuchten Tuch reinigen und anschließend abtrocknen. Nicht in der Spülmaschine reinigen. Keine aggressiven Reinigungs- oder Scheuermittel verwenden. Keiner direkter Hitze oder starker Sonneneinstrahlung aussetzen, da PLA dadurch mit der Zeit verformt oder sich verfärben kann."
+    },
+    "notes": {
+        "manufacturing": "Die Vasen sind durch ihr Material nicht wasserdicht und daher nicht für frische Blumen geeignet. Es sollten Trockenblumen verwendet werden.Jede Vase wird in Tirol im 3D-Druckverfahren aus PLA gefertigt. Durch die additive Fertigung kann es zu geringfügigen Abweichungen in Oberfläche, Struktur, Farbe und Form kommen. Dadurch ist jedes Stück ein Unikat.",
+        "surface": "Kleine sichtbare Druckspuren, minimale Unebenheiten oder feine Linien können entstehen. Sie gehören zum Herstellungsprozess und machen den Charakter eines 3D-gedruckten Produkts aus."
+    },
+    "attributes": {
+        "waterproof": false,
+        "indoor": true,
+        "outdoor": false
+    },
+    "meta": {
+        "created": "2026-08-17T09:20:39.896Z",
+        "updated": "2026-08-17T09:20:39.896Z"
     }
 }
 

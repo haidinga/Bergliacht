@@ -504,6 +504,65 @@ function openProductEditor() {
 
 
     initializeDefaultVariants();
+    initializeDefaultProductTexts();
+
+}
+
+/* ==========================================================
+   Default Product Texts
+========================================================== */
+
+function initializeDefaultProductTexts() {
+
+    const care =
+        getElement(
+            "#product-care"
+        );
+
+    const manufacturing =
+        getElement(
+            "#product-manufacturing"
+        );
+
+    const material =
+        getElement(
+            "#product-material"
+        );
+
+    const surface =
+        getElement(
+            "#product-surface"
+        );
+
+
+    if (care) {
+
+        care.value =
+            "Mit einem weichen, leicht feuchten Tuch reinigen und anschließend abtrocknen. Nicht in der Spülmaschine reinigen. Keine aggressiven Reinigungs- oder Scheuermittel verwenden. Keiner direkter Hitze oder starker Sonneneinstrahlung aussetzen, da PLA dadurch mit der Zeit verformt oder sich verfärben kann.";
+
+    }
+
+
+    if (manufacturing) {
+
+        manufacturing.value =
+            "Die Vasen sind durch ihr Material nicht wasserdicht und daher nicht für frische Blumen geeignet. Es sollten Trockenblumen verwendet werden.Jede Vase wird in Tirol im 3D-Druckverfahren aus PLA gefertigt. Durch die additive Fertigung kann es zu geringfügigen Abweichungen in Oberfläche, Struktur, Farbe und Form kommen. Dadurch ist jedes Stück ein Unikat.";
+
+    }
+
+    if (material) {
+
+        material.value =
+            "PLA (Polylactic Acid) ist ein biologisch abbaubarer Kunststoff, der aus nachwachsenden Rohstoffen wie Maisstärke oder Zuckerrohr hergestellt wird. PLA ist umweltfreundlicher als viele andere Kunststoffe, da es aus erneuerbaren Ressourcen stammt und unter bestimmten Bedingungen kompostierbar ist. Es ist jedoch nicht so hitzebeständig wie einige andere Kunststoffe und kann sich bei hohen Temperaturen verformen, dadurch ist darauf zu achten, dass die Produkte nicht zu lange im Auto in der Sonne stehen.";
+
+    }
+
+
+    if (surface) {
+
+        surface.value =
+            "Kleine sichtbare Druckspuren, minimale Unebenheiten oder feine Linien können entstehen. Sie gehören zum Herstellungsprozess und machen den Charakter eines 3D-gedruckten Produkts aus.";
+    }
 
 }
 

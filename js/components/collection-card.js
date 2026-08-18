@@ -16,7 +16,7 @@ export function createCollectionCard(collection) {
 
             <a
                 class="collection-card__link"
-                href="#products"
+                href="collection.html?id=${collection.id}"
             >
 
                 <img
@@ -25,6 +25,7 @@ export function createCollectionCard(collection) {
                     alt="${collection.content.name}"
                     loading="lazy"
                 >
+
 
                 <div class="collection-card__overlay">
 
@@ -36,11 +37,13 @@ export function createCollectionCard(collection) {
 
                         </h3>
 
+
                         <p class="collection-card__description">
 
                             ${collection.content.description}
 
                         </p>
+
 
                         <span class="collection-card__button">
 
